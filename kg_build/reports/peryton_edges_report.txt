@@ -1,0 +1,26 @@
+Peryton edge extraction report
+
+output_file	D:\Paperwork_code\microbe\kg_build\edges\peryton_edges.tsv
+raw_records	7977
+final_edges_after_dedup	4060
+
+skipped_record_counts
+non_human	167
+contaminant	1222
+missing_microbe_taxon	0
+missing_disease_mesh	0
+missing_relation	123
+
+relation_counts
+depleted_in	2045
+enriched_in	2015
+
+node_counts
+unique_disease_nodes	40
+unique_microbe_nodes	1301
+
+notes
+Source: original_data/Peryton-results.tsv (Peryton database export).
+microbe head_id = NCBI_TAXON:<microbe_ncbi_tax_id>; disease tail_id = bare MeSH descriptor (MESH: prefix stripped).
+relationship_name -> relation: Increased -> enriched_in, Decreased -> depleted_in.
+Skipped records flagged as contaminant (microbe_com_contaminant=true), missing IDs/relation, or non-human host.

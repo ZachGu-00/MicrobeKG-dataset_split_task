@@ -1,0 +1,21 @@
+CTD chem-gene-ixns edges report
+
+input_file	D:\Paperwork_code\microbe\original_data\CTD-chemical-gene\CTD_chem_gene_ixns.tsv\CTD_chem_gene_ixns.tsv
+output_edges	D:\Paperwork_code\microbe\kg_build\edges\ctd_chem_gene_edges.tsv
+
+total_human_ixns_scanned	1320161
+matched_to_kg_metabolite	180396
+matched_pct_of_human	13.66
+dropped_not_microbe_linked (Plan B)	0
+microbe_linked_metabolite_set_size	0
+rows_after_expression_action_filter	120326
+unique_edges_written	95946
+unique_metabolites_in_edges	571
+unique_genes_in_edges	19117
+ctd_chemicals_mappable_via_xref	1253
+new_host_gene_nodes_to_create	5815
+bidirectional_pairs (both up and down on same (m,g))	4465
+
+relation_counts:
+  downregulates_gene	44725
+  upregulates_gene	51221

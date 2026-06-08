@@ -1,0 +1,19 @@
+NJC19 metabolic interaction edges report (human-relevant subset only)
+
+raw_activities	9136
+organisms_kept (human-touching microbe with NCBI id)	518
+organisms_skip_host	6
+organisms_skip_mouse_only	320
+organisms_skip_no_taxid	0
+compounds_kept (with KEGG id)	268
+compounds_skip_no_kegg	15
+skip_organism_filtered	4159
+skip_compound_no_kegg	60
+skip_unknown_activity	0
+final_edges_after_dedupe	5042
+
+edges_per_relation
+utilizes	3155
+produces	1724
+does_not_utilize	146
+does_not_produce	17

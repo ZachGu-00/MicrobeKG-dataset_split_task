@@ -1,0 +1,31 @@
+{
+  "task": "task2",
+  "model": "Popularity",
+  "setting": "C50",
+  "seed": 42,
+  "model_type": "trivial",
+  "num_train": 1484325,
+  "needs_surrogate": false,
+  "auroc_eval": {
+    "num_pos": 3559,
+    "num_neg": 146,
+    "prevalence_floor": 0.9605937921727395,
+    "auprc": 0.9623905769365251,
+    "auprc_ci95": [
+      0.9568559059175086,
+      0.9675513740876942
+    ],
+    "auprc_over_floor": 1.0018704938324883,
+    "auroc": 0.4884953061310896,
+    "auroc_ci95": [
+      0.4430214543872952,
+      0.5290899590850131
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.547945205479452,
+    "scoring_relation": "structural"
+  },
+  "stratified_note": "recompute capacity-layer strata offline from raw + test_microbe_capacity_layer.tsv",
+  "early_stopping": null,
+  "elapsed_sec": 4.3
+}

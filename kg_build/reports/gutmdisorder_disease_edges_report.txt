@@ -1,0 +1,28 @@
+gutMDisorder phenotype edge extraction report
+
+output_file	D:\Paperwork_code\microbe\kg_build\edges\gutmdisorder_disease_edges.tsv
+raw_jsonl_records	2014
+final_edges_after_dedup	1641
+
+skipped_record_counts
+non_human	0
+missing_microbe_taxon	42
+condition1_is_health	0
+missing_disease_id	223
+
+relation_counts
+depleted_in	830
+enriched_in	811
+
+node_counts
+unique_disease_nodes	124
+unique_microbe_nodes	434
+
+notes
+Source: gutMDisorder v2 'Literature-based associations > Human > Phenotype' branch (scraped by scripts/get_data.py).
+Disease tail_id uses bare MeSH descriptor (e.g. D000152), aligned with gmrepo, CTD, and Disbiome edge files.
+Microbe head_id is NCBI_TAXON:<GutMicrobeNcbiID>, aligned with gmrepo and gutMGene microbe nodes.
+Alteration -> relation: increase|present -> enriched_in, decrease|absent -> depleted_in.
+Compound Condition1ID like 'D023241;D015658' is split into one edge per MeSH descriptor; '*' placeholders are dropped.
+Rows where Condition1 is Health-only or has no MeSH ID are skipped; Health vs disease comparisons keep the disease side as Condition1.
+Edges are de-duplicated on (head_id, relation, tail_id, ...); PMID and evidence_detail merged with pipe separators.

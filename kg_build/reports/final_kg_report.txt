@@ -1,0 +1,78 @@
+Final KG report
+
+final_edges_file	D:\Paperwork_code\microbe\kg_build\final_kg_edges.tsv
+final_nodes_file	D:\Paperwork_code\microbe\kg_build\final_kg_nodes.tsv
+total_nodes	69090
+total_edges	3687015
+shared_microbe_nodes_across_sources	12769
+largest_connected_component_nodes	68382
+degree_le_1_nodes	9098
+upgraded_competes_with_edges	0
+
+node_type_counts
+disease	5256
+host_gene	21008
+intervention	122
+metabolite	25184
+microbe	16502
+substrate	1018
+
+relation_counts
+associated_with_disease	41266
+associated_with_metabolite	851444
+belongs_to_class	10632
+belongs_to_family	10504
+belongs_to_genus	10196
+belongs_to_order	10634
+belongs_to_phylum	10725
+can_utilize	1501799
+co_occurs_with	6469
+depleted_in	115199
+does_not_produce	17
+does_not_utilize	146
+downregulates_gene	45598
+enriched_in	129936
+inconsistent_association	2552
+intervention_decreases	343
+intervention_increases	431
+is_a	8076
+is_clade_of	83
+is_strain_of	5606
+produces	860841
+therapeutic_target_for	2237
+treats_disease	6285
+upregulates_gene	52387
+utilizes	3609
+
+source_edge_counts
+AGORA2	1501799
+BugSigDB	21731
+CTD	144419
+Disbiome	6918
+GMMAD	1048789
+GMrepo_v3	23719
+HMDAD	407
+HMDB	851347
+Lit44	3701
+MeSH	8076
+NCBI_Taxonomy	58297
+NJC19	5037
+Peryton	4060
+Piccinno_2025	191
+Thomas_2019	52
+cross_source_conflict	1304
+gutMDisorder_v2	2415
+gutMGene	4788
+mBodyMap	8252
+
+evidence_type_counts (per-edge primary tag, pipe-joined when multi-source)
+cohort_statistical	27103
+cohort_statistical|computational	29
+computational	2548423
+curated_database	995733
+experimental	45987
+experimental|cohort_statistical	1206
+experimental|cohort_statistical|computational	195
+experimental|computational	1941
+experimental|curated_database	25
+ontology	66373

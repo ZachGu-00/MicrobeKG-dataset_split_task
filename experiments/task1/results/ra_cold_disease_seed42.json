@@ -1,0 +1,131 @@
+{
+  "task": "task1",
+  "model": "RA",
+  "setting": "cold_disease",
+  "seed": 42,
+  "model_type": "structural",
+  "elapsed_sec": 1.4,
+  "num_train": 129139,
+  "num_test_eval": 1928,
+  "num_test_oov": 48,
+  "early_stopping": null,
+  "ranking": {
+    "tail": {
+      "micro": {
+        "mrr": 0.005855916363298545,
+        "mean_rank": 243.42816390041494,
+        "n": 1928,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.001037344398340249,
+        "hits_at_10": 0.004149377593360996,
+        "hits_at_20": 0.006742738589211619
+      },
+      "macro": {
+        "mrr": 0.005054917329111466,
+        "n_groups": 1108,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.001128158844765343,
+        "hits_at_10": 0.003062145435791645,
+        "hits_at_20": 0.004641567818463125
+      },
+      "micro_minus_macro_gap": {
+        "mrr": 0.0008009990341870787,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": -9.081444642509398e-05,
+        "hits_at_10": 0.0010872321575693508,
+        "hits_at_20": 0.002101170770748494
+      }
+    },
+    "head": {
+      "micro": {
+        "mrr": 0.0025596380912047655,
+        "mean_rank": 3816.769190871369,
+        "n": 1928,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0015560165975103733,
+        "hits_at_5": 0.0031120331950207467,
+        "hits_at_10": 0.005705394190871369,
+        "hits_at_20": 0.008817427385892116
+      },
+      "macro": {
+        "mrr": 0.003768100791797689,
+        "n_groups": 20,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0006329113924050633,
+        "hits_at_5": 0.0034631000716503465,
+        "hits_at_10": 0.0066879343091428125,
+        "hits_at_20": 0.023689893320595495
+      },
+      "micro_minus_macro_gap": {
+        "mrr": -0.0012084627005929235,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.00092310520510531,
+        "hits_at_5": -0.0003510668766295998,
+        "hits_at_10": -0.0009825401182714435,
+        "hits_at_20": -0.014872465934703379
+      }
+    },
+    "both": {
+      "micro": {
+        "mrr": 0.004207777227251655,
+        "mean_rank": 2030.0986773858922,
+        "n": 3856,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0007780082987551867,
+        "hits_at_5": 0.002074688796680498,
+        "hits_at_10": 0.004927385892116182,
+        "hits_at_20": 0.007780082987551867
+      },
+      "macro": {
+        "mrr": 0.005032101433059803,
+        "n_groups": 1128,
+        "hits_at_1": 0.0,
+        "hits_at_3": 1.1221833198671334e-05,
+        "hits_at_5": 0.001169558511908694,
+        "hits_at_10": 0.0031264324725531903,
+        "hits_at_20": 0.004979304086231429
+      },
+      "micro_minus_macro_gap": {
+        "mrr": -0.0008243242058081478,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0007667864655565153,
+        "hits_at_5": 0.0009051302847718039,
+        "hits_at_10": 0.001800953419562992,
+        "hits_at_20": 0.0028007789013204387
+      }
+    },
+    "both_mrr_ci95": [
+      0.0037055324070849128,
+      0.004710912347226316
+    ],
+    "protocol": "full ranking over same-type candidate pool, filtered (train+valid+test), realistic rank; tail grouped by head, head grouped by tail",
+    "both_mean_reciprocal_rank": 0.004207777227251655,
+    "both_hits_at_1": 0.0,
+    "both_hits_at_3": 0.0007780082987551867,
+    "both_hits_at_5": 0.002074688796680498,
+    "both_hits_at_10": 0.004927385892116182,
+    "both_hits_at_20": 0.007780082987551867
+  },
+  "hardneg_auroc": {
+    "num_pos": 1928,
+    "num_neg": 78,
+    "prevalence_floor": 0.9611166500498505,
+    "auprc": 0.9576930606088946,
+    "auprc_ci95": [
+      0.9538106004682939,
+      0.9617962437770237
+    ],
+    "auprc_over_floor": 0.9964379043472212,
+    "auroc": 0.47943930205340995,
+    "auroc_ci95": [
+      0.4386849664857964,
+      0.5174330380891584
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 1.0
+  },
+  "stratified_note": "recompute offline from raw dump + *_proximity.tsv (aggregate.py)"
+}

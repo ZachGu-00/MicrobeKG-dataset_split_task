@@ -1,0 +1,28 @@
+{
+  "task": "task2",
+  "model": "TuckER",
+  "setting": "C50",
+  "seed": 42,
+  "model_type": "kge",
+  "num_train": 1484325,
+  "needs_surrogate": false,
+  "auroc_eval": {
+    "num_pos": 2655,
+    "num_neg": 102,
+    "prevalence_floor": 0.9630032644178455,
+    "auprc": 0.9585,
+    "auprc_ci95": [
+      0.951,
+      0.966
+    ],
+    "auprc_over_floor": 0.9953247672347225,
+    "auroc": 0.458,
+    "auroc_ci95": [
+      0.403,
+      0.515
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.5784313725490197,
+    "scoring_relation": "utilizes"
+  }
+}

@@ -1,0 +1,8 @@
+EFO -> MeSH cross-mapping report
+
+input	D:\Paperwork_code\microbe\original_data\efo.owl
+owl_classes_seen	122995
+efo_classes	18348
+efo_with_mesh_xref	2223
+efo_with_multiple_mesh	30
+final_mappings	2223

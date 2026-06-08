@@ -1,0 +1,6 @@
+BugSigDB conflict-mining hard-negative edges report
+
+input_bugsigdb_edges	20434
+pairs_with_both_directions	2392
+pairs_filtered_single_study_only	1095
+final_inconsistent_association_edges	1297

@@ -1,0 +1,19 @@
+Cross-source conflict-mining hard-negative edges report
+
+sources_loaded	9
+
+per_source_directed_edge_counts
+  BugSigDB                 	enriched=  10,852	depleted=   9,582
+  Disbiome                 	enriched=   3,594	depleted=   3,324
+  GMMAD                    	enriched=   1,959	depleted=   1,877
+  GMrepo_v3                	enriched=  10,037	depleted=   7,213
+  HMDAD                    	enriched=     219	depleted=     188
+  Lit44                    	enriched=   1,701	depleted=   2,463
+  Peryton                  	enriched=   2,015	depleted=   2,045
+  gutMDisorder_v2          	enriched=     811	depleted=     830
+  mBodyMap                 	enriched=   4,178	depleted=   4,074
+
+unique_pairs_with_any_direction	52,915
+pairs_skipped_single_source	47,143
+pairs_skipped_no_cross_source_conflict	4,468
+final_cross_source_inconsistent_association_edges	1,304

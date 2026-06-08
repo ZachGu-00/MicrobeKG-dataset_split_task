@@ -1,0 +1,34 @@
+{
+  "task": "task4",
+  "model": "DistMult",
+  "setting": "B",
+  "seed": 42,
+  "model_type": "kge",
+  "num_train": 3679941,
+  "hardneg_auroc": {
+    "num_pos": 6279,
+    "num_neg": 62850,
+    "prevalence_floor": 0.09083018704161784,
+    "auprc": 0.5123862049617165,
+    "auprc_ci95": [
+      0.5028162382103162,
+      0.5227473259264538
+    ],
+    "auprc_over_floor": 5.641144443828397,
+    "auroc": 0.9495479026640177,
+    "auroc_ci95": [
+      0.9468395745411932,
+      0.9522117634795076
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.04294351630867144,
+    "scoring_relation": "associated_with_disease",
+    "neg_ratio": 10
+  },
+  "early_stopping": {
+    "stopped_early": true,
+    "best_epoch": 20,
+    "best_metric": 0.09929051995277405
+  },
+  "elapsed_sec": 979.9
+}

@@ -1,0 +1,31 @@
+{
+  "task": "task2",
+  "model": "RA",
+  "setting": "C50",
+  "seed": 42,
+  "model_type": "structural",
+  "num_train": 1484325,
+  "needs_surrogate": false,
+  "auroc_eval": {
+    "num_pos": 2655,
+    "num_neg": 102,
+    "prevalence_floor": 0.9630032644178455,
+    "auprc": 0.9799728244567285,
+    "auprc_ci95": [
+      0.9756701597105379,
+      0.9832992004300354
+    ],
+    "auprc_over_floor": 1.017621497938682,
+    "auroc": 0.7175547431778737,
+    "auroc_ci95": [
+      0.6782167848306931,
+      0.7546902348510025
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.14705882352941177,
+    "scoring_relation": "structural"
+  },
+  "stratified_note": "recompute capacity-layer strata offline from raw + test_microbe_capacity_layer.tsv",
+  "early_stopping": null,
+  "elapsed_sec": 5.4
+}

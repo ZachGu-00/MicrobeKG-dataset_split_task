@@ -1,0 +1,60 @@
+Segata-lab CRC edge build report
+
+output_file	D:\Paperwork_code\microbe\kg_build\edges\segata_crc_edges.tsv
+total_edges	243
+piccinno_2025_edges	191
+thomas_2019_edges	52
+
+Piccinno stats
+  significant_sgb_rows_at_fdr_0.05	108
+  sgb_species_resolved_to_ncbi	83
+  sgb_species_unresolved	25
+  is_clade_of_bridge_edges	83
+
+Thomas stats
+  table2_rows	61
+  resolved_to_ncbi	52
+  unresolved	9
+
+relation_counts
+depleted_in	47
+enriched_in	113
+is_clade_of	83
+
+piccinno_unresolved_species (manual review):
+  Porphyromonas_SGB1980
+  Clostridiales_Family_XIII_Incertae_Sedis_unclassified_SGB3978
+  Porphyromonas_SGB1977
+  GGB45495_SGB63167
+  GGB9694_SGB15201
+  Peptostreptococcus_SGB749
+  GGB9694_SGB15204
+  Enterocloster_aldensis
+  Prevotella_buccae
+  GGB9342_SGB14306
+  GGB9633_SGB15091
+  GGB9618_SGB15065
+  Gemmiger_SGB15299
+  GGB3486_SGB4658
+  GGB9561_SGB14972
+  GGB3278_SGB4328
+  GGB9593_SGB15015
+  GGB3570_SGB4777
+  GGB9758_SGB15368
+  Lachnospira_SGB5076
+  GGB4588_SGB6347
+  GGB51441_SGB71759
+  Clostridium_SGB6179
+  GGB3490_SGB4664
+  Faecalibacterium_SGB15346
+
+thomas_unresolved_species (manual review):
+  Parvimonas spp.
+  Peptostreptococcus spp.
+  Methanobrevibacter spp.
+  Anaerotruncusspp.
+  Slackia spp.
+  Bilophila spp.
+  Leptotrichia spp.
+  Ruminococcussp 5 1 39BFAA
+  Pseudomonas spp.

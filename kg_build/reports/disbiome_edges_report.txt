@@ -1,0 +1,28 @@
+Disbiome edge extraction report
+
+output_file	D:\Paperwork_code\microbe\kg_build\edges\disbiome_edges.tsv
+raw_experiment_records	10866
+final_edges_after_dedup	6918
+
+skipped_record_counts
+non_human	55
+missing_microbe_taxon	94
+missing_outcome	0
+unmapped_disease	2336
+
+relation_counts
+depleted_in	3324
+enriched_in	3594
+
+node_counts
+unique_disease_nodes	217
+unique_microbe_nodes	1337
+
+notes
+Source: original_data/disbiome_experiment_data.txt (Disbiome experiment dump).
+Disease names mapped to MeSH descriptors via preprocessed/mesh/mesh_disease_synonyms.tsv (NLM desc2026).
+Microbe head_id is NCBI_TAXON:<organism_ncbi_id> to align with gmrepo and gutMGene microbe nodes.
+Disease tail_id is the bare MeSH descriptor (e.g. D003920), matching gmrepo_disease_edges.tsv and ctd_edges.tsv.
+qualitative_outcome -> relation: Elevated -> enriched_in, Reduced -> depleted_in (matches gmrepo relation vocabulary).
+Records with non-human host, missing NCBI taxon ID, missing outcome, or disease names that could not be resolved against MeSH are skipped (counts above). Unmapped disease names are listed in disbiome_unmapped_diseases.tsv for follow-up curation.
+Edges de-duplicated on (head_id, relation, tail_id, species_source, confidence, source); publication_id and evidence_detail merged with pipe separators.

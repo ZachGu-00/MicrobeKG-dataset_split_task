@@ -1,0 +1,25 @@
+HMDAD edge extraction report
+
+output_file	D:\Paperwork_code\microbe\kg_build\edges\hmdad_edges.tsv
+raw_records	483
+final_edges_after_dedup	407
+
+skipped_record_counts
+missing_relation	0
+unmapped_disease	36
+unmapped_microbe	9
+
+relation_counts
+depleted_in	188
+enriched_in	219
+
+node_counts
+unique_disease_nodes	25
+unique_microbe_nodes	277
+
+notes
+Source: original_data/Human Microbe-Disease Association Database.txt (HMDAD).
+Disease names resolved via MeSH synonym table (preprocessed/mesh/mesh_disease_synonyms.tsv).
+Microbe names resolved via local ncbi_query_cache.json with NCBI taxonomy esearch fallback.
+Evidence values: Increase -> enriched_in, Decrease -> depleted_in.
+Microbe head_id = NCBI_TAXON:<id>; disease tail_id = bare MeSH descriptor (e.g. D003110).

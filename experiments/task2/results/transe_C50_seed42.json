@@ -1,0 +1,35 @@
+{
+  "task": "task2",
+  "model": "TransE",
+  "setting": "C50",
+  "seed": 42,
+  "model_type": "kge",
+  "num_train": 1484325,
+  "needs_surrogate": false,
+  "auroc_eval": {
+    "num_pos": 2655,
+    "num_neg": 102,
+    "prevalence_floor": 0.9630032644178455,
+    "auprc": 0.9598714514375717,
+    "auprc_ci95": [
+      0.9518458412165043,
+      0.967857272711729
+    ],
+    "auprc_over_floor": 0.996747868780936,
+    "auroc": 0.4985894169343821,
+    "auroc_ci95": [
+      0.4390397326538902,
+      0.5587796794800783
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.4803921568627451,
+    "scoring_relation": "utilizes"
+  },
+  "stratified_note": "recompute capacity-layer strata offline from raw + test_microbe_capacity_layer.tsv",
+  "early_stopping": {
+    "stopped_early": false,
+    "best_epoch": 195,
+    "best_metric": 0.4718512296676636
+  },
+  "elapsed_sec": 799.8
+}

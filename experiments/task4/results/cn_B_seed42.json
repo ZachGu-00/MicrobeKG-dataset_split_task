@@ -1,0 +1,30 @@
+{
+  "task": "task4",
+  "model": "CN",
+  "setting": "B",
+  "seed": 42,
+  "model_type": "structural",
+  "num_train": 3679941,
+  "hardneg_auroc": {
+    "num_pos": 6279,
+    "num_neg": 62850,
+    "prevalence_floor": 0.09083018704161784,
+    "auprc": 0.09279886975518882,
+    "auprc_ci95": [
+      0.09099682610232189,
+      0.094876071815298
+    ],
+    "auprc_over_floor": 1.0216743219153446,
+    "auroc": 0.49788931877963727,
+    "auroc_ci95": [
+      0.4907457768270262,
+      0.5053040402635194
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.5752426412092283,
+    "scoring_relation": "structural",
+    "neg_ratio": 10
+  },
+  "early_stopping": null,
+  "elapsed_sec": 200.5
+}

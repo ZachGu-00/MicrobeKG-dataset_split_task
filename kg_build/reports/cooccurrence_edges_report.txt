@@ -1,0 +1,18 @@
+GMrepo cooccurrence report
+
+output_file	D:\Paperwork_code\microbe\kg_build\edges\cooccurrence_edges.tsv
+health_runs_with_abundance	12205
+species_taxa	2178
+input_long_rows	1305488
+tested_pairs	2370753
+total_edges	6469
+
+relation_counts
+co_occurs_negative	20
+co_occurs_with	6449
+
+thresholds
+positive_r_gt	0.3
+negative_r_lt	-0.3
+pvalue_lt	0.05
+fdr_lt	0.05

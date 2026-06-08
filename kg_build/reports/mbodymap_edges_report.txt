@@ -1,0 +1,32 @@
+mBodyMap edge extraction report
+
+output_file	D:\Paperwork_code\microbe\kg_build\edges\mbodymap_edges.tsv
+api_calls_disease_site_pairs	336
+empty_disease_site_pairs	324
+raw_species_records	8252
+final_edges_after_dedup	8252
+
+skipped_record_counts
+missing_taxon	0
+no_health_baseline_at_site	2046
+no_signal_log2fc_in_(-1,1)	4941
+
+relation_counts
+depleted_in	4074
+enriched_in	4178
+
+node_counts
+unique_disease_nodes	11
+unique_microbe_nodes	3038
+
+config
+target_body_sites	Cecum,Colon,Duodenum,Ileum,Rectum,Stomach
+log2fc_enriched_threshold	1.0
+log2fc_depleted_threshold	-1.0
+min_abundance_floor	0.001
+
+notes
+Edges derive direction (enriched/depleted) by comparing relative_abundance_avg against Health (D006262) at the same body site. log2fc thresholds are configurable.
+Body sites are restricted to gut-relevant: Cecum/Colon/Duodenum/Ileum/Rectum/Stomach.
+Species present in only one cohort with abundance above min_abundance are taken as +/- inf log2fc.
+Multi-site evidence is retained in evidence_detail by pipe-joining individual records.

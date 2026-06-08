@@ -1,0 +1,135 @@
+{
+  "task": "task1",
+  "model": "RotatE",
+  "setting": "cold_microbe",
+  "seed": 42,
+  "model_type": "kge",
+  "elapsed_sec": 116.1,
+  "num_train": 127386,
+  "num_test_eval": 2687,
+  "num_test_oov": 168,
+  "early_stopping": {
+    "stopped_early": true,
+    "best_epoch": 20,
+    "best_metric": 0.03629065677523613
+  },
+  "ranking": {
+    "tail": {
+      "micro": {
+        "mrr": 0.09395406912793443,
+        "mean_rank": 60.765351693338296,
+        "n": 2687,
+        "hits_at_1": 0.03386676590993673,
+        "hits_at_3": 0.0718273167100856,
+        "hits_at_5": 0.1164867882396725,
+        "hits_at_10": 0.20878302940081875,
+        "hits_at_20": 0.34536657982880536
+      },
+      "macro": {
+        "mrr": 0.10783886108962272,
+        "n_groups": 324,
+        "hits_at_1": 0.035668592438780504,
+        "hits_at_3": 0.10189235226881806,
+        "hits_at_5": 0.1473357899306067,
+        "hits_at_10": 0.23252896800293588,
+        "hits_at_20": 0.3906898607682266
+      },
+      "micro_minus_macro_gap": {
+        "mrr": -0.013884791961688292,
+        "hits_at_1": -0.0018018265288437738,
+        "hits_at_3": -0.030065035558732453,
+        "hits_at_5": -0.0308490016909342,
+        "hits_at_10": -0.023745938602117128,
+        "hits_at_20": -0.04532328093942123
+      }
+    },
+    "head": {
+      "micro": {
+        "mrr": 0.0002249536424795147,
+        "mean_rank": 5817.387048753257,
+        "n": 2687,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.0,
+        "hits_at_10": 0.0,
+        "hits_at_20": 0.0
+      },
+      "macro": {
+        "mrr": 0.00022820373580416663,
+        "n_groups": 301,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.0,
+        "hits_at_10": 0.0,
+        "hits_at_20": 0.0
+      },
+      "micro_minus_macro_gap": {
+        "mrr": -3.250093324651932e-06,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.0,
+        "hits_at_10": 0.0,
+        "hits_at_20": 0.0
+      }
+    },
+    "both": {
+      "micro": {
+        "mrr": 0.04708951138520698,
+        "mean_rank": 2939.0762002232973,
+        "n": 5374,
+        "hits_at_1": 0.016933382954968365,
+        "hits_at_3": 0.0359136583550428,
+        "hits_at_5": 0.05824339411983625,
+        "hits_at_10": 0.10439151470040937,
+        "hits_at_20": 0.17268328991440268
+      },
+      "macro": {
+        "mrr": 0.056013568508023706,
+        "n_groups": 625,
+        "hits_at_1": 0.018490598320263816,
+        "hits_at_3": 0.05282099541615528,
+        "hits_at_5": 0.0763788735000265,
+        "hits_at_10": 0.12054301701272198,
+        "hits_at_20": 0.20253362382224865
+      },
+      "micro_minus_macro_gap": {
+        "mrr": -0.008924057122816728,
+        "hits_at_1": -0.0015572153652954508,
+        "hits_at_3": -0.016907337061112478,
+        "hits_at_5": -0.018135479380190257,
+        "hits_at_10": -0.016151502312312604,
+        "hits_at_20": -0.029850333907845972
+      }
+    },
+    "both_mrr_ci95": [
+      0.0434243655121695,
+      0.05070511747858029
+    ],
+    "protocol": "full ranking over same-type candidate pool, filtered (train+valid+test), realistic rank; tail grouped by head, head grouped by tail",
+    "both_mean_reciprocal_rank": 0.04708951138520698,
+    "both_hits_at_1": 0.016933382954968365,
+    "both_hits_at_3": 0.0359136583550428,
+    "both_hits_at_5": 0.05824339411983625,
+    "both_hits_at_10": 0.10439151470040937,
+    "both_hits_at_20": 0.17268328991440268
+  },
+  "hardneg_auroc": {
+    "num_pos": 2687,
+    "num_neg": 94,
+    "prevalence_floor": 0.9661992089176555,
+    "auprc": 0.9653922445662027,
+    "auprc_ci95": [
+      0.9600527485082234,
+      0.9704933332118638
+    ],
+    "auprc_over_floor": 0.9991648054107218,
+    "auroc": 0.4609427582766512,
+    "auroc_ci95": [
+      0.40064791866274974,
+      0.51810816856575
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.5851063829787234
+  },
+  "stratified_note": "recompute offline from raw dump + *_proximity.tsv (aggregate.py)"
+}

@@ -1,0 +1,36 @@
+MeSH disease-ontology hierarchy edges (is_a)
+
+input_descriptors	5194
+disease_tree_assignments	13464
+distinct_disease_descriptors	5194
+is_a_edges	8076
+distinct_child_diseases	5170
+distinct_parent_diseases	1932
+top_level_skipped (no parent)	24
+orphan_parent_skipped (parent tree not a disease descriptor)	0
+
+edges_per_top_branch
+C01	1074
+C04	888
+C05	431
+C06	336
+C07	205
+C08	234
+C09	73
+C10	993
+C11	251
+C12	430
+C14	453
+C15	304
+C16	479
+C17	309
+C18	191
+C19	81
+C20	103
+C21	2
+C22	119
+C23	622
+C24	16
+C25	102
+C26	218
+F03	162

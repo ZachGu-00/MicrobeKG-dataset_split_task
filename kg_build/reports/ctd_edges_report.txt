@@ -1,0 +1,48 @@
+CTD curated edge extraction report
+
+output_file	D:\Paperwork_code\microbe\kg_build\edges\ctd_edges.tsv
+total_edges	143579
+
+by_component
+gene_disease_input_rows	34255
+chemical_disease_input_rows	109144
+gene_disease_edges_after_dedup	34564
+chemical_disease_edges_after_dedup	109015
+
+relation_counts
+associated_with_disease	101789
+therapeutic_target_for	2249
+treats_disease	39541
+
+head_type_counts
+host_gene	34564
+metabolite	109015
+
+tail_disease_namespace
+MESH	142036
+OMIM	1543
+OTHER	0
+
+skipped_rows
+gene.missing_gene	0
+gene.missing_disease	0
+gene.missing_evidence	0
+chemical.missing_chemical	0
+chemical.missing_disease	0
+chemical.missing_evidence	0
+
+chemical_head_namespace_after_xref
+CHEBI	38908
+HMDB	1848
+KEGG	0
+PUBCHEM	6571
+MESH	61817
+
+notes
+Source files: original_data/CTD_curated_genes_diseases.tsv and CTD_curated_chemicals_diseases.tsv (CTD curated subset).
+Genes use HGNC:<symbol> head IDs to match gutMGene host_gene nodes.
+Chemical head IDs are rewritten via kg_build/mapping/ctd_chemical_xref.tsv (preferred_id priority CHEBI > HMDB > KEGG > PUBCHEM > MESH); rows without a cross-reference fall back to MESH:<ChemicalID>.
+Disease tail IDs follow the gmrepo edge convention: bare MeSH descriptor (e.g. D003872); OMIM identifiers retain the OMIM: prefix.
+Rows with DirectEvidence combining marker/mechanism|therapeutic are emitted as one edge per evidence type.
+Edges are de-duplicated on (head_id, relation, tail_id, ...); PMIDs are merged with pipe separators.
+species_source is set to 'unknown' because CTD curated annotations do not consistently distinguish human vs. model organism context.

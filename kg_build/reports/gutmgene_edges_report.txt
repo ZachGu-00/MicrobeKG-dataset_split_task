@@ -1,0 +1,31 @@
+gutMGene edge extraction report
+
+output_file	D:\Paperwork_code\microbe\kg_build\edges\gutmgene_edges.tsv
+total_edges	4964
+
+by_component
+microbe_metabolite_edges	2813
+microbe_gene_edges	1185
+metabolite_gene_edges	966
+
+relation_counts
+associated_with_metabolite	1458
+downregulates_gene	908
+produces	856
+upregulates_gene	1243
+utilizes	499
+
+species_source_counts
+human	1528
+mouse	3436
+
+fallback_counts
+microbe_metabolite.unmapped_microbe_rows	75
+microbe_metabolite.fallback_metabolite_rows	93
+microbe_metabolite.fallback_substrate_rows	26
+microbe_gene.unmapped_microbe_rows	10
+metabolite_gene.fallback_metabolite_rows	29
+
+notes
+gut_microbe_metabolite_all.tsv lacks an alteration column; causally was mapped to produces and all other rows to associated_with_metabolite.
+Rows were de-duplicated by head_id, relation, tail_id, species_source, confidence, and source; PMIDs were merged with pipe separators.

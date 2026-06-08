@@ -1,0 +1,18 @@
+BugSigDB microbe-disease edges report
+
+input	D:\Paperwork_code\microbe\original_data\BugSigDBE.csv
+raw_signatures	7425
+skip_non_human	1511
+skip_incomplete	0
+resolved_by_name	3348
+resolved_by_efo	344
+skip_unresolved_condition	2222
+skip_unknown_direction	0
+skip_no_taxa	0
+signatures_used	3692
+edges_emitted_pre_dedupe	31931
+final_edges_after_dedupe	20434
+
+relation_counts
+enriched_in	10852
+depleted_in	9582

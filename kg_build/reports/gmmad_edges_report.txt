@@ -1,0 +1,33 @@
+GMMAD edge build report
+
+output_file	D:\Paperwork_code\microbe\kg_build\edges\gmmad_edges.tsv
+total_edges	1053987
+disease_microbe_edges	3836
+disease_metabolite_edges	189731
+microbe_metabolite_edges	860420
+
+disease_microbe_stats
+  rows	3836
+  skipped_no_direction	0
+  skipped_no_taxon	0
+
+disease_metabolite_stats
+  rows	220690
+  kept	189731
+  unclear_skipped	30959
+  no_id	0
+
+microbe_metabolite_stats
+  rows	861245
+  kept	860420
+  skipped_no_id	825
+
+relation_counts
+depleted_in	91706
+enriched_in	101861
+produces	860420
+
+head_tail_type_counts
+metabolite -> disease	189731
+microbe -> disease	3836
+microbe -> metabolite	860420

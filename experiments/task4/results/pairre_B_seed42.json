@@ -1,0 +1,34 @@
+{
+  "task": "task4",
+  "model": "PairRE",
+  "setting": "B",
+  "seed": 42,
+  "model_type": "kge",
+  "num_train": 3679941,
+  "hardneg_auroc": {
+    "num_pos": 6279,
+    "num_neg": 62850,
+    "prevalence_floor": 0.09083018704161784,
+    "auprc": 0.2097502131278711,
+    "auprc_ci95": [
+      0.20554486485685372,
+      0.21454323166699996
+    ],
+    "auprc_over_floor": 2.309256646490938,
+    "auroc": 0.778016537553738,
+    "auroc_ci95": [
+      0.7720989721772124,
+      0.7839763157184554
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.1249164677804296,
+    "scoring_relation": "associated_with_disease",
+    "neg_ratio": 10
+  },
+  "early_stopping": {
+    "stopped_early": false,
+    "best_epoch": 185,
+    "best_metric": 0.6486935019493103
+  },
+  "elapsed_sec": 5210.6
+}

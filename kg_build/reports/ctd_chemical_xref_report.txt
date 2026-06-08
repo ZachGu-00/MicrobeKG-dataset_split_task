@@ -1,0 +1,25 @@
+CTD chemical cross-reference report
+
+output_file	D:\Paperwork_code\microbe\kg_build\mapping\ctd_chemical_xref.tsv
+total_mesh_chemicals	179480
+
+coverage
+with_pubchem_cid	11667
+with_inchikey	9134
+with_cas_rn	56601
+with_chebi	6425
+with_hmdb	4310
+with_kegg	460
+
+preferred_id_namespace_counts
+MESH	167813
+CHEBI	6425
+PUBCHEM	4406
+HMDB	835
+KEGG	1
+
+notes
+Direct fields (PubChemCID, CasRN, InChIKey) are taken straight from CTD_chemicals.tsv.
+CHEBI/HMDB are inferred by joining on PubChem CID against UniChem wholeSourceMapping files (src7src22.txt for ChEBI, src18src22.txt for HMDB); KEGG and the long tail of CHEBI/HMDB are filled in from gutMGene preprocessed tables and the VMH mapping.
+preferred_id priority: CHEBI > HMDB > KEGG > PUBCHEM > MESH (matches step_gutmgene canonicalize_compound_id ordering).
+Apply this mapping in downstream steps to rewrite CTD chemical head_ids onto the same node space as gutMGene/AGORA2 metabolites.

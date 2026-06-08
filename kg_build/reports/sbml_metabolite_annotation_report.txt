@@ -1,0 +1,180 @@
+SBML metabolite annotation mining report
+
+target_abbreviations	167
+resolved	46
+unresolved	121
+sbml_files_scanned	7302
+edges_before_fallback	669781
+edges_after_fallback	593887
+edges_replaced	75894
+
+resolved_mappings
+12dgr180	HMDB:HMDB0031012
+1ohmdz	HMDB:HMDB0061089
+2shchc	CHEBI:39564
+4ahmmp	CHEBI:16892
+4ohmdz	HMDB:HMDB0061090
+7ocholate	CHEBI:16390
+acon_C	CHEBI:16383
+adchac	CHEBI:81276
+atvacid	CHEBI:39548
+butso3	PUBCHEM:3704751
+chols	CHEBI:16822
+chtbs	CHEBI:28681
+cinnm	CHEBI:15669
+core2	CHEBI:18357
+ctbt	KEGG:C11458
+dhcinnm	CHEBI:32356
+dhna	CHEBI:18094
+dhnacoa	CHEBI:52668
+dhpppn	CHEBI:18136
+ethso3	PUBCHEM:11668
+fruur	CHEBI:4126
+gbbtn	CHEBI:16244
+hg2	CHEBI:16793
+ibupgluc	HMDB:HMDB0010343
+icdchol	CHEBI:88102
+ichor	CHEBI:17582
+idon_L	CHEBI:17796
+indlac	CHEBI:17282
+kdo	CHEBI:16064
+lmn2	KEGG:C02048
+mantr	CHEBI:27387
+metala	CHEBI:18357
+metsox_S_L	CHEBI:17016
+mn2	CHEBI:29035
+mso3	CHEBI:27376
+ph2s	PUBCHEM:108196
+q8	CHEBI:61683
+sbzcoa	CHEBI:15509
+sheme	CHEBI:28599
+strch1	CHEBI:28017
+strch2	HMDB:HMDB39707
+sucbz	CHEBI:18325
+sulfac	CHEBI:50519
+tet	CHEBI:15226
+tmacmp	PUBCHEM:162260
+uchol	CHEBI:81240
+
+unresolved
+12dhchol	12-Dehydrocholic acid; 12-Oxodeoxycholic acid; 12oxo-3alpha,7alpha-Dihydroxy-5beta-cholan-24-oic acid
+1hibupglu_S	1-hydroxy S-ibuprofen-glucuronide
+1hmdgluc	1'-OH-Midazolam-Glucuronide
+2dmmq8	2-Demethylmenaquinone 8
+2hatvacid	2-Hydroxy-Atorvastatin-Acid / Ortho-Hydroxy-Atorvastatin-Acid
+2hatvacidgluc	2-Hydroxy-Atorvastatin-Acyl-Glucuronide
+2hatvlac	2-Hydroxy-Atorvastatin-Lactone / Ortho-Hydroxy-Atorvastatin-Lactone
+2hatvlacgluc	2-Hydroxy-Atorvastatin-Lactone-Glucuronide
+2hibupglu_S	2-hydroxy S-ibuprofen-glucuronide
+3dhcdchol	3-Dehydrochenodeoxychollyc acid; 7oxo-3alpha-hydroxy-5beta-cholan-24-oic acid
+3hibupglu_S	3-hydroxy S-ibuprofen-glucuronide
+3meacmp	3-Methoxy-Acetaminophen
+4hmdgluc	4-OH-Midazolam-Glucuronide
+5ohfvs	5-Hydroxy-Fluvastatin
+5ohfvsglu	5-Hydroxy-Fluvastatin-Glucuronide
+6bhglz	6-Beta-OH-Gliclazide
+6bhglzglc	6-Beta-OH-Gliclazide-Glucuronide
+6ohfvs	6-Hydroxy-Fluvastatin
+6ohfvsglu	6-Hydroxy-Fluvastatin-Glucuronide
+7bhglz	7-Beta-OH-Gliclazide
+7bhglzglc	7-Beta-OH-Gliclazide-Glucuronide
+7dhcdchol	7-Dehydrochenodeoxycholic acid; 7oxo-3alpha-hydroxy-5beta-cholan-24-oic acid
+Cit_Mg	Citrate-Mg
+Rtotal2	R Total 2 Position
+Ser_Thr	Protein-Linked Serine Or Threonine Residue (O-Glycosylation Site)
+Tyr_ggn	Tyr-194 Of Apo-Glycogenin Protein (Primer For Glycogen Synthesis)
+acgalglcur	Dimer GalNAc-GlcA
+acgalidour	Dimer GalNAc-IdoA
+acgalidour2s	Dimer GalNAc-IdoA2S
+alaasp	L-alanyl-L-aspartate
+alagln	L-alanyl-L-glutamine
+alaglu	L-alanyl-L-glutamate
+alagly	L-alanylglycine
+alaleu	L-alanyl-L-leucine
+alathr	L-alanyl-L-threonine
+am1ccs	AM1c (Cyclosporine)
+am1cglc	AM1c-Glucuronide (Cyclosporine)
+amylose300	Amylose (n=300 repeat units, alpha-1,4-glc)
+arabttr	Arabinotriose
+atvacylgluc	Atorvastatin-Acyl-Glucuronide / G2
+atvethgluc	Atorvastatin-Ether-Glucuronide / G1
+atvlacgluc	Atorvastatin-Lactone-Ether-Glucuronide / G3
+bglc	Beta-Glucans
+biomass	Biomass
+caribupglu_S	S-carboxy ibuprofen glucuronide
+core5	Core 5
+core6	Core 6
+core7	Core 7
+core8	Core 8
+cro4	Chromate
+crvsm1	Cerivastatin-M1
+crvsm23	Cerivastatin-M23
+cspg_a	Chondroitin Sulfate A (GalNac4S-Glca) Proteoglycan
+cspg_a_degr	Dimer GalNAc4S-GlcA
+cspg_ab_rest	Not degradable product CSABCPASE_A/B, Gal4S-Gal-Xyl-L-Ser-protein
+cspg_b	Chondroitin Sulfate B / Dermatan Sulfate (Idoa2S-GalNac4S) Proteoglycan
+cspg_b_degr	Dimer GalNAc4S-IdoA2S
+cspg_c	Chondroitin Sulfate C (GalNac6S-Glca) Proteoglycan
+cspg_c_degr	Dimer GalNAc6S-GlcA
+cspg_c_rest	Not degradable product CSABCPASE_C, Gal6S-Gal-Xyl-L-Ser-protein
+cvm1gluc	Cerivastatin-M1-Glucuronide
+cvm23gluc	Cerivastatin-M23-Glucuronide
+f1a	F1Alpha
+fvsgluc	Fluvstatin-Glucuronide
+fvstet	Des-Isopropyl-Dihydro-Fluvastatin-Tetranor
+fvstetglu	Des-Isopropyl-Dihydro-Lluvastatin-Tetranor-Glucuronide
+galct_D	D-Galactarate
+gam26s	Glucosamine 2,6-sulfate
+glc3meacp	Glucuronide-Conjugate of 3-Methoxy-Acetaminophen
+glycys	Gly-Cys
+glygn2	Glycogen, Structure 2 (Glycogenin-1,6-{7[1,4-Glc], 4[1,4-Glc]})
+glygn4	Glycogen, Structure 4 (Glycogenin-1,6-{2[1,4-Glc], [1,4-Glc]})
+glygn5	Glycogen, Structure 5 (Glycogenin-2[1,4-Glc])
+gncore1	GlcNac-Alpha-1,4-Core 1
+gncore2	GlcNac-Alpha-1,4-Core 2
+gtacmp	Glucuronide-Thiomethyl-Acetaminophen Conjugate
+ha_deg1	Hyaluronan Degradation Product 1
+hexs	Hexanesulfonate
+homogal	Homogalacturonan, 100 galacturonate residues. Assumed to be methylated/ acetylated in every 5th residue. Citrus HG consists of 7... <Preview truncated at 128 characters>
+hspg	Heparan Sulfate Proteoglycan
+hspg_degr_1	Product 1 HEPARL1_e, IdoA-GlcN2,6diS-GlcA-GlcN2,3,6triS
+hspg_degr_10	Product AS3TASE_HS2, GlcN2S-IdoA-GlcNAc-GlcA-Gal-Gal-Xyl-L-Ser (protein)
+hspg_degr_11	Product GAM2STASE_HS3, GlcN-IdoA-GlcNAc-GlcA-Gal-Gal-Xyl-L-Ser (protein)
+hspg_degr_12	Product GLCNACASE_HS2, GlcA-GlcNAc-IdoA-Gal-Gal-Xyl-L-Ser (protein)
+hspg_degr_13	Product GLCAASE_HS, GlcNAc-IdoA-Gal-Gal-Xyl-L-Ser (protein)
+hspg_degr_14	Product GLCNACASE_HS3, IdoA-Gal-Gal-Xyl-L-Ser (protein)
+hspg_degr_15	Product IDOURASE_HS3, Gal-Gal-Xyl-L-Ser (protein)
+hspg_degr_2	Product 2 HEPARL1_e, IdoA2S-GlcN2,6diS-IdoA2S-GlcNAc3S-GlcA-Gal-Gal-Xyl-L-Ser (protein)
+hspg_degr_3	Product IDOURASE_HS1, GlcN2,6diS-GlcA-GlcN2,3,6triS
+hspg_degr_4	Product AS6TASE_HS1, GlcN2S-GlcA-GlcN2,3diS
+hspg_degr_5	Product AS3TASE_HS1, GlcN2S-GlcA-GlcN2S
+hspg_degr_6	Product GAM2STASE_HS2, GlcN-GlcA-GlcN
+hspg_degr_7	Product IS2TASE_HS1, IdoA-GlcN2,6diS-IdoA-GlcNAc3S-GlcA-Gal-Gal-Xyl-L-Ser (protein)
+hspg_degr_8	Product IDOURASE_HS2, GlcN2,6diS-IdoA-GlcNAc3S-GlcA-Gal-Gal-Xyl-L-Ser (protein)
+hspg_degr_9	Product AS6TASE_HS2, GlcN2S-IdoA-GlcNAc3S-GlcA-Gal-Gal-Xyl-L-Ser (protein)
+hspg_rest	Undegradable product GALASE_HS, Xyl-L-Ser (protein)
+kesto	Kestose (2 fru, 1 glc inulin-type fructo-oligosaccharide)
+kestopt	Kestopentaose (4 fru, 1 glc inulin-type fructo-oligosaccharide)
+kestottr	Kestotetraose (3 fru, 1 glc inulin-type fructo-oligosaccharide)
+levantttr	Levantetraose
+lmn30	Laminarin (n=30 repeat units, beta -1,3 glc)
+lst4exp	Losartan-E3174/ Losartan-M6
+lstn1gluc	Losartan-N1-Glucuronide
+lstnm4	Losartan-M4 (Glucuronide Derivative)
+lstnm7	Losartan-N2-Glucuronide / Losartan-M7
+lyx_L	L-lyxose
+mannan	Alpha-mannan, yeast, has a MW of about 25000 (PMID: 5461381), equals ~ 140 mannose units. ID according to iMM904
+mdzglc	Midazolam-Glucuronide
+mops	3-(n-Morpholino)Propanesulfonic Acid
+pecticgal	Pectic galactan (potato), gal: arab-L: rmn: galur = 78: 9: 4: 9 (www.megazyme.com). Assumed to consist of 100 sugars per macromo... <Preview truncated at 128 characters>
+ptvstgluc	Pitavastatin-Glucuronide
+pullulan1200	Pullulan (n=1200 repeat units, alpha-1,4 and alph-1,6 bounds)
+pvsgluc	Pravastatin Glucuronide
+r34hpp	(R)-3-(4-Hydroxyphenyl)propionate
+rsvgluc	Rosuvastatin-Glucuronide
+simvgluc	Simvastatin-Acyl-Glucuronide
+smvacid	Simvastatin Dihydroxy (Acid Form)
+starch1200	Starch n=1200 repeat units (300 repeat units amylose, 900 repeat units amylopectin, corresponds to potatoe starch)
+thsacmp	Thiomethyl-Sulphoxide-Conjugate-Acetaminophen
+tsacmgluc	Thiomethyl-Sulphoxide-Acetaminophen-Glucuronide
+xyluglc	Xyluglucan, PMID:16663672, Fry SC 1989. 600 glc_D, 360 xyl_D, 108 gal, 60 fuc_L, 6 arab_L

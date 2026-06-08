@@ -1,0 +1,35 @@
+{
+  "task": "task2",
+  "model": "ConvE",
+  "setting": "C50",
+  "seed": 42,
+  "model_type": "kge",
+  "num_train": 1484325,
+  "needs_surrogate": false,
+  "auroc_eval": {
+    "num_pos": 2655,
+    "num_neg": 102,
+    "prevalence_floor": 0.9630032644178455,
+    "auprc": 0.951589668687602,
+    "auprc_ci95": [
+      0.9434842634737632,
+      0.9602217734378642
+    ],
+    "auprc_over_floor": 0.9881479158462217,
+    "auroc": 0.4498799896606477,
+    "auroc_ci95": [
+      0.392807226468742,
+      0.5084595288209446
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.5,
+    "scoring_relation": "utilizes"
+  },
+  "stratified_note": "recompute capacity-layer strata offline from raw + test_microbe_capacity_layer.tsv",
+  "early_stopping": {
+    "stopped_early": true,
+    "best_epoch": 5,
+    "best_metric": 0.02654346264898777
+  },
+  "elapsed_sec": 12849.1
+}

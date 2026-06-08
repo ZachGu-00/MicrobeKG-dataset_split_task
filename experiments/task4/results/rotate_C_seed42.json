@@ -1,0 +1,137 @@
+{
+  "task": "task4",
+  "model": "RotatE",
+  "setting": "C",
+  "seed": 42,
+  "model_type": "kge",
+  "num_train": 3679906,
+  "ranking": {
+    "tail": {
+      "micro": {
+        "mrr": 0.0349169148833932,
+        "mean_rank": 365.3634797588286,
+        "n": 1161,
+        "hits_at_1": 0.009474590869939707,
+        "hits_at_3": 0.025839793281653745,
+        "hits_at_5": 0.047372954349698536,
+        "hits_at_10": 0.07838070628768304,
+        "hits_at_20": 0.11369509043927649
+      },
+      "macro": {
+        "mrr": 0.03098261955408537,
+        "n_groups": 117,
+        "hits_at_1": 0.005443858829362679,
+        "hits_at_3": 0.027000455532063098,
+        "hits_at_5": 0.039832534599260415,
+        "hits_at_10": 0.07325974637929306,
+        "hits_at_20": 0.10295590388148203
+      },
+      "micro_minus_macro_gap": {
+        "mrr": 0.003934295329307828,
+        "hits_at_1": 0.004030732040577027,
+        "hits_at_3": -0.0011606622504093528,
+        "hits_at_5": 0.007540419750438121,
+        "hits_at_10": 0.005120959908389983,
+        "hits_at_20": 0.010739186557794461
+      }
+    },
+    "head": {
+      "micro": {
+        "mrr": 0.005751560998799894,
+        "mean_rank": 296.99397071490097,
+        "n": 1161,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.0,
+        "hits_at_10": 0.0008613264427217916,
+        "hits_at_20": 0.00516795865633075
+      },
+      "macro": {
+        "mrr": 0.005733814869209207,
+        "n_groups": 608,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.0,
+        "hits_at_10": 0.001644736842105263,
+        "hits_at_20": 0.005893640350877192
+      },
+      "micro_minus_macro_gap": {
+        "mrr": 1.7746129590687047e-05,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.0,
+        "hits_at_10": -0.0007834103993834715,
+        "hits_at_20": -0.0007256816945464427
+      }
+    },
+    "both": {
+      "micro": {
+        "mrr": 0.020334237941096546,
+        "mean_rank": 331.17872523686475,
+        "n": 2322,
+        "hits_at_1": 0.004737295434969853,
+        "hits_at_3": 0.012919896640826873,
+        "hits_at_5": 0.023686477174849268,
+        "hits_at_10": 0.03962101636520241,
+        "hits_at_20": 0.059431524547803614
+      },
+      "macro": {
+        "mrr": 0.009808449556285775,
+        "n_groups": 725,
+        "hits_at_1": 0.0008785261834971496,
+        "hits_at_3": 0.004357314892760526,
+        "hits_at_5": 0.0064281469629151305,
+        "hits_at_10": 0.013201917691554878,
+        "hits_at_20": 0.02155748149995411
+      },
+      "micro_minus_macro_gap": {
+        "mrr": 0.010525788384810771,
+        "hits_at_1": 0.003858769251472704,
+        "hits_at_3": 0.008562581748066346,
+        "hits_at_5": 0.01725833021193414,
+        "hits_at_10": 0.026419098673647536,
+        "hits_at_20": 0.037874043047849505
+      }
+    },
+    "both_mrr_ci95": [
+      0.016985726092717132,
+      0.02394174267682325
+    ],
+    "protocol": "full ranking over same-type candidate pool, filtered (train+valid+test), realistic rank; tail grouped by head, head grouped by tail",
+    "both_mean_reciprocal_rank": 0.020334237941096546,
+    "both_hits_at_1": 0.004737295434969853,
+    "both_hits_at_3": 0.012919896640826873,
+    "both_hits_at_5": 0.023686477174849268,
+    "both_hits_at_10": 0.03962101636520241,
+    "both_hits_at_20": 0.059431524547803614
+  },
+  "num_test_eval": 1161,
+  "num_test_oov": 2,
+  "hardneg_auroc": {
+    "num_pos": 1161,
+    "num_neg": 11630,
+    "prevalence_floor": 0.09076694550856071,
+    "auprc": 0.26016957953465825,
+    "auprc_ci95": [
+      0.2421628321339182,
+      0.2828303651238904
+    ],
+    "auprc_over_floor": 2.866347193650141,
+    "auroc": 0.7204456160854008,
+    "auroc_ci95": [
+      0.7022410234676276,
+      0.7391892135341565
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.1297506448839209,
+    "scoring_relation": "treats_disease",
+    "neg_ratio": 10
+  },
+  "chemical_class_stratification": "TODO (needs ChEBI/ClassyFire, see split dir)",
+  "early_stopping": {
+    "stopped_early": true,
+    "best_epoch": 10,
+    "best_metric": 0.01921946555376053
+  },
+  "elapsed_sec": 1255.8
+}

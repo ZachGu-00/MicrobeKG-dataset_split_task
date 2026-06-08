@@ -1,0 +1,13 @@
+HMDB metabolite edges report
+
+input	D:\Paperwork_code\microbe\original_data\hmdb_metabolites\hmdb_metabolites.xml
+metabolites_processed	217920
+disease_edges_emitted	26079
+disease_unresolved (no OMIM, name miss)	1591
+protein_edges_emitted	858077
+protein_no_gene_name (skipped)	5682
+final_edges_after_dedupe	876223
+
+relation_counts
+associated_with_metabolite	850152
+associated_with_disease	26071

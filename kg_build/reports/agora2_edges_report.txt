@@ -1,0 +1,28 @@
+AGORA2 edge extraction report
+
+output_edges	D:\Paperwork_code\microbe\kg_build\edges\agora2_edges.tsv
+output_microbe_mapping	D:\Paperwork_code\microbe\kg_build\mapping\vmh_to_ncbi_taxon.tsv
+output_metabolite_mapping	D:\Paperwork_code\microbe\kg_build\mapping\vmh_metabolite_to_hmdb.tsv
+manifest_models	7302
+vmh_microbe_api_rows	818
+vmh_microbe_api_mapped_taxon	818
+vmh_metabolite_api_rows	5607
+vmh_metabolite_api_mapped_external_id	2543
+xml_files_recovered_with_lxml	1400
+total_edges	3263441
+
+relation_counts
+can_utilize	1631717
+
+fallback_counts
+fallback_microbe_head_id_rows	2970940
+fallback_metabolite_tail_id_rows	1339569
+
+notes
+Exchange reactions were detected from reaction ids starting with R_EX_.
+Flux bounds were read from SBML FBC lowerFluxBound and upperFluxBound references.
+In sampled AGORA2 models, exchange reactions were reversible (-1000, 1000), so upper_bound > 0 was treated as potential secretion rather than observed flux.
+When VMH mapping was unavailable, microbe ids fell back to VMH:{model_id} and metabolite ids to VMH_MET:{abbreviation}.
+
+semantic_fix
+produces edges removed: all AGORA2 exchange reactions are reversible (lb=-1000 ub=1000); produces only semantically valid for lb>=0. See step_agora2.py.

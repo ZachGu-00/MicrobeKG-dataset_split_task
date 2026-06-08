@@ -1,0 +1,135 @@
+{
+  "task": "task1",
+  "model": "RotatE",
+  "setting": "cold_disease",
+  "seed": 42,
+  "model_type": "kge",
+  "elapsed_sec": 173.0,
+  "num_train": 129139,
+  "num_test_eval": 1928,
+  "num_test_oov": 48,
+  "early_stopping": {
+    "stopped_early": true,
+    "best_epoch": 55,
+    "best_metric": 0.011024749837815762
+  },
+  "ranking": {
+    "tail": {
+      "micro": {
+        "mrr": 0.002807504373504028,
+        "mean_rank": 377.65871369294604,
+        "n": 1928,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.0,
+        "hits_at_10": 0.0,
+        "hits_at_20": 0.0005186721991701245
+      },
+      "macro": {
+        "mrr": 0.0029345179996099337,
+        "n_groups": 1108,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.0,
+        "hits_at_10": 0.0,
+        "hits_at_20": 0.0009025270758122744
+      },
+      "micro_minus_macro_gap": {
+        "mrr": -0.00012701362610590544,
+        "hits_at_1": 0.0,
+        "hits_at_3": 0.0,
+        "hits_at_5": 0.0,
+        "hits_at_10": 0.0,
+        "hits_at_20": -0.0003838548766421499
+      }
+    },
+    "head": {
+      "micro": {
+        "mrr": 0.01692889969950537,
+        "mean_rank": 1673.6441908713693,
+        "n": 1928,
+        "hits_at_1": 0.0031120331950207467,
+        "hits_at_3": 0.009854771784232365,
+        "hits_at_5": 0.022302904564315353,
+        "hits_at_10": 0.038381742738589214,
+        "hits_at_20": 0.061721991701244816
+      },
+      "macro": {
+        "mrr": 0.044109360869951014,
+        "n_groups": 20,
+        "hits_at_1": 0.031254180810942764,
+        "hits_at_3": 0.03519302855051214,
+        "hits_at_5": 0.03969900751585466,
+        "hits_at_10": 0.05883534433928396,
+        "hits_at_20": 0.08151751051063647
+      },
+      "micro_minus_macro_gap": {
+        "mrr": -0.027180461170445643,
+        "hits_at_1": -0.028142147615922018,
+        "hits_at_3": -0.025338256766279772,
+        "hits_at_5": -0.017396102951539306,
+        "hits_at_10": -0.020453601600694746,
+        "hits_at_20": -0.01979551880939165
+      }
+    },
+    "both": {
+      "micro": {
+        "mrr": 0.0098682020365047,
+        "mean_rank": 1025.6514522821576,
+        "n": 3856,
+        "hits_at_1": 0.0015560165975103733,
+        "hits_at_3": 0.004927385892116182,
+        "hits_at_5": 0.011151452282157677,
+        "hits_at_10": 0.019190871369294607,
+        "hits_at_20": 0.03112033195020747
+      },
+      "macro": {
+        "mrr": 0.0036645684051124353,
+        "n_groups": 1128,
+        "hits_at_1": 0.0005541521420379923,
+        "hits_at_3": 0.0006239898679168821,
+        "hits_at_5": 0.0007038831119832386,
+        "hits_at_10": 0.0010431798641717016,
+        "hits_at_20": 0.002331870753734689
+      },
+      "micro_minus_macro_gap": {
+        "mrr": 0.006203633631392265,
+        "hits_at_1": 0.001001864455472381,
+        "hits_at_3": 0.004303396024199301,
+        "hits_at_5": 0.010447569170174437,
+        "hits_at_10": 0.018147691505122906,
+        "hits_at_20": 0.02878846119647278
+      }
+    },
+    "both_mrr_ci95": [
+      0.008360344030217622,
+      0.011659685204647382
+    ],
+    "protocol": "full ranking over same-type candidate pool, filtered (train+valid+test), realistic rank; tail grouped by head, head grouped by tail",
+    "both_mean_reciprocal_rank": 0.0098682020365047,
+    "both_hits_at_1": 0.0015560165975103733,
+    "both_hits_at_3": 0.004927385892116182,
+    "both_hits_at_5": 0.011151452282157677,
+    "both_hits_at_10": 0.019190871369294607,
+    "both_hits_at_20": 0.03112033195020747
+  },
+  "hardneg_auroc": {
+    "num_pos": 1928,
+    "num_neg": 78,
+    "prevalence_floor": 0.9611166500498505,
+    "auprc": 0.9510855078638811,
+    "auprc_ci95": [
+      0.942845126503399,
+      0.9585822443244663
+    ],
+    "auprc_over_floor": 0.9895630335969634,
+    "auroc": 0.3811176720927758,
+    "auroc_ci95": [
+      0.3266976540057453,
+      0.4413446576763485
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.6794871794871795
+  },
+  "stratified_note": "recompute offline from raw dump + *_proximity.tsv (aggregate.py)"
+}

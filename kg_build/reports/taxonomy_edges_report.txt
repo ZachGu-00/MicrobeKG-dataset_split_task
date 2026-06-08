@@ -1,0 +1,12 @@
+NCBI Taxonomy hierarchy edges report
+
+total_ids_queried	14402
+total_hierarchy_edges	58297
+
+relation_counts
+belongs_to_class	10632
+belongs_to_family	10504
+belongs_to_genus	10196
+belongs_to_order	10634
+belongs_to_phylum	10725
+is_strain_of	5606

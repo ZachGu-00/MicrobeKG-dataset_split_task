@@ -1,0 +1,82 @@
+总边数: 17250
+过滤参数: FDR<0.05, |log2FC|>=0.5, min_samples=10
+
+disease_id	phenotype	n_case	n_ctrl	n_sig_edges
+D000067877	Autism Spectrum Disorder	case=123	ctrl=12205	sig=374
+D000086382	COVID-19	case=1812	ctrl=12205	sig=595
+D000437	Alcoholism	case=67	ctrl=12205	sig=182
+D000690	Amyotrophic Lateral Sclerosis	case=37	ctrl=12205	sig=191
+D000855	Anorexia	case=50	ctrl=12205	sig=229
+D001172	Arthritis, Rheumatoid	case=121	ctrl=12205	sig=220
+D001249	Asthma	case=36	ctrl=12205	sig=89
+D001656	Biliary Atresia	case=35	ctrl=12205	sig=289
+D002169	Campylobacter Infections	case=26	ctrl=12205	sig=91
+D002446	Celiac Disease	case=39	ctrl=12205	sig=75
+D002583	Uterine Cervical Neoplasms	case=41	ctrl=12205	sig=219
+D002769	Cholelithiasis	case=42	ctrl=12205	sig=168
+D003015	Clostridium Infections	case=120	ctrl=12205	sig=427
+D003093	Colitis, Ulcerative	case=857	ctrl=12205	sig=437
+D003123	Hereditary Nonpolyposis Colorectal Cancer	case=18	ctrl=12205	sig=300
+D003248	Constipation	case=10	ctrl=12205	sig=41
+D003327	Coronary Disease	case=18	ctrl=12205	sig=122
+D003397	Craniopharyngioma	case=56	ctrl=12205	sig=85
+D003424	Crohn Disease	case=1423	ctrl=12205	sig=584
+D003550	Cystic Fibrosis	case=488	ctrl=12205	sig=674
+D003865	Depressive Disorder, Major	case=91	ctrl=12205	sig=151
+D003876	Dermatitis, Atopic	case=226	ctrl=12205	sig=430
+D003922	Diabetes Mellitus, Type 1	case=326	ctrl=12205	sig=324
+D003924	Diabetes Mellitus, Type 2	case=84	ctrl=12205	sig=193
+D003967	Diarrhea	case=75	ctrl=12205	sig=261
+D004392	Dwarfism	case=30	ctrl=12205	sig=103
+D004485	Eczema	case=14	ctrl=12205	sig=141
+D004927	Escherichia coli Infections	case=48	ctrl=12205	sig=393
+D005356	Fibromyalgia	case=94	ctrl=12205	sig=187
+D005764	Gastroesophageal Reflux	case=10	ctrl=12205	sig=38
+D006392	Hemangioma, Cavernous	case=127	ctrl=12205	sig=167
+D006501	Hepatic Encephalopathy	case=12	ctrl=12205	sig=150
+D006528	Carcinoma, Hepatocellular	case=76	ctrl=12205	sig=174
+D006973	Hypertension	case=110	ctrl=12205	sig=269
+D007234	Infant, Premature	case=35	ctrl=12205	sig=186
+D007417	Intestinal Polyps	case=30	ctrl=12205	sig=157
+D007669	Kidney Calculi	case=16	ctrl=12205	sig=19
+D007676	Kidney Failure, Chronic	case=347	ctrl=12205	sig=325
+D008180	Lupus Erythematosus, Systemic	case=15	ctrl=12205	sig=77
+D008268	Macular Degeneration	case=12	ctrl=12205	sig=37
+D008288	Malaria	case=69	ctrl=12205	sig=465
+D009103	Multiple Sclerosis	case=113	ctrl=12205	sig=161
+D009157	Myasthenia Gravis	case=52	ctrl=12205	sig=77
+D009447	Neuroblastoma	case=95	ctrl=12205	sig=242
+D009765	Obesity	case=66	ctrl=12205	sig=251
+D010024	Osteoporosis	case=59	ctrl=12205	sig=152
+D010190	Pancreatic Neoplasms	case=40	ctrl=12205	sig=54
+D010300	Parkinson Disease	case=549	ctrl=12205	sig=349
+D010580	Peutz-Jeghers Syndrome	case=61	ctrl=12205	sig=188
+D010911	Pituitary Neoplasms	case=44	ctrl=12205	sig=82
+D011085	Polycystic Ovary Syndrome	case=50	ctrl=12205	sig=104
+D011471	Prostatic Neoplasms	case=130	ctrl=12205	sig=288
+D011565	Psoriasis	case=103	ctrl=12205	sig=300
+D011618	Psychotic Disorders	case=26	ctrl=12205	sig=63
+D012559	Schizophrenia	case=219	ctrl=12205	sig=269
+D013167	Spondylitis, Ankylosing	case=97	ctrl=12205	sig=164
+D014435	Typhoid Fever	case=18	ctrl=12205	sig=64
+D015179	Colorectal Neoplasms	case=793	ctrl=12205	sig=685
+D015212	Inflammatory Bowel Diseases	case=260	ctrl=12205	sig=320
+D015356	Retinal Artery Occlusion	case=29	ctrl=12205	sig=143
+D015470	Leukemia, Myeloid, Acute	case=30	ctrl=12205	sig=255
+D015658	HIV Infections	case=74	ctrl=12205	sig=388
+D015663	Osteoporosis, Postmenopausal	case=399	ctrl=12205	sig=330
+D015673	Fatigue Syndrome, Chronic	case=302	ctrl=12205	sig=328
+D016269	Milk Hypersensitivity	case=22	ctrl=12205	sig=148
+D016403	Lymphoma, Large B-Cell, Diffuse	case=108	ctrl=12205	sig=198
+D016553	Purpura, Thrombocytopenic, Idiopathic	case=16	ctrl=12205	sig=56
+D016640	Diabetes, Gestational	case=196	ctrl=12205	sig=230
+D017098	IgA Deficiency	case=56	ctrl=12205	sig=188
+D017250	Caliciviridae Infections	case=33	ctrl=12205	sig=44
+D018281	Cholangiocarcinoma	case=19	ctrl=12205	sig=232
+D018777	Multiple Chemical Sensitivity	case=30	ctrl=12205	sig=71
+D019578	Multiple System Atrophy	case=15	ctrl=12205	sig=139
+D043183	Irritable Bowel Syndrome	case=372	ctrl=12205	sig=397
+D047748	Pituitary ACTH Hypersecretion	case=27	ctrl=12205	sig=92
+D051436	Renal Insufficiency, Chronic	case=47	ctrl=12205	sig=221
+D056833	Central Serous Chorioretinopathy	case=19	ctrl=12205	sig=36
+D065626	Non-alcoholic fatty liver disease	case=493	ctrl=12205	sig=302
