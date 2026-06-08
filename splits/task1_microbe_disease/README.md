@@ -20,17 +20,18 @@ directional edges (130× HMDAD / 8× Disbiome).
 
 ## Three paradigms
 
-### (A) Transductive — 5 seeds [42, 123, 456, 789, 2024]
-Split unit = unique qualifier-tuple `(head_id, tail_id, body_site_uberon,
-evidence_type)`. Ratio 80/10/10. Hard-neg pool split 80/10/10 separately;
-test-side hard-neg goes to `test_hardneg.tsv`.
+### (A) Transductive — seed 42
+Split unit = unique `(head_id, tail_id)` pair. All body-site, evidence-type,
+positive, and inconsistent-association records for the same pair remain
+co-located. Ratio 80/10/10; test-side hard negatives go to
+`test_hardneg.tsv`.
 
-### (B) Inductive Cold-Microbe — 3 seeds [42, 123, 456]
+### (B) Inductive Cold-Microbe — seed 42
 Random 10 % of microbes with positive edges held out. Their positive edges
 → 50/50 valid/test. Taxonomy parents (genus/family/...) of held microbes
 remain in train, so the model has structural signal to generalize.
 
-### (C) Inductive Cold-Disease — 3 seeds [42, 123, 456]
+### (C) Inductive Cold-Disease — seed 42
 Random 10 % of D-coded MeSH diseases that have a MeSH `is_a` parent held
 out. Parents stay in train.
 

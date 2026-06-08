@@ -43,8 +43,8 @@ AUX_RELS = [
     "belongs_to_class", "belongs_to_phylum",
     "is_a", "co_occurs_with",
 ]
-TRANSDUCTIVE_SEEDS = [42, 123, 456, 789, 2024]
-INDUCTIVE_SEEDS = [42, 123, 456]
+TRANSDUCTIVE_SEEDS = [42]
+INDUCTIVE_SEEDS = [42]
 
 
 def filter_scope(edges):
@@ -159,13 +159,13 @@ def main():
     print(f"  hard-neg (inconsistent_association): {len(neg):,}")
     print(f"  aux (taxonomy+is_a+co_occurs): {len(aux):,}; bridges (control): {len(bridges):,}")
 
-    print("\n>>> 1A transductive (5 seeds, pair-split)")
+    print("\n>>> 1A transductive (seed 42, pair-split)")
     make_transductive(pos, neg, aux, bridges, with_bridges=False)
     print("\n>>> 1A control: transductive_with_bridges (seed 42)")
     make_transductive(pos, neg, aux, bridges, with_bridges=True)
-    print("\n>>> 1B cold-microbe (3 seeds + tax proximity)")
+    print("\n>>> 1B cold-microbe (seed 42 + tax proximity)")
     make_cold_microbe(pos, neg, aux, lineage)
-    print("\n>>> 1C cold-disease (3 seeds + ontology proximity)")
+    print("\n>>> 1C cold-disease (seed 42 + ontology proximity)")
     make_cold_disease(pos, neg, aux, is_a_edges)
     print("\nTask 1 splits written to", TASK1_DIR)
 

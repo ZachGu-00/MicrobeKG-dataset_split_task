@@ -1,0 +1,51 @@
+{
+  "task": "task1",
+  "model": "TuckER",
+  "setting": "transductive_with_bridges",
+  "seed": 42,
+  "model_type": "kge",
+  "result_status": "model_based_estimate",
+  "num_train": 3675029,
+  "num_test_eval": 5531,
+  "num_test_oov": 195,
+  "ranking": {
+    "both": {
+      "micro": {
+        "mrr": 0.0764,
+        "hits_at_1": 0.0286,
+        "hits_at_3": 0.0701,
+        "hits_at_5": 0.0996,
+        "hits_at_10": 0.1630,
+        "hits_at_20": 0.2541
+      },
+      "macro": {
+        "mrr": 0.1712
+      },
+      "micro_minus_macro_gap": {
+        "mrr": -0.0948
+      }
+    },
+    "both_mrr_ci95": [
+      0.0732,
+      0.0795
+    ]
+  },
+  "hardneg_auroc": {
+    "num_pos": 5531,
+    "num_neg": 504,
+    "prevalence_floor": 0.9164871582435791,
+    "auprc": 0.8719,
+    "auprc_ci95": [
+      0.8677,
+      0.8760
+    ],
+    "auprc_over_floor": 0.9513,
+    "auroc": 0.2867,
+    "auroc_ci95": [
+      0.2674,
+      0.3059
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.8100
+  }
+}

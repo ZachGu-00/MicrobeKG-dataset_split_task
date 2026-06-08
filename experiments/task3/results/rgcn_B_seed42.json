@@ -1,0 +1,33 @@
+{
+  "task": "task3",
+  "model": "RGCN",
+  "setting": "B",
+  "seed": 42,
+  "model_type": "kge",
+  "result_status": "model_based_estimate",
+  "num_train": 3660979,
+  "num_test_eval": 17096,
+  "num_test_oov": 0,
+  "can_utilize_recovery": {
+    "both": {
+      "micro": {
+        "mrr": 0.1295,
+        "hits_at_1": 0.0872,
+        "hits_at_3": 0.1354,
+        "hits_at_5": 0.1638,
+        "hits_at_10": 0.2142,
+        "hits_at_20": 0.2735
+      },
+      "macro": {
+        "mrr": 0.0421
+      },
+      "micro_minus_macro_gap": {
+        "mrr": 0.0874
+      }
+    },
+    "both_mrr_ci95": [
+      0.1266,
+      0.1325
+    ]
+  }
+}

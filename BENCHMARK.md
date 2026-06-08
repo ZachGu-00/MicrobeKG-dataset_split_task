@@ -16,7 +16,7 @@ transfer, and mechanism**, not closure memorization. Baseline numbers are in
   proximity** (`genus / family / none`) — the `none` layer is the honest signal.
 - **Leakage audited**: closure inflation and taxonomic copying are measured, not
   assumed away.
-- **Fixed seeds**; Task 1 transductive ships 5 seeds, others seed 42.
+- **Single fixed seed (42)** across all released benchmark cells.
 
 | Task | Target | Settings | Core question |
 |---|---|---|---|
@@ -38,11 +38,11 @@ microbe–metabolite / metabolite–disease / host-gene / intervention /
 `associated_with_disease` is excluded because in this KG it is host-gene→disease or
 metabolite→disease, never microbe→disease.
 
-| Paradigm | Rule | Seeds |
+| Paradigm | Rule | Seed |
 |---|---|--:|
-| **Transductive** | Split unit = unique `(head_id, tail_id, body_site_uberon, evidence_type)`, 80/10/10; hard-neg split separately → `test_hardneg.tsv` | 5 |
-| **Cold-microbe** | Hold out 10% of microbes with positives; their edges → 50/50 valid/test. Taxonomy parents stay in train (structural signal) | 3 |
-| **Cold-disease** | Hold out 10% of D-coded MeSH diseases that have an `is_a` parent; parents stay in train | 3 |
+| **Transductive** | Split unit = unique `(head_id, tail_id)` pair, 80/10/10; all qualifiers and hard negatives for a pair remain co-located → `test_hardneg.tsv` | 42 |
+| **Cold-microbe** | Hold out 10% of microbes with positives; their edges → 50/50 valid/test. Taxonomy parents stay in train (structural signal) | 42 |
+| **Cold-disease** | Hold out 10% of D-coded MeSH diseases that have an `is_a` parent; parents stay in train | 42 |
 
 **Reporting:** MRR / Hits@{1,3,5,10,20} (micro + macro), stratified by evidence
 type and body-site; hard-negative **AUROC** on `test_hardneg.tsv` (positives vs
@@ -133,4 +133,4 @@ discrimination. Sample at a stated ratio and report the true imbalance.
    `n+ : n−`. See [RESULTS.md](RESULTS.md) for why the metric flips by set.
 3. **Stratified** — by evidence type / body-site (Task 1) and by **tax-proximity
    `none` layer** (Tasks 2/3).
-4. **Seed** — report seed; Task 1 transductive averages 5 seeds.
+4. **Seed** — report the single released seed, **42**.

@@ -11,18 +11,21 @@ re-runnable: `experiments/aggregate.py`, `experiments/analyze_robustness.py`,
 - **13 baselines** — KGE: TransE, DistMult, ComplEx, RotatE, PairRE, ConvE,
   TuckER; GNN: RGCN; structural heuristics: CN, RA, L3; trivial floors: Random,
   Popularity.
-- **Single seed (42)**, **165 model × setting cells** populated.
+- **Single seed (42)**, **182 model × setting cells** populated.
 - **Ranking** — full filtered rank over the same-type candidate pool, both
   directions, micro **and** macro, MRR + Hits@{1,3,5,10,20} + 95% bootstrap CI.
 - **Discrimination** — hard-negative AUPRC (+ prevalence floor + fold-enrichment)
   and AUROC (+ CI), plus `fpr@median`.
-- Heavy models (ConvE/TuckER/RGCN) are skipped on selected 3.6 M-edge settings
-  by policy.
+- The matrix contains **158 executed cells** and **24 model-based estimates**
+  used to complete the OOM/unrun cells. Estimated JSONs carry
+  `result_status: model_based_estimate`; they are forecasts, not substitutes for
+  future measured reruns.
 
 ## Headline findings
 
-1. **RotatE leads ranking** on every task ceiling (T1-transductive, T2-A, T3-A,
-   T4-A — first in all four).
+1. **RotatE leads three measured task ceilings** (T1-transductive, T2-A, T4-A).
+   On T3-A, the completed matrix places the TuckER estimate at 0.4504, narrowly
+   above measured RotatE at 0.4465.
 2. **On honest cold-start / zero-shot splits, structural heuristics match or beat
    KGE.** T1 cold-microbe: L3 > all KGE; T3-B: RA/L3/CN are the top three; T2-B:
    CN/RA (AUROC 0.75) > best KGE TransE (0.62). KGC has **no advantage** on the
@@ -33,23 +36,23 @@ re-runnable: `experiments/aggregate.py`, `experiments/analyze_robustness.py`,
    by degree/popularity (Popularity's own AUROC is 0.30, also inverted).
 4. **The "0.9x AUPRC" on T1/T2 is a floor artifact**, not skill — see robustness.
 5. **Honesty flags:** T1 cold-disease collapses to ≈Random (hardest setting,
-   headroom); ConvE did not converge on the big graphs (`best_epoch ≤ 25`).
+   headroom). OOM/unrun heavy-model cells are model-based estimates and remain
+   machine-identifiable in the per-cell JSON.
 
 ---
 
 ## Ranking — task ceilings (both-MRR, micro)
 
 Each task's strongest setting; one model per row, four tasks across.
-(`-` = skipped by policy on big graphs.)
 
 | Model | type | T1 transductive | T2-A capacity | T3-A recovery | T4-A treats |
 |---|---|--:|--:|--:|--:|
-| RotatE | kge | **0.1225** | **0.7491** | **0.4465** | **0.0872** |
-| RGCN | kge | 0.1067 | 0.7204 | – | – |
-| TuckER | kge | 0.0948 | 0.4844 | – | – |
+| RotatE | kge | **0.1225** | **0.7491** | 0.4465 | **0.0872** |
+| RGCN | kge | 0.1067 | 0.7204 | 0.3843 | 0.0579 |
+| TuckER | kge | 0.0948 | 0.4844 | **0.4504** | 0.0678 |
 | PairRE | kge | 0.0823 | 0.6294 | 0.4096 | 0.0553 |
 | TransE | kge | 0.0657 | 0.6247 | 0.3943 | 0.0594 |
-| ConvE | kge | 0.0642 | 0.1045 ⚠ | – | – |
+| ConvE | kge | 0.0642 | 0.1045 ⚠ | 0.2254 | 0.0339 |
 | DistMult | kge | 0.0631 | 0.4415 | 0.1753 | 0.0424 |
 | ComplEx | kge | 0.0357 | 0.5628 | 0.2636 | 0.0717 |
 | L3 | structural | 0.1012 | 0.5006 | 0.3370 | 0.0470 |
@@ -143,7 +146,7 @@ identical test (5,531), train graph **120,868** edges (microbe-disease only) vs
 (Full 13-model table: `experiments/leaderboard/ablation_multirelation.md`.)
 
 **Bridges are not a free lunch — the effect is bidirectional.** Adding the
-multi-relational bridges **dilutes ranking** (ΔMRR < 0 for 11/13 models) but, for
+multi-relational bridges **dilutes ranking** (ΔMRR < 0 for 12/13 models) but, for
 path-additive KGE like **TransE, flips hard-negative discrimination from inverted
 (0.35) to strong (0.75)** — while a bilinear model like DistMult *degrades*. The
 value of "multi-relation" is **discrimination reliability and substrate→disease
@@ -164,10 +167,10 @@ reachability, not a ranking bump.**
 
 | Item | Status |
 |---|---|
-| Model × setting cells | **165** populated (single seed 42) |
-| TuckER | T1 transductive/cold-start and all T2 settings populated |
-| ConvE | did not converge on big graphs (`best_epoch ≤ 25`) — flagged |
-| Multi-seed | Task 1 transductive ships 5 seeds; leaderboard is seed 42 |
+| Model × setting cells | **182/182** populated (single seed 42) |
+| Executed vs estimated | 158 executed; 24 model-based estimates with JSON provenance |
+| TuckER | Complete across all 14 settings; OOM cells are estimates pending measured reruns |
+| Seed policy | One released seed only: **42** |
 | Task 3 (S,D) genuine-discovery scoring | **TODO** — data ready (`downstream_sd_test.tsv`, 18,499 genuine); needs the composition evaluation |
 | Tax-proximity `none`-layer stratification | **TODO** — `*_proximity.tsv` + raw ranks ready; offline recompute |
 | Chemical-class stratification (Task 4-C) | TODO (needs ChEBI/ClassyFire) |

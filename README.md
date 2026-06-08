@@ -25,24 +25,64 @@ and mechanism-aware substrate→disease discovery.
 
 ---
 
-## Why MicrobeKG exists — three gaps it closes
+## Why MicrobeKG exists — a benchmark gap, not a size claim
 
-Three years of microbe–disease KGC papers report **AUC 0.93–0.99** on the small
-bipartite HMDAD (≈450 associations) / Disbiome (≈8.6 K) graphs, where the task
-degenerates into matrix factorization. MicrobeKG targets the three gaps behind
-that inflation:
+Microbiome knowledge graphs have been built for different scientific purposes,
+so raw node or edge counts are not a meaningful ranking by themselves.
+[MetagenomicKG](https://pmc.ncbi.nlm.nih.gov/articles/PMC10980061/) is larger
+because it integrates broad taxonomic and functional resources, while
+[MGMLink](https://www.nature.com/articles/s41598-025-91230-6) inherits a large
+general biomedical substrate to support mechanistic path search. MicrobeKG does
+**not** claim to be the largest microbiome KG. It addresses a different design
+objective: a disease-centered graph that can be evaluated as a controlled,
+reproducible KGC benchmark.
 
-1. **Ends the inflated-AUC loop.** A **16,502 microbe × 5,256 disease × 25
-   relation** multi-relational graph with **hard-negative relations**
-   (`inconsistent_association` 2,552, `does_not_utilize` 146, `does_not_produce`
-   17) so models can no longer collapse to memorizing degree.
-2. **First KGC-ready splits for a microbiome KG.** Standardized splits with
-   fixed seeds: transductive / cold-microbe / cold-disease / capacity-transfer /
-   substrate-disease discovery — train/valid/test + hard-negative sets included.
-3. **First leakage-audited microbiome KG.** Anti-shortcut training graphs
-   (no 2/3-hop leakage through metabolite, host-gene, or closure edges) and
-   taxonomy-proximity (`genus / family / none`) probes that expose taxonomic
-   copying.
+The resource closes three linked methodological gaps:
+
+1. **Scale and structure mismatch in existing prediction benchmarks.** Common
+   microbe–disease benchmarks reduce the problem to a single bipartite
+   association matrix: HMDAD contains 292 microbes, 39 diseases, and 450
+   deduplicated associations; a widely used Disbiome subset contains 1,582
+   microbes, 352 diseases, and 8,645 associations. MicrobeKG instead exposes an
+   **86.7 million-pair microbe × disease hypothesis space** (16,502 × 5,256)
+   inside a 25-relation graph. That space is approximately **7,600× HMDAD** and
+   **156× the Disbiome subset**, before accounting for substrates, metabolites,
+   host genes, interventions, and explicit hard negatives.
+2. **Resource availability without benchmark specification.** Existing
+   microbiome KGs primarily support integration, querying, or hypothesis
+   generation. Among the public releases compared below, MicrobeKG is the only
+   one that jointly provides fixed train/valid/test files, transductive and
+   cold-start settings, hard-negative evaluation, and a 13-model leaderboard.
+   All reported benchmark cells use **seed 42**.
+3. **Evaluation without shortcut auditing.** MicrobeKG treats leakage control as
+   part of the dataset specification. Pair-level duplicates, inverse relations,
+   taxonomy/ontology closure, and 2–3-hop mechanistic shortcuts are audited or
+   removed per task; taxonomy-proximity strata (`genus / family / none`) then
+   quantify how much apparent generalization can be explained by copying from
+   nearby taxa.
+
+### Positioning against related microbiome resources
+
+| Resource | Nodes | Edges / records | Microbial layer | Primary design objective | Standard KGC splits / cold-start / leakage audit |
+|---|---:|---:|---:|---|---|
+| **MicrobeKG v3.3** | **69,090** | **3,687,015** | **16,502 microbes** | Disease-centered, evidence-typed KGC benchmark | **Yes / Yes / Yes** |
+| MetagenomicKG | 1.25 M | 56 M | GTDB-centered | Taxonomic and metagenomic functional integration | Not reported |
+| MGMLink | 782,466 | 5,076,297 | 533 microbial taxa | Mechanistic path search for microbe–disease hypotheses | Not reported |
+| MicrobiomeKG v2.1 | 27,772 | 112,118 | 1,593 organism-taxon nodes | Literature-table integration and Translator queries | Not reported |
+| KG-Microbe | Modular; graph-dependent | Modular; graph-dependent | Customizable bacterial/archaeal subsets | Traits, taxonomy, chemistry, and environment integration | Not reported |
+| HMDAD benchmark | 331 entities | 450 associations | 292 microbes | Curated bipartite microbe–disease association matrix | No / No / No |
+| Disbiome benchmark subset | 1,934 entities | 8,645 associations | 1,582 microbes | Curated bipartite microbe–disease association matrix | No / No / No |
+
+![Scale and benchmark-readiness comparison of microbiome knowledge resources](figures/kg_landscape_comparison.png)
+
+*Counts are release-specific and not perfectly commensurate: ontology expansion,
+duplicate assertions, and background biomedical content differ across graphs.
+Sources: [MetagenomicKG](https://pmc.ncbi.nlm.nih.gov/articles/PMC10980061/),
+[MGMLink](https://www.nature.com/articles/s41598-025-91230-6),
+[MicrobiomeKG v2.1](https://www.frontiersin.org/journals/systems-biology/articles/10.3389/fsysb.2025.1544432/full),
+[KG-Microbe registry](https://kghub.org/kg-registry/resource/kg-microbe/kg-microbe.html),
+and the [HMDAD/Disbiome benchmark summary](https://pmc.ncbi.nlm.nih.gov/articles/PMC11443509/).
+The figure is reproducible with `python scripts/plot_kg_landscape.py`.*
 
 ## What you get
 
@@ -50,7 +90,7 @@ that inflation:
 |---|---|
 | **Multi-relational KG** | 25 relations × 6 node types, evidence-annotated, ~3.69 M edges |
 | **4 benchmark tasks** | microbe→disease, capacity→realization, substrate→disease discovery, metabolite→disease therapy |
-| **Baseline leaderboard** | 13 baselines (8 KGE/GNN + 3 structural heuristics + 2 trivial floors) across 165 model×setting cells |
+| **Baseline leaderboard** | 13 baselines (8 KGE/GNN + 3 structural heuristics + 2 trivial floors) across 182 model×setting cells |
 | **Robustness + ablation** | negative-ratio robustness of every discrimination set; multi-relation (±bridge) ablation |
 
 ---
@@ -67,7 +107,7 @@ that inflation:
 | Source databases / resources | 19 |
 | Largest connected component | 68,382 nodes |
 | Hard-negative pool | 2,715 edges (`inconsistent_association` 2,552 + `does_not_utilize` 146 + `does_not_produce` 17) |
-| Benchmark tasks | 4 (single seed 42 leaderboard; Task 1 transductive ships 5 seeds) |
+| Benchmark tasks | 4 (all leaderboard cells use seed 42) |
 | Split package size | ~1.9 GB |
 | Edge schema | 10 columns, evidence-aware (see [DATA.md](DATA.md)) |
 

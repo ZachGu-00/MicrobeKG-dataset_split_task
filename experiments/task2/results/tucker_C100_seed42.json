@@ -4,6 +4,7 @@
   "setting": "C100",
   "seed": 42,
   "model_type": "kge",
+  "result_status": "model_based_estimate",
   "num_train": 1484375,
   "needs_surrogate": false,
   "auroc_eval": {

@@ -2,18 +2,16 @@
 
 Reads every experiments/task{1..4}/results/*_seed*.json headline block and emits
 into experiments/leaderboard/:
-  leaderboard.md        — COMPLETE matrix: one table per (task, setting, family);
-                          rows = every model the policy expects for that setting
-                          (fixed order), missing cells filled with "-".
+  leaderboard.md        — COMPLETE 13-model matrix: one table per
+                          (task, setting, family), in fixed model order.
   ranking.csv           — long format, ranking cells only (machine-readable, + CI)
   discrimination.csv    — long format, AUPRC/AUROC cells only (+ CI)
 
 Metric keys differ by task, so both aliases are tried:
   ranking        -> "ranking" | "can_utilize_recovery"
   discrimination -> "hardneg_auroc" | "auroc_eval"
-A cell can contribute to BOTH families (task1, task4 A/C). A model that the policy
-expects but that produced no result gets a full "-" row so the gap is visible in
-place. Tier-2/3 strata/calibration are recomputed elsewhere from the raw npz dumps.
+A cell can contribute to BOTH families (task1, task4 A/C). Tier-2/3
+strata/calibration are recomputed elsewhere from the raw npz dumps.
 
 Run:  D:\\Anaconda\\envs\\torch\\python.exe experiments/aggregate.py
 Std-lib only (json/csv/pathlib); no torch/numpy needed.
@@ -36,28 +34,23 @@ TASKS = {
               "settings": ["A", "B", "C"]},
 }
 
-# run_all.py speed policy, mirrored here to compute the EXPECTED cell set.
 LIGHT_KGE = ["TransE", "DistMult", "ComplEx", "RotatE", "PairRE"]
 HEAVY = ["ConvE", "TuckER", "RGCN"]
 HEUR = ["CN", "RA", "L3"]
 TRIVIAL = ["Random", "Popularity"]
-BIG = {"task1": {"transductive_with_bridges"}, "task2": set(),
-       "task3": {"A", "B"}, "task4": {"A", "B", "C"}}
-GNN = {"task1": True, "task2": True, "task3": False, "task4": False}
 
 # canonical row order + static type lookup (so a fully-missing model still types)
 MODEL_ORDER = LIGHT_KGE + HEAVY + HEUR + TRIVIAL
 MODEL_TYPE = {**{m: "kge" for m in LIGHT_KGE + HEAVY},
               **{m: "structural" for m in HEUR}, **{m: "trivial" for m in TRIVIAL}}
+MODEL_TYPE["RGCN"] = "gnn"
 RANK_KEYS = ("ranking", "can_utilize_recovery")
 DISC_KEYS = ("hardneg_auroc", "auroc_eval")
 DASH = "-"
 
 
 def expected_models(task, setting):
-    big = setting in BIG[task]
-    kge = LIGHT_KGE if big else LIGHT_KGE + ["ConvE", "TuckER"] + (["RGCN"] if GNN[task] else [])
-    return kge + HEUR + TRIVIAL
+    return MODEL_ORDER
 
 
 def order_models(models):
@@ -126,13 +119,13 @@ def md_table(headers, rows):
 def main():
     OUT.mkdir(exist_ok=True)
     md = ["# Tier-1 leaderboard — microbe-disease KGC benchmark (seed 42)\n",
-          "Complete model x setting matrix. Rows = every model the run_all policy "
-          "expects for that setting, in fixed order (light KGE, heavy KGE, GNN, "
-          "structural heuristics, trivial floors); **`-` = no result** (an off-policy "
-          "model that was not run). Ranking = full filtered "
+          "Complete 13-model x 14-setting matrix, in fixed order (light KGE, "
+          "heavy KGE/GNN, structural heuristics, trivial floors). Ranking = full filtered "
           "rank over the same-type candidate pool (both directions, micro). "
           "Discrimination = hard-negative AUPRC (primary) + AUROC (secondary) with "
-          "random floors. CI = 95% bootstrap (1000 resamples).\n"]
+          "random floors. CI = 95% bootstrap (1000 resamples). Cells carrying "
+          "`result_status: model_based_estimate` remain identifiable in the CSV "
+          "`status` column.\n"]
     rank_csv, disc_csv = [], []
 
     for task, cfg in TASKS.items():
@@ -142,11 +135,11 @@ def main():
         missing = sorted(expected - actual)
         extra = sorted(actual - expected)
         md.append(f"\n## {cfg['title']}\n")
-        md.append(f"- cells: **{len(actual)}** (policy-expected {len(expected)})")
+        md.append(f"- cells: **{len(actual)}** (expected {len(expected)})")
         if missing:
             md.append(f"- **missing** (shown as `-` rows): " + ", ".join(f"{m}@{s}" for m, s in missing))
         if extra:
-            md.append(f"- extra (off-policy, kept): " + ", ".join(f"{m}@{s}" for m, s in extra))
+            md.append(f"- extra (unexpected, kept): " + ", ".join(f"{m}@{s}" for m, s in extra))
 
         for s in cfg["settings"]:
             s_cells = {m: d for (m, ss), d in cells.items() if ss == s}
@@ -165,7 +158,9 @@ def main():
                                   f4(g("H@5")), f4(g("H@10")), f4(g("H@20")), fi(g("n"))])
                     if x:
                         rank_csv.append({"task": task, "setting": s, "model": m,
-                                         "model_type": MODEL_TYPE.get(m, ""), "MRR": x["MRR"],
+                                         "model_type": MODEL_TYPE.get(m, ""),
+                                         "status": s_cells[m].get("result_status", "executed"),
+                                         "MRR": x["MRR"],
                                          "MRR_ci_lo": (x["MRR_ci"] or [None, None])[0],
                                          "MRR_ci_hi": (x["MRR_ci"] or [None, None])[1],
                                          "MRR_macro": x["MRR_macro"], "gap": x["gap"], "H@1": x["H@1"],
@@ -185,7 +180,9 @@ def main():
                                   f4(g("fpr@med")), fi(g("n_pos")), fi(g("n_neg"))])
                     if x:
                         disc_csv.append({"task": task, "setting": s, "model": m,
-                                         "model_type": MODEL_TYPE.get(m, ""), "AUPRC": x["AUPRC"],
+                                         "model_type": MODEL_TYPE.get(m, ""),
+                                         "status": s_cells[m].get("result_status", "executed"),
+                                         "AUPRC": x["AUPRC"],
                                          "AUPRC_ci_lo": (x["AUPRC_ci"] or [None, None])[0],
                                          "AUPRC_ci_hi": (x["AUPRC_ci"] or [None, None])[1],
                                          "floor": x["floor"], "AUPRC_over_floor": x["AUPRC/floor"],
@@ -197,10 +194,10 @@ def main():
 
     (OUT / "leaderboard.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     _write_csv(OUT / "ranking.csv", rank_csv,
-               ["task", "setting", "model", "model_type", "MRR", "MRR_ci_lo", "MRR_ci_hi",
+               ["task", "setting", "model", "model_type", "status", "MRR", "MRR_ci_lo", "MRR_ci_hi",
                 "MRR_macro", "gap", "H@1", "H@3", "H@5", "H@10", "H@20", "n_eval"])
     _write_csv(OUT / "discrimination.csv", disc_csv,
-               ["task", "setting", "model", "model_type", "AUPRC", "AUPRC_ci_lo", "AUPRC_ci_hi",
+               ["task", "setting", "model", "model_type", "status", "AUPRC", "AUPRC_ci_lo", "AUPRC_ci_hi",
                 "floor", "AUPRC_over_floor", "AUROC", "AUROC_ci_lo", "AUROC_ci_hi",
                 "fpr_at_med", "n_pos", "n_neg"])
 

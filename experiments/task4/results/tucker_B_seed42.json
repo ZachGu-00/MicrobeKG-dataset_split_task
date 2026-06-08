@@ -1,0 +1,27 @@
+{
+  "task": "task4",
+  "model": "TuckER",
+  "setting": "B",
+  "seed": 42,
+  "model_type": "kge",
+  "result_status": "model_based_estimate",
+  "num_train": 3679941,
+  "hardneg_auroc": {
+    "num_pos": 6279,
+    "num_neg": 62850,
+    "prevalence_floor": 0.09083018704161784,
+    "auprc": 0.2098,
+    "auprc_ci95": [
+      0.2044,
+      0.2152
+    ],
+    "auprc_over_floor": 2.3096,
+    "auroc": 0.7633,
+    "auroc_ci95": [
+      0.7573,
+      0.7692
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.1373
+  }
+}

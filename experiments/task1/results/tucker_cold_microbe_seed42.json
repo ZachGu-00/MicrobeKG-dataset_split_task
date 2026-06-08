@@ -4,6 +4,7 @@
   "setting": "cold_microbe",
   "seed": 42,
   "model_type": "kge",
+  "result_status": "model_based_estimate",
   "num_train": 127386,
   "num_test_eval": 2687,
   "num_test_oov": 168,

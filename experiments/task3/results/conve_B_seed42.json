@@ -1,0 +1,33 @@
+{
+  "task": "task3",
+  "model": "ConvE",
+  "setting": "B",
+  "seed": 42,
+  "model_type": "kge",
+  "result_status": "model_based_estimate",
+  "num_train": 3660979,
+  "num_test_eval": 17096,
+  "num_test_oov": 0,
+  "can_utilize_recovery": {
+    "both": {
+      "micro": {
+        "mrr": 0.0760,
+        "hits_at_1": 0.0512,
+        "hits_at_3": 0.0795,
+        "hits_at_5": 0.0961,
+        "hits_at_10": 0.1257,
+        "hits_at_20": 0.1605
+      },
+      "macro": {
+        "mrr": 0.0279
+      },
+      "micro_minus_macro_gap": {
+        "mrr": 0.0481
+      }
+    },
+    "both_mrr_ci95": [
+      0.0730,
+      0.0790
+    ]
+  }
+}

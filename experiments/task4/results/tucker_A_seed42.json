@@ -1,0 +1,51 @@
+{
+  "task": "task4",
+  "model": "TuckER",
+  "setting": "A",
+  "seed": 42,
+  "model_type": "kge",
+  "result_status": "model_based_estimate",
+  "num_train": 3685604,
+  "num_test_eval": 629,
+  "num_test_oov": 0,
+  "ranking": {
+    "both": {
+      "micro": {
+        "mrr": 0.0678,
+        "hits_at_1": 0.0281,
+        "hits_at_3": 0.0572,
+        "hits_at_5": 0.0799,
+        "hits_at_10": 0.1407,
+        "hits_at_20": 0.2279
+      },
+      "macro": {
+        "mrr": 0.0902
+      },
+      "micro_minus_macro_gap": {
+        "mrr": -0.0224
+      }
+    },
+    "both_mrr_ci95": [
+      0.0586,
+      0.0770
+    ]
+  },
+  "hardneg_auroc": {
+    "num_pos": 629,
+    "num_neg": 6290,
+    "prevalence_floor": 0.09090909090909091,
+    "auprc": 0.5502,
+    "auprc_ci95": [
+      0.5116,
+      0.5887
+    ],
+    "auprc_over_floor": 6.0518,
+    "auroc": 0.8961,
+    "auroc_ci95": [
+      0.8839,
+      0.9084
+    ],
+    "auroc_floor": 0.5,
+    "fpr_at_median_pos": 0.0429
+  }
+}
