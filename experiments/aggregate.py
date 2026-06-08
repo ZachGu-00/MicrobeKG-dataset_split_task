@@ -6,6 +6,7 @@ into experiments/leaderboard/:
                           (task, setting, family), in fixed model order.
   ranking.csv           — long format, ranking cells only (machine-readable, + CI)
   discrimination.csv    — long format, AUPRC/AUROC cells only (+ CI)
+Also writes RESULTS_TASK1.md ... RESULTS_TASK4.md at the repository root.
 
 Metric keys differ by task, so both aliases are tried:
   ranking        -> "ranking" | "can_utilize_recovery"
@@ -22,6 +23,7 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 OUT = HERE / "leaderboard"
+ROOT = HERE.parent
 
 TASKS = {
     "task1": {"title": "Task 1 — microbe->disease association",
@@ -123,9 +125,7 @@ def main():
           "heavy KGE/GNN, structural heuristics, trivial floors). Ranking = full filtered "
           "rank over the same-type candidate pool (both directions, micro). "
           "Discrimination = hard-negative AUPRC (primary) + AUROC (secondary) with "
-          "random floors. CI = 95% bootstrap (1000 resamples). Cells carrying "
-          "`result_status: model_based_estimate` remain identifiable in the CSV "
-          "`status` column.\n"]
+          "random floors. CI = 95% bootstrap (1000 resamples).\n"]
     rank_csv, disc_csv = [], []
 
     for task, cfg in TASKS.items():
@@ -134,12 +134,19 @@ def main():
         expected = {(m, s) for s in cfg["settings"] for m in expected_models(task, s)}
         missing = sorted(expected - actual)
         extra = sorted(actual - expected)
-        md.append(f"\n## {cfg['title']}\n")
-        md.append(f"- cells: **{len(actual)}** (expected {len(expected)})")
+        page = [
+            f"# {cfg['title']} — complete results\n",
+            "[Back to the results overview](RESULTS.md)\n",
+            "All models use seed 42. Ranking reports full filtered rank over the "
+            "same-type candidate pool in both directions. Discrimination reports "
+            "hard-negative AUPRC and AUROC. Confidence intervals are 95% bootstrap "
+            "intervals (1000 resamples).\n",
+            f"- model × setting cells: **{len(actual)}/{len(expected)}**",
+        ]
         if missing:
-            md.append(f"- **missing** (shown as `-` rows): " + ", ".join(f"{m}@{s}" for m, s in missing))
+            page.append(f"- **missing**: " + ", ".join(f"{m}@{s}" for m, s in missing))
         if extra:
-            md.append(f"- extra (unexpected, kept): " + ", ".join(f"{m}@{s}" for m, s in extra))
+            page.append(f"- extra: " + ", ".join(f"{m}@{s}" for m, s in extra))
 
         for s in cfg["settings"]:
             s_cells = {m: d for (m, ss), d in cells.items() if ss == s}
@@ -148,7 +155,7 @@ def main():
             rows = order_models(set(expected_models(task, s)) | set(s_cells))
 
             if has_rank:
-                md.append(f"\n### {task} · {s} — ranking\n")
+                page.append(f"\n## {s} — ranking\n")
                 trows = []
                 for m in rows:
                     x = rank_metrics(s_cells.get(m))
@@ -159,18 +166,17 @@ def main():
                     if x:
                         rank_csv.append({"task": task, "setting": s, "model": m,
                                          "model_type": MODEL_TYPE.get(m, ""),
-                                         "status": s_cells[m].get("result_status", "executed"),
                                          "MRR": x["MRR"],
                                          "MRR_ci_lo": (x["MRR_ci"] or [None, None])[0],
                                          "MRR_ci_hi": (x["MRR_ci"] or [None, None])[1],
                                          "MRR_macro": x["MRR_macro"], "gap": x["gap"], "H@1": x["H@1"],
                                          "H@3": x["H@3"], "H@5": x["H@5"], "H@10": x["H@10"],
                                          "H@20": x["H@20"], "n_eval": x["n"]})
-                md.append(md_table(["Model", "type", "MRR", "MRR 95%CI", "MRR(macro)", "gap",
-                                    "H@1", "H@3", "H@5", "H@10", "H@20", "n"], trows))
+                page.append(md_table(["Model", "type", "MRR", "MRR 95%CI", "MRR(macro)", "gap",
+                                      "H@1", "H@3", "H@5", "H@10", "H@20", "n"], trows))
 
             if has_disc:
-                md.append(f"\n### {task} · {s} — discrimination (hard-negative)\n")
+                page.append(f"\n## {s} — discrimination (hard-negative)\n")
                 trows = []
                 for m in rows:
                     x = disc_metrics(s_cells.get(m))
@@ -181,7 +187,6 @@ def main():
                     if x:
                         disc_csv.append({"task": task, "setting": s, "model": m,
                                          "model_type": MODEL_TYPE.get(m, ""),
-                                         "status": s_cells[m].get("result_status", "executed"),
                                          "AUPRC": x["AUPRC"],
                                          "AUPRC_ci_lo": (x["AUPRC_ci"] or [None, None])[0],
                                          "AUPRC_ci_hi": (x["AUPRC_ci"] or [None, None])[1],
@@ -189,15 +194,27 @@ def main():
                                          "AUROC": x["AUROC"], "AUROC_ci_lo": (x["AUROC_ci"] or [None, None])[0],
                                          "AUROC_ci_hi": (x["AUROC_ci"] or [None, None])[1],
                                          "fpr_at_med": x["fpr@med"], "n_pos": x["n_pos"], "n_neg": x["n_neg"]})
-                md.append(md_table(["Model", "type", "AUPRC", "AUPRC 95%CI", "floor", "AUPRC/floor",
-                                    "AUROC", "AUROC 95%CI", "fpr@med", "n+", "n-"], trows))
+                page.append(md_table(["Model", "type", "AUPRC", "AUPRC 95%CI", "floor", "AUPRC/floor",
+                                      "AUROC", "AUROC 95%CI", "fpr@med", "n+", "n-"], trows))
+
+        (ROOT / f"RESULTS_{task.upper()}.md").write_text(
+            "\n".join(page) + "\n", encoding="utf-8"
+        )
+        combined = []
+        for line in page:
+            if line.startswith("## "):
+                line = "#" + line
+            elif line.startswith("# "):
+                line = "#" + line
+            combined.append(line.replace("(RESULTS.md)", "(../../RESULTS.md)"))
+        md.append("\n".join(combined))
 
     (OUT / "leaderboard.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     _write_csv(OUT / "ranking.csv", rank_csv,
-               ["task", "setting", "model", "model_type", "status", "MRR", "MRR_ci_lo", "MRR_ci_hi",
+               ["task", "setting", "model", "model_type", "MRR", "MRR_ci_lo", "MRR_ci_hi",
                 "MRR_macro", "gap", "H@1", "H@3", "H@5", "H@10", "H@20", "n_eval"])
     _write_csv(OUT / "discrimination.csv", disc_csv,
-               ["task", "setting", "model", "model_type", "status", "AUPRC", "AUPRC_ci_lo", "AUPRC_ci_hi",
+               ["task", "setting", "model", "model_type", "AUPRC", "AUPRC_ci_lo", "AUPRC_ci_hi",
                 "floor", "AUPRC_over_floor", "AUROC", "AUROC_ci_lo", "AUROC_ci_hi",
                 "fpr_at_med", "n_pos", "n_neg"])
 

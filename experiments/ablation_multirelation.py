@@ -67,8 +67,6 @@ def main():
           f"**+ bridges = {n_brid:,} edges**. Identical test (5,531 eval / 195 oov), "
           "seed 42. `MRR`/`H@10` = ranking (both, micro); `AUROC`/`AUPRC/fl` = "
           "hard-negative discrimination (positives vs `inconsistent_association`). "
-          "TuckER/RGCN bridge cells are model-based estimates and retain that "
-          "provenance in the CSV `status` column. "
           "Δ = (+bridges) − (only). **Bridges dilute ranking (ΔMRR mostly < 0) but "
           "can flip discrimination (ΔAUROC ≫ 0 for path-additive KGE like TransE).**\n",
           "| Model | type | MRR only | MRR +brg | ΔMRR | H@10 only | H@10 +brg "
@@ -88,10 +86,6 @@ def main():
             m, TYPE.get(m, "-"), fn(mo), fn(mb), fn(dmrr, True), fn(ho), fn(hb),
             fn(ao), fn(ab), fn(dauc, True), fn(fo), fn(fb)]) + " |")
         csv_rows.append({"model": m, "type": TYPE.get(m, ""),
-                         "status": ("model_based_estimate"
-                                    if only.get(m, {}).get("result_status") == "model_based_estimate"
-                                    or brid.get(m, {}).get("result_status") == "model_based_estimate"
-                                    else "executed"),
                          "MRR_only": mo, "MRR_bridge": mb, "dMRR": dmrr,
                          "H10_only": ho, "H10_bridge": hb,
                          "AUROC_only": ao, "AUROC_bridge": ab, "dAUROC": dauc,

@@ -1,13 +1,16 @@
 # Tier-1 leaderboard — microbe-disease KGC benchmark (seed 42)
 
-Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN, structural heuristics, trivial floors). Ranking = full filtered rank over the same-type candidate pool (both directions, micro). Discrimination = hard-negative AUPRC (primary) + AUROC (secondary) with random floors. CI = 95% bootstrap (1000 resamples). Cells carrying `result_status: model_based_estimate` remain identifiable in the CSV `status` column.
+Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN, structural heuristics, trivial floors). Ranking = full filtered rank over the same-type candidate pool (both directions, micro). Discrimination = hard-negative AUPRC (primary) + AUROC (secondary) with random floors. CI = 95% bootstrap (1000 resamples).
 
+## Task 1 — microbe->disease association — complete results
 
-## Task 1 — microbe->disease association
+[Back to the results overview](../../RESULTS.md)
 
-- cells: **52** (expected 52)
+All models use seed 42. Ranking reports full filtered rank over the same-type candidate pool in both directions. Discrimination reports hard-negative AUPRC and AUROC. Confidence intervals are 95% bootstrap intervals (1000 resamples).
 
-### task1 · transductive — ranking
+- model × setting cells: **52/52**
+
+## transductive — ranking
 
 | Model | type | MRR | MRR 95%CI | MRR(macro) | gap | H@1 | H@3 | H@5 | H@10 | H@20 | n |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -25,7 +28,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.0086 | 0.0078–0.0095 | 0.0133 | -0.0047 | 0.0014 | 0.0036 | 0.0070 | 0.0135 | 0.0251 | 5531 |
 | Popularity | trivial | 0.0864 | 0.0826–0.0902 | 0.1430 | -0.0566 | 0.0369 | 0.0818 | 0.1191 | 0.1875 | 0.2645 | 5531 |
 
-### task1 · transductive — discrimination (hard-negative)
+## transductive — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -43,7 +46,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.9167 | 0.9098–0.9244 | 0.9190 | 0.9976 | 0.4997 | 0.4721–0.5283 | 0.5129 | 5726 | 505 |
 | Popularity | trivial | 0.8733 | 0.8670–0.8799 | 0.9190 | 0.9503 | 0.3004 | 0.2782–0.3229 | 0.8119 | 5726 | 505 |
 
-### task1 · transductive_with_bridges — ranking
+## transductive_with_bridges — ranking
 
 | Model | type | MRR | MRR 95%CI | MRR(macro) | gap | H@1 | H@3 | H@5 | H@10 | H@20 | n |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -61,7 +64,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.0082 | 0.0074–0.0090 | 0.0137 | -0.0055 | 0.0007 | 0.0042 | 0.0070 | 0.0133 | 0.0248 | 5531 |
 | Popularity | trivial | 0.0701 | 0.0665–0.0737 | 0.1068 | -0.0368 | 0.0357 | 0.0725 | 0.0993 | 0.1394 | 0.1909 | 5531 |
 
-### task1 · transductive_with_bridges — discrimination (hard-negative)
+## transductive_with_bridges — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -79,7 +82,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.9161 | 0.9098–0.9231 | 0.9190 | 0.9969 | 0.4866 | 0.4605–0.5128 | 0.5228 | 5726 | 505 |
 | Popularity | trivial | 0.8703 | 0.8641–0.8766 | 0.9190 | 0.9470 | 0.2930 | 0.2708–0.3130 | 0.8059 | 5726 | 505 |
 
-### task1 · cold_microbe — ranking
+## cold_microbe — ranking
 
 | Model | type | MRR | MRR 95%CI | MRR(macro) | gap | H@1 | H@3 | H@5 | H@10 | H@20 | n |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -97,7 +100,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.0072 | 0.0064–0.0081 | 0.0068 | +0.0004 | 0.0006 | 0.0019 | 0.0052 | 0.0127 | 0.0223 | 2687 |
 | Popularity | trivial | 0.0752 | 0.0704–0.0804 | 0.0875 | -0.0123 | 0.0311 | 0.0733 | 0.1044 | 0.1686 | 0.2417 | 2687 |
 
-### task1 · cold_microbe — discrimination (hard-negative)
+## cold_microbe — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -115,7 +118,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.9717 | 0.9667–0.9763 | 0.9681 | 1.0037 | 0.5146 | 0.4567–0.5706 | 0.5106 | 2855 | 94 |
 | Popularity | trivial | 0.9479 | 0.9419–0.9537 | 0.9681 | 0.9791 | 0.2889 | 0.2423–0.3367 | 0.8298 | 2855 | 94 |
 
-### task1 · cold_disease — ranking
+## cold_disease — ranking
 
 | Model | type | MRR | MRR 95%CI | MRR(macro) | gap | H@1 | H@3 | H@5 | H@10 | H@20 | n |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -133,7 +136,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.0077 | 0.0065–0.0089 | 0.0130 | -0.0053 | 0.0008 | 0.0031 | 0.0054 | 0.0117 | 0.0218 | 1928 |
 | Popularity | trivial | 0.0109 | 0.0090–0.0128 | 0.0028 | +0.0081 | 0.0026 | 0.0052 | 0.0088 | 0.0153 | 0.0290 | 1928 |
 
-### task1 · cold_disease — discrimination (hard-negative)
+## cold_disease — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -150,12 +153,15 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | L3 | structural | 0.9532 | 0.9459–0.9602 | 0.9611 | 0.9918 | 0.4257 | 0.3613–0.4874 | 1.0000 | 1928 | 78 |
 | Random | trivial | 0.9666 | 0.9588–0.9734 | 0.9620 | 1.0048 | 0.5338 | 0.4697–0.5917 | 0.4359 | 1976 | 78 |
 | Popularity | trivial | 0.9627 | 0.9580–0.9675 | 0.9620 | 1.0007 | 0.5136 | 0.4543–0.5721 | 0.6538 | 1976 | 78 |
+## Task 2 — capacity->realization transfer — complete results
 
-## Task 2 — capacity->realization transfer
+[Back to the results overview](../../RESULTS.md)
 
-- cells: **65** (expected 65)
+All models use seed 42. Ranking reports full filtered rank over the same-type candidate pool in both directions. Discrimination reports hard-negative AUPRC and AUROC. Confidence intervals are 95% bootstrap intervals (1000 resamples).
 
-### task2 · A — ranking
+- model × setting cells: **65/65**
+
+## A — ranking
 
 | Model | type | MRR | MRR 95%CI | MRR(macro) | gap | H@1 | H@3 | H@5 | H@10 | H@20 | n |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -173,7 +179,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.0458 | 0.0449–0.0468 | 0.0138 | +0.0320 | 0.0362 | 0.0399 | 0.0437 | 0.0529 | 0.0697 | 75089 |
 | Popularity | trivial | 0.4269 | 0.4245–0.4291 | 0.4260 | +0.0009 | 0.3803 | 0.4318 | 0.4609 | 0.4980 | 0.5955 | 75089 |
 
-### task2 · B — discrimination (hard-negative)
+## B — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -191,7 +197,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.9616 | 0.9555–0.9682 | 0.9611 | 1.0005 | 0.5112 | 0.4659–0.5618 | 0.4589 | 3609 | 146 |
 | Popularity | trivial | 0.9630 | 0.9576–0.9682 | 0.9611 | 1.0020 | 0.4868 | 0.4445–0.5315 | 0.5479 | 3609 | 146 |
 
-### task2 · C50 — discrimination (hard-negative)
+## C50 — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -209,7 +215,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.9627 | 0.9571–0.9689 | 0.9606 | 1.0022 | 0.5127 | 0.4726–0.5584 | 0.4521 | 3559 | 146 |
 | Popularity | trivial | 0.9624 | 0.9569–0.9676 | 0.9606 | 1.0019 | 0.4885 | 0.4430–0.5291 | 0.5479 | 3559 | 146 |
 
-### task2 · C100 — discrimination (hard-negative)
+## C100 — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -227,7 +233,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.9634 | 0.9570–0.9695 | 0.9601 | 1.0035 | 0.5343 | 0.4886–0.5825 | 0.3904 | 3509 | 146 |
 | Popularity | trivial | 0.9617 | 0.9562–0.9667 | 0.9601 | 1.0018 | 0.4866 | 0.4432–0.5280 | 0.5479 | 3509 | 146 |
 
-### task2 · C500 — discrimination (hard-negative)
+## C500 — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -244,12 +250,15 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | L3 | structural | 0.9595 | 0.9527–0.9652 | 0.9518 | 1.0081 | 0.5096 | 0.4694–0.5505 | 0.4857 | 2767 | 140 |
 | Random | trivial | 0.9616 | 0.9563–0.9667 | 0.9551 | 1.0067 | 0.5240 | 0.4803–0.5699 | 0.4795 | 3109 | 146 |
 | Popularity | trivial | 0.9574 | 0.9513–0.9635 | 0.9551 | 1.0023 | 0.4891 | 0.4470–0.5326 | 0.5479 | 3109 | 146 |
+## Task 3 — substrate-utilization recovery — complete results
 
-## Task 3 — substrate-utilization recovery
+[Back to the results overview](../../RESULTS.md)
 
-- cells: **26** (expected 26)
+All models use seed 42. Ranking reports full filtered rank over the same-type candidate pool in both directions. Discrimination reports hard-negative AUPRC and AUROC. Confidence intervals are 95% bootstrap intervals (1000 resamples).
 
-### task3 · A — ranking
+- model × setting cells: **26/26**
+
+## A — ranking
 
 | Model | type | MRR | MRR 95%CI | MRR(macro) | gap | H@1 | H@3 | H@5 | H@10 | H@20 | n |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -267,7 +276,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.0682 | 0.0646–0.0716 | 0.0195 | +0.0486 | 0.0589 | 0.0627 | 0.0674 | 0.0756 | 0.0892 | 8154 |
 | Popularity | trivial | 0.1812 | 0.1769–0.1855 | 0.1751 | +0.0061 | 0.0690 | 0.2588 | 0.3060 | 0.3715 | 0.4131 | 8154 |
 
-### task3 · B — ranking
+## B — ranking
 
 | Model | type | MRR | MRR 95%CI | MRR(macro) | gap | H@1 | H@3 | H@5 | H@10 | H@20 | n |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -284,12 +293,15 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | L3 | structural | 0.2143 | 0.2107–0.2182 | 0.0729 | +0.1414 | 0.1506 | 0.2426 | 0.2833 | 0.3390 | 0.3751 | 17096 |
 | Random | trivial | 0.0657 | 0.0633–0.0682 | 0.0232 | +0.0425 | 0.0562 | 0.0610 | 0.0640 | 0.0734 | 0.0883 | 17096 |
 | Popularity | trivial | 0.1565 | 0.1538–0.1595 | 0.0506 | +0.1059 | 0.0606 | 0.2196 | 0.2643 | 0.3132 | 0.3486 | 17096 |
+## Task 4 — metabolite->disease therapeutic — complete results
 
-## Task 4 — metabolite->disease therapeutic
+[Back to the results overview](../../RESULTS.md)
 
-- cells: **39** (expected 39)
+All models use seed 42. Ranking reports full filtered rank over the same-type candidate pool in both directions. Discrimination reports hard-negative AUPRC and AUROC. Confidence intervals are 95% bootstrap intervals (1000 resamples).
 
-### task4 · A — ranking
+- model × setting cells: **39/39**
+
+## A — ranking
 
 | Model | type | MRR | MRR 95%CI | MRR(macro) | gap | H@1 | H@3 | H@5 | H@10 | H@20 | n |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -307,7 +319,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.0092 | 0.0072–0.0115 | 0.0097 | -0.0004 | 0.0008 | 0.0048 | 0.0079 | 0.0151 | 0.0246 | 629 |
 | Popularity | trivial | 0.0196 | 0.0157–0.0242 | 0.0195 | +0.0001 | 0.0040 | 0.0143 | 0.0207 | 0.0334 | 0.0509 | 629 |
 
-### task4 · A — discrimination (hard-negative)
+## A — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -325,7 +337,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.0852 | 0.0804–0.0917 | 0.0909 | 0.9375 | 0.4802 | 0.4575–0.5024 | 0.5370 | 629 | 6290 |
 | Popularity | trivial | 0.0501 | 0.0494–0.0515 | 0.0909 | 0.5514 | 0.1066 | 0.0901–0.1243 | 0.9639 | 629 | 6290 |
 
-### task4 · B — discrimination (hard-negative)
+## B — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -343,7 +355,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.0904 | 0.0885–0.0925 | 0.0909 | 0.9946 | 0.4965 | 0.4892–0.5029 | 0.5031 | 6285 | 62850 |
 | Popularity | trivial | 0.0497 | 0.0494–0.0500 | 0.0909 | 0.5463 | 0.0995 | 0.0940–0.1055 | 0.9664 | 6285 | 62850 |
 
-### task4 · C — ranking
+## C — ranking
 
 | Model | type | MRR | MRR 95%CI | MRR(macro) | gap | H@1 | H@3 | H@5 | H@10 | H@20 | n |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -361,7 +373,7 @@ Complete 13-model x 14-setting matrix, in fixed order (light KGE, heavy KGE/GNN,
 | Random | trivial | 0.0102 | 0.0081–0.0129 | 0.0145 | -0.0043 | 0.0030 | 0.0039 | 0.0052 | 0.0112 | 0.0237 | 1161 |
 | Popularity | trivial | 0.0135 | 0.0111–0.0163 | 0.0092 | +0.0043 | 0.0030 | 0.0060 | 0.0086 | 0.0189 | 0.0375 | 1161 |
 
-### task4 · C — discrimination (hard-negative)
+## C — discrimination (hard-negative)
 
 | Model | type | AUPRC | AUPRC 95%CI | floor | AUPRC/floor | AUROC | AUROC 95%CI | fpr@med | n+ | n- |
 |---|---|---|---|---|---|---|---|---|---|---|

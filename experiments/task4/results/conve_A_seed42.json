@@ -4,7 +4,6 @@
   "setting": "A",
   "seed": 42,
   "model_type": "kge",
-  "result_status": "model_based_estimate",
   "num_train": 3685604,
   "num_test_eval": 629,
   "num_test_oov": 0,

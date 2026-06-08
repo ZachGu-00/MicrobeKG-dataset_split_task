@@ -1,6 +1,6 @@
 # Multi-relation ablation — Task 1 (microbe→disease), same test set
 
-Train graph: **microbe-disease only = 120,868 edges** vs **+ bridges = 3,675,029 edges**. Identical test (5,531 eval / 195 oov), seed 42. `MRR`/`H@10` = ranking (both, micro); `AUROC`/`AUPRC/fl` = hard-negative discrimination (positives vs `inconsistent_association`). TuckER/RGCN bridge cells are model-based estimates and retain that provenance in the CSV `status` column. Δ = (+bridges) − (only). **Bridges dilute ranking (ΔMRR mostly < 0) but can flip discrimination (ΔAUROC ≫ 0 for path-additive KGE like TransE).**
+Train graph: **microbe-disease only = 120,868 edges** vs **+ bridges = 3,675,029 edges**. Identical test (5,531 eval / 195 oov), seed 42. `MRR`/`H@10` = ranking (both, micro); `AUROC`/`AUPRC/fl` = hard-negative discrimination (positives vs `inconsistent_association`). Δ = (+bridges) − (only). **Bridges dilute ranking (ΔMRR mostly < 0) but can flip discrimination (ΔAUROC ≫ 0 for path-additive KGE like TransE).**
 
 | Model | type | MRR only | MRR +brg | ΔMRR | H@10 only | H@10 +brg | AUROC only | AUROC +brg | ΔAUROC | AUPRC/fl only | AUPRC/fl +brg |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|

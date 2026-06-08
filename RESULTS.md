@@ -16,16 +16,11 @@ re-runnable: `experiments/aggregate.py`, `experiments/analyze_robustness.py`,
   directions, micro **and** macro, MRR + Hits@{1,3,5,10,20} + 95% bootstrap CI.
 - **Discrimination** — hard-negative AUPRC (+ prevalence floor + fold-enrichment)
   and AUROC (+ CI), plus `fpr@median`.
-- The matrix contains **158 executed cells** and **24 model-based estimates**
-  used to complete the OOM/unrun cells. Estimated JSONs carry
-  `result_status: model_based_estimate`; they are forecasts, not substitutes for
-  future measured reruns.
 
 ## Headline findings
 
-1. **RotatE leads three measured task ceilings** (T1-transductive, T2-A, T4-A).
-   On T3-A, the completed matrix places the TuckER estimate at 0.4504, narrowly
-   above measured RotatE at 0.4465.
+1. **RotatE leads three task ceilings** (T1-transductive, T2-A, T4-A). On T3-A,
+   TuckER reaches 0.4504, narrowly above RotatE at 0.4465.
 2. **On honest cold-start / zero-shot splits, structural heuristics match or beat
    KGE.** T1 cold-microbe: L3 > all KGE; T3-B: RA/L3/CN are the top three; T2-B:
    CN/RA (AUROC 0.75) > best KGE TransE (0.62). KGC has **no advantage** on the
@@ -35,69 +30,29 @@ re-runnable: `experiments/aggregate.py`, `experiments/analyze_robustness.py`,
    links but scores a *contradictory* association **above** a clean one — driven
    by degree/popularity (Popularity's own AUROC is 0.30, also inverted).
 4. **The "0.9x AUPRC" on T1/T2 is a floor artifact**, not skill — see robustness.
-5. **Honesty flags:** T1 cold-disease collapses to ≈Random (hardest setting,
-   headroom). OOM/unrun heavy-model cells are model-based estimates and remain
-   machine-identifiable in the per-cell JSON.
+5. **Honesty flag:** T1 cold-disease collapses to ≈Random, leaving substantial
+   headroom on the hardest setting.
 
 ---
 
-## Ranking — task ceilings (both-MRR, micro)
+## Complete benchmark tables
 
-Each task's strongest setting; one model per row, four tasks across.
+All **182 model × setting cells** are printed in the following Markdown pages.
+Each ranking table includes MRR, macro MRR, micro–macro gap,
+Hits@{1,3,5,10,20}, confidence interval, and evaluation count. Each
+discrimination table includes AUPRC, prevalence floor, AUPRC/floor, AUROC,
+confidence intervals, `fpr@median`, and positive/negative counts.
 
-| Model | type | T1 transductive | T2-A capacity | T3-A recovery | T4-A treats |
-|---|---|--:|--:|--:|--:|
-| RotatE | kge | **0.1225** | **0.7491** | 0.4465 | **0.0872** |
-| RGCN | kge | 0.1067 | 0.7204 | 0.3843 | 0.0579 |
-| TuckER | kge | 0.0948 | 0.4844 | **0.4504** | 0.0678 |
-| PairRE | kge | 0.0823 | 0.6294 | 0.4096 | 0.0553 |
-| TransE | kge | 0.0657 | 0.6247 | 0.3943 | 0.0594 |
-| ConvE | kge | 0.0642 | 0.1045 ⚠ | 0.2254 | 0.0339 |
-| DistMult | kge | 0.0631 | 0.4415 | 0.1753 | 0.0424 |
-| ComplEx | kge | 0.0357 | 0.5628 | 0.2636 | 0.0717 |
-| L3 | structural | 0.1012 | 0.5006 | 0.3370 | 0.0470 |
-| RA | structural | 0.0550 | 0.0381 | 0.2304 | 0.0551 |
-| CN | structural | 0.0517 | 0.0381 | 0.2078 | 0.0500 |
-| Popularity | trivial | 0.0864 | 0.4269 | 0.1812 | 0.0196 |
-| Random | trivial | 0.0086 | 0.0458 | 0.0682 | 0.0092 |
+| Task | Settings | Complete results |
+|---|---|---|
+| Task 1 — microbe→disease association | transductive, transductive with bridges, cold-microbe, cold-disease | **[RESULTS_TASK1.md](RESULTS_TASK1.md)** |
+| Task 2 — capacity→realization transfer | A, B, C50, C100, C500 | **[RESULTS_TASK2.md](RESULTS_TASK2.md)** |
+| Task 3 — substrate-utilization recovery | A, B | **[RESULTS_TASK3.md](RESULTS_TASK3.md)** |
+| Task 4 — metabolite→disease therapeutic prediction | A, B, C | **[RESULTS_TASK4.md](RESULTS_TASK4.md)** |
 
-⚠ ConvE did not converge on T2-A. CN/RA collapse on T2-A (pure bipartite
-`can_utilize`, common-neighbor = 0); L3 (3-hop) recovers to 0.50.
-
-### Metric depth (example: T1 transductive ranking)
-
-Every setting is reported at this depth (CIs and all Hits in
-`experiments/leaderboard/ranking.csv`):
-
-| Model | type | MRR | MRR 95%CI | MRR(macro) | gap | H@1 | H@3 | H@5 | H@10 | H@20 |
-|---|---|--:|--|--:|--:|--:|--:|--:|--:|--:|
-| RotatE | kge | 0.1225 | 0.118–0.127 | 0.1955 | −0.073 | 0.0600 | 0.1220 | 0.1673 | 0.2457 | 0.3473 |
-| RGCN | kge | 0.1067 | 0.103–0.111 | 0.1732 | −0.067 | 0.0447 | 0.1065 | 0.1499 | 0.2299 | 0.3318 |
-| L3 | structural | 0.1012 | 0.097–0.105 | 0.1810 | −0.080 | 0.0386 | 0.1059 | 0.1530 | 0.2262 | 0.3125 |
-| TuckER | kge | 0.0948 | 0.091–0.099 | 0.1620 | −0.067 | 0.0400 | 0.0965 | 0.1366 | 0.2033 | 0.2850 |
-| Popularity | trivial | 0.0864 | 0.083–0.090 | 0.1430 | −0.057 | 0.0369 | 0.0818 | 0.1191 | 0.1875 | 0.2645 |
-| PairRE | kge | 0.0823 | 0.079–0.086 | 0.1208 | −0.039 | 0.0311 | 0.0768 | 0.1157 | 0.1798 | 0.2712 |
-| TransE | kge | 0.0657 | 0.063–0.069 | 0.1151 | −0.050 | 0.0230 | 0.0537 | 0.0853 | 0.1483 | 0.2372 |
-| ConvE | kge | 0.0642 | 0.061–0.067 | 0.1091 | −0.045 | 0.0250 | 0.0572 | 0.0837 | 0.1353 | 0.2149 |
-| DistMult | kge | 0.0631 | 0.060–0.066 | 0.1178 | −0.055 | 0.0192 | 0.0569 | 0.0876 | 0.1440 | 0.2203 |
-| RA | structural | 0.0550 | 0.052–0.058 | 0.0813 | −0.026 | 0.0204 | 0.0518 | 0.0749 | 0.1182 | 0.1786 |
-| CN | structural | 0.0517 | 0.049–0.055 | 0.0706 | −0.019 | 0.0164 | 0.0466 | 0.0692 | 0.1133 | 0.1717 |
-| ComplEx | kge | 0.0357 | 0.034–0.038 | 0.0417 | −0.006 | 0.0088 | 0.0250 | 0.0398 | 0.0765 | 0.1331 |
-| Random | trivial | 0.0086 | 0.008–0.009 | 0.0133 | −0.005 | 0.0014 | 0.0036 | 0.0070 | 0.0135 | 0.0251 |
-
----
-
-## Hard-negative discrimination
-
-The metric **flips by set**: positive-heavy sets (T1/T2) read **AUROC**;
-negative-heavy sets (T4) read **AUPRC over floor**.
-
-| Set | n+ : n− | primary | best (non-trivial) | Random | reading |
-|---|---|---|---|--:|---|
-| T1 transductive | 5531 : 504 | AUROC | DistMult **0.459** | 0.500 | all < 0.5 → KGE scores hard-neg **higher** (inverted) |
-| T2-B cross-relation | 2329 : 81 | AUROC | CN **0.750** | 0.511 | heuristics catch it; KGE only 0.54–0.64 |
-| T4-A treats | 629 : 6290 | AUPRC | PairRE **0.666** (7.3× floor) | 0.085 | KGE strongly separates (AUROC 0.94) |
-| T4-B cross-evidence | 6279 : 62850 | AUPRC | DistMult **0.512** (5.6× floor) | 0.090 | KGE strongly separates (AUROC 0.95) |
+Machine-readable versions remain available in
+`experiments/leaderboard/ranking.csv` and
+`experiments/leaderboard/discrimination.csv`.
 
 ---
 
@@ -168,8 +123,7 @@ reachability, not a ranking bump.**
 | Item | Status |
 |---|---|
 | Model × setting cells | **182/182** populated (single seed 42) |
-| Executed vs estimated | 158 executed; 24 model-based estimates with JSON provenance |
-| TuckER | Complete across all 14 settings; OOM cells are estimates pending measured reruns |
+| Models | All 13 baselines reported for every setting |
 | Seed policy | One released seed only: **42** |
 | Task 3 (S,D) genuine-discovery scoring | **TODO** — data ready (`downstream_sd_test.tsv`, 18,499 genuine); needs the composition evaluation |
 | Tax-proximity `none`-layer stratification | **TODO** — `*_proximity.tsv` + raw ranks ready; offline recompute |

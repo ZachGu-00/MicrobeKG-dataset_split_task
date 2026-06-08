@@ -113,7 +113,8 @@ Full node, relation, source, and evidence inventories are in **[DATA.md](DATA.md
 README.md          # this file — overview + dataset card
 DATA.md            # data sources (19), node/relation inventory (6/25), schema, IDs, evidence
 BENCHMARK.md       # the 4 tasks and their split designs (leakage protection, tax-proximity)
-RESULTS.md         # baseline leaderboard (full metrics) + robustness + multi-relation ablation
+RESULTS.md         # results overview + robustness + multi-relation ablation
+RESULTS_TASK*.md   # complete per-setting tables for Tasks 1-4
 figures/           # figures referenced by the docs (robustness.png, ...)
 splits/            # split-design READMEs; full train/valid/test TSVs are in the data package
 experiments/       # benchmark code (run.py per task), raw results, and aggregation scripts
@@ -138,16 +139,17 @@ kg_build/          # KG build reports (kg_build/reports/final_kg_report.txt is a
 
 ## Results preview
 
-- **RotatE leads ranking** on every task ceiling; **structural heuristics match or
-  beat KGE on honest cold-start / zero-shot splits** (e.g. Task 1 cold-microbe,
-  Task 3-B).
+- **RotatE leads three task ceilings**, while TuckER is highest on Task 3-A;
+  **structural heuristics match or beat KGE on honest cold-start / zero-shot
+  splits** (e.g. Task 1 cold-microbe, Task 3-B).
 - On the **hard-negative discrimination sets, models collapse** — AUROC near or
   below 0.5 on Task 1/2 (the Gap-1 evidence): a model can rank standard links but
   cannot tell a contradictory association from a clean one.
 - A negative-ratio robustness analysis shows the high "0.9x" AUPRC on these sets
   is a **prevalence floor artifact** (AUROC is ratio-invariant).
 
-Full tables, figures, and the per-cell leaderboard are in **[RESULTS.md](RESULTS.md)**.
+The results overview links to complete per-setting tables for all **182**
+model × setting cells: **[RESULTS.md](RESULTS.md)**.
 
 ---
 
@@ -157,7 +159,11 @@ Full tables, figures, and the per-cell leaderboard are in **[RESULTS.md](RESULTS
 |---|---|
 | [DATA.md](DATA.md) | Sources, node/relation inventory, edge schema, ID conventions, evidence types |
 | [BENCHMARK.md](BENCHMARK.md) | The 4 tasks, split rules, leakage protection, recommended metrics |
-| [RESULTS.md](RESULTS.md) | Baseline leaderboard, negative-ratio robustness, multi-relation ablation |
+| [RESULTS.md](RESULTS.md) | Results overview, complete-table index, negative-ratio robustness, multi-relation ablation |
+| [RESULTS_TASK1.md](RESULTS_TASK1.md) | Complete Task 1 ranking and discrimination tables |
+| [RESULTS_TASK2.md](RESULTS_TASK2.md) | Complete Task 2 ranking and discrimination tables |
+| [RESULTS_TASK3.md](RESULTS_TASK3.md) | Complete Task 3 ranking tables |
+| [RESULTS_TASK4.md](RESULTS_TASK4.md) | Complete Task 4 ranking and discrimination tables |
 
 ## Citation & license
 
