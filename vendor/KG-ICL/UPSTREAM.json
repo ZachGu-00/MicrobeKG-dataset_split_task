@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/nju-websoft/KG-ICL",
+  "commit": "6a3166e347ae468acdfb30a70a2cf3608b66b8f1",
+  "checkpoint": "checkpoint/KG-ICL-6L/model_best.tar",
+  "checkpoint_sha256": "80f885ffa2c0175cd6ed829af99ae45177fdb5f77302c7648591bbdf62bc1c81",
+  "license": "GPL-3.0",
+  "retrieved": "2026-09-18",
+  "local_patches": [
+    "Evaluation attention RReLU obeys module training flag.",
+    "Use tuple-style multidimensional assignment compatible with PyTorch 2.9."
+  ]
+}

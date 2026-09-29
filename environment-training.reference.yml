@@ -1,0 +1,15 @@
+# Training environment reference; run conda env create from the repository root.
+name: microbekg-training
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements-training.reference.txt
+      - matplotlib
+      - filelock
+      - torch-geometric==2.6.1
+      - ninja
+# Install torch-scatter for the selected PyTorch/CUDA wheel target.
+# ULTRA also needs the server's CUDA toolkit/nvcc and a C++ compiler.

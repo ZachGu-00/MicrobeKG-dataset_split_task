@@ -1,0 +1,5 @@
+# Tested on Windows, Python 3.13.5; CPU only.
+et_xmlfile==2.0.0
+inflate64==1.0.4
+lxml==5.3.0
+openpyxl==3.1.5

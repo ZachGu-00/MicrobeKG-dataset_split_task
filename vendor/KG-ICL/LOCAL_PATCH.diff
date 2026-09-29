@@ -1,0 +1,21 @@
+diff --git a/src/encoder/EntityEncoder.py b/src/encoder/EntityEncoder.py
+index 0328942..d5d696e 100644
+--- a/src/encoder/EntityEncoder.py
++++ b/src/encoder/EntityEncoder.py
+@@ -44,7 +44,7 @@ class GNNLayer(torch.nn.Module):
+         h_qr = rel_embeddings[q_rel + torch.arange(q_rel.size(0)).to(self.args.device) * (loader.kg.relation_num + 1)][r_idx]
+ 
+         alpha = self.w_alpha(
+-            nn.RReLU()(self.Ws_attn(hs) + self.Wr_attn(hr) + self.Wqr_attn(h_qr)))
++            torch.nn.functional.rrelu(self.Ws_attn(hs) + self.Wr_attn(hr) + self.Wqr_attn(h_qr), training=self.training))
+         alpha = torch.sigmoid(alpha)  # [N_edge_of_all_batch, 1]
+ 
+         # if not torch.cuda.is_available():
+@@ -166,6 +166,6 @@ class EntityEncoder(torch.nn.Module):
+ 
+         scores = self.W_final(hidden).squeeze(-1)
+         scores_all = torch.zeros((n, n_ent)).to(self.args.device)
+-        scores_all[[nodes[:,0], nodes[:,1]]] = scores
++        scores_all[nodes[:,0], nodes[:,1]] = scores
+         scores_all = scores_all * distance2node
+         return scores_all, rel_embedding_full, torch.from_numpy(repeat_rels).to(self.args.device)

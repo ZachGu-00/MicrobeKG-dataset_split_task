@@ -1,0 +1,5 @@
+{
+  "repository": "https://github.com/DeepGraphLearning/ULTRA",
+  "commit": "427966ad8ed60420eef034063d44f3153addff90",
+  "checkpoint": "ckpts/ultra_50g.pth"
+}

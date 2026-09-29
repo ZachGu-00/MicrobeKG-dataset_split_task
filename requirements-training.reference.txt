@@ -1,0 +1,13 @@
+# Tested with Python 3.11.13. CUDA wheels: install torch/torchvision from cu128 first.
+torch==2.7.1
+torchvision==0.22.1
+pykeen==1.11.1
+numpy==1.26.4
+pandas==2.2.0
+scipy==1.16.1
+scikit-learn==1.7.2
+networkx==3.5
+class-resolver==0.6.0
+torch-ppr==0.0.8
+torch-max-mem==0.1.4
+optuna==4.4.0

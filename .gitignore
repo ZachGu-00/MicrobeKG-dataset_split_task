@@ -1,47 +1,56 @@
-# ============================================================
-# MicrobeKG — GitHub keeps: docs + code + build reports +
-# split design READMEs + aggregated leaderboard.
-# Everything large or third-party-licensed goes to Zenodo/Drive.
-# ============================================================
-
-# ---- large data: distribute via Zenodo/Drive, NOT git ----
-# 9.9 GB raw third-party downloads
+# External inputs, generated outputs and local collaboration artifacts.
 original_data/
-# Intermediate cleaned tables
 preprocessed/
-# Final KG tables and per-source edges
-kg_build/final_kg_edges.tsv
-kg_build/final_kg_nodes.tsv
-kg_build/edges/
-kg_build/*
-!kg_build/reports/
-!kg_build/reports/**
-
-# splits: ship the big train/valid/test TSVs via Zenodo; keep only the
-# per-task design READMEs in git.
-splits/**
-!splits/
-!splits/*/
-!splits/*/*/
-!splits/**/README.md
-
-# experiments: keep code + aggregated leaderboard; drop raw dumps & old runs
-experiments/**/results/raw/
-experiments/**/*.npz
-experiments/previous/
-
-# ---- copyrighted / internal: do NOT publish ----
-# Full-text PDFs and internal submission/RLVR notes
+kg_build*/
+benchmark_data/
+supplement_data/
+revision_data/
+data/
+data_local/
 literature_evidence/
-docs/
-claude.md
-CLAUDE.md
-AGENTS.md
-
-# ---- tooling / local ----
+results/
+reference_results/
+revision_results/
+autodl/
+outputs/
+archive/
+release_staging/
+paper_work_collaboration/
+.codex*/
 .claude/
+.venv*/
 .pykeen_home/
-.vscode/
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
 .DS_Store
+.env
+.env.*
+*.log
+*.csv
+*.tsv
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.zip
+*.tar
+*.gz
+*.7z
+*.xlsx
+*.xls
+*.docx
+*.pdf
+*.tex
+*.bib
+*.png
+*.jpg
+*.jpeg
+*.svg
+vendor/**/checkpoint/
+vendor/**/ckpts/
+revision/bundle_manifest.json
+supplement_plan.json

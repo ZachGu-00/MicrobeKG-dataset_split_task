@@ -1,0 +1,22 @@
+MicrobeKG code release, 2026-09-29.
+
+Original benchmark, orchestration and resource-query software: MIT, see LICENSE.
+ULTRA source: MIT, see vendor/ULTRA/LICENSE.
+KG-ICL source: GPL-3.0, see vendor/KG-ICL/LICENSE.
+benchmark/kgicl_adapter.py and the local KG-ICL modifications are distributed
+under GPL-3.0. Corresponding adapter and modified source are retained; preserve
+upstream notices. The root MIT license does not override these terms.
+
+Upstream repositories and revision identifiers are recorded in vendor/*/UPSTREAM.json:
+https://github.com/nju-websoft/KG-ICL
+https://github.com/DeepGraphLearning/ULTRA
+
+Pretrained checkpoints are obtained separately from their upstream authors.
+No model weights, graph records, source downloads or manuscript files are
+included. Software licenses do not grant rights to redistribute upstream data.
+
+Scientific references for the retained foundation models:
+Cui et al., A Knowledge Graph Foundation Model for Universal In-Context
+Reasoning, NeurIPS 2024. See the upstream README for the full citation.
+Galkin et al., Towards Foundation Models for Knowledge Graph Reasoning,
+ICLR 2024. https://openreview.net/forum?id=jVEoydFOl9
