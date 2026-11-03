@@ -1,6 +1,6 @@
 {
   "published_date": "2026-11-03",
-  "graph_version": "audited-20260928",
+  "graph_version": "microbekg-audited",
   "benchmark_version": "mkbench-v3",
   "package_version": "3.0.0",
   "github_url": "https://github.com/ZachGu-00/MicrobeKG-dataset_split_task",
@@ -11,13 +11,14 @@
   "archives": [
     {
       "name": "MicrobeKG-Bench_release_v3.zip",
-      "bytes": 67425961,
-      "sha256": "08ed7222a836ac46e841959e61d5e0610fab9c20782b60f901b225ba5d882da6"
+      "bytes": 67426492,
+      "sha256": "6e93d3a2ec8853108aa3d2dc537cfcdb0b9c23b3e835b3d1fcf924a5997b1566"
     },
     {
       "name": "MicrobeKG-Bench_analysis_code_v3.zip",
       "bytes": 105817,
       "sha256": "f0d1f173869bdb5c8e2bb0453e7f38b012d978f6e8266f0ed1aa64b1c1892fab"
     }
-  ]
+  ],
+  "metadata_revision": "naming-1"
 }

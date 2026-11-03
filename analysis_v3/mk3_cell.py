@@ -2,7 +2,7 @@
 from pathlib import Path
 import sys
 
-ROOT = Path("/root/autodl-tmp/MicrobeKG_data_20261031")
+ROOT = Path("/root/autodl-tmp/MicrobeKG_data")
 sys.path.insert(0, str(ROOT / "benchmark"))
 import prepare  # noqa: E402
 

@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path("/root/autodl-tmp/MicrobeKG_data_20261031")
+ROOT = Path("/root/autodl-tmp/MicrobeKG_data")
 MKG = Path("/root/autodl-tmp/mkg")
 sys.path.insert(0, str(MKG))
 from external_v2 import SNAP, norm  # noqa: E402
@@ -17,7 +17,7 @@ from external_v2 import SNAP, norm  # noqa: E402
 ents = pd.read_csv(MKG / "bench2/entities.tsv", sep="\t", dtype=str, keep_default_na=False)
 n = len(ents)
 idx = {(t, i): j for j, (t, i) in enumerate(zip(ents.node_type, ents.node_id))}
-edges = pd.read_csv(ROOT / "kg_build_audited_20260928/final_kg_edges.tsv", sep="\t", dtype=str, keep_default_na=False,
+edges = pd.read_csv(ROOT / "kg_build_audited/final_kg_edges.tsv", sep="\t", dtype=str, keep_default_na=False,
                     usecols=["head_type", "tail_id", "tail_type", "source", "evidence"])
 b = edges[(edges.head_type == "microbe") & (edges.tail_type == "disease") & edges.source.str.contains("BugSigDB")]
 votes = defaultdict(Counter)

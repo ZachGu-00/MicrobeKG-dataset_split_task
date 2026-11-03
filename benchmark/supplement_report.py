@@ -204,7 +204,7 @@ python benchmark/audit_results.py
 python benchmark/supplement.py report
 ```
 
-完整离线备份：`{ARCHIVE}/snapshots/MicrobeKG_2x5090_complete_20260917.zip`，12,483,674,748 字节；SHA-256：`619e466785a15293e9701d08b817c76cda47a835c88a31e76cd96161ab0e19b6`。备份保留服务器原始报告；当前结论以本文件为准。清理只针对已核对的副本、旧状态与缓存，不删低分结果或唯一权重。
+完整离线备份：`{ARCHIVE}/snapshots/MicrobeKG_2x5090_complete.zip`，12,483,674,748 字节；SHA-256：`619e466785a15293e9701d08b817c76cda47a835c88a31e76cd96161ab0e19b6`。备份保留服务器原始报告；当前结论以本文件为准。清理只针对已核对的副本、旧状态与缓存，不删低分结果或唯一权重。
 
 重复解压副本位于 `{ARCHIVE}/verified_extraction/`：自动审批规则拒绝递归删除，因此改为归档，未物理删除，也未据此宣称释放磁盘空间。移动与清理记录见该归档目录下的 `file_moves.json`、`cleanup_check.json`；更早归档保持原样。
 

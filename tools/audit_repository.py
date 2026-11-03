@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 ALLOWED={'.toml','.sha256','.py','.cpp','.cu','.h','.cuh','.md','.json','.txt','.yml','.yaml','.sh','.diff'}
 SPECIAL={'.gitignore','.gitattributes','LICENSE','NOTICE'}
 FORBIDDEN_DIRS={'original_data','preprocessed','data','data_local','benchmark_data','supplement_data','revision_data',
-               'kg_build','kg_build_audited_20260928','kg_build_corrected_20260928','paper_work_collaboration',
+               'kg_build','kg_build_audited','kg_build_corrected','paper_work_collaboration',
                'results','reference_results','revision_results','archive','release_staging','literature_evidence','autodl','outputs'}
 SECRET_PATTERNS=[r'gh[pousr]_[A-Za-z0-9]{30,}',r'github_pat_[A-Za-z0-9_]{30,}',r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----']
 

@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse,csv,hashlib,json,re,sys,zipfile,struct,zlib,xml.etree.ElementTree as ET
 csv.field_size_limit(10**9)
 SOURCES={'BugSigDB':'bugsigdb_edges.tsv','Disbiome':'disbiome_edges.tsv','GMMAD':'gmmad_edges.tsv','GMrepo_v3':'gmrepo_disease_edges.tsv','HMDAD':'hmdad_edges.tsv','Lit44':'literature44_edges.tsv','Peryton':'peryton_edges.tsv','gutMDisorder_v2':'gutmdisorder_disease_edges.tsv','mBodyMap':'mbodymap_edges.tsv','cross_source_conflict':'cross_source_conflict_edges.tsv'}
-GRAPH_DIRECTORY='kg_build_audited_20260928'
+GRAPH_DIRECTORY='kg_build_audited'
 AUDITED_SUPPORT=None
 
 def graph_file(root,relative_path):
@@ -222,14 +222,14 @@ def utilization(root,microbe,substrate):
 def main():
     global GRAPH_DIRECTORY,AUDITED_SUPPORT
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--project-root',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
-    ap.add_argument('--graph-dir',default='kg_build_audited_20260928',help='Versioned graph directory relative to project root')
+    ap.add_argument('--graph-dir',default='kg_build_audited',help='Versioned graph directory relative to project root')
     ap.add_argument('--support-dir',help='Audited support directory relative to project root (default: GRAPH/provenance/query_support)')
     ap.add_argument('--mode',choices=['association','utilization','demo'],default='demo');ap.add_argument('--microbe');ap.add_argument('--disease');ap.add_argument('--substrate');args=ap.parse_args()
     root=args.project_root.resolve();out=args.out.resolve()
     GRAPH_DIRECTORY=args.graph_dir
     AUDITED_SUPPORT=args.support_dir
     if out.is_relative_to(local(root,GRAPH_DIRECTORY)):raise ValueError('Query output must not modify the graph directory')
-    for protected in ['kg_build','kg_build_corrected_20260928','kg_build_audited_20260928','original_data','literature_evidence','results','preprocessed']:
+    for protected in [p.name for p in root.glob('kg_build*') if p.is_dir()] + ['original_data','literature_evidence','results','preprocessed']:
         if out.is_relative_to(root/protected):raise ValueError('Write query output outside source and frozen-result directories')
     if AUDITED_SUPPORT and out.is_relative_to(local(root,AUDITED_SUPPORT)):raise ValueError('Query output must not modify support inputs')
     out.mkdir(parents=True,exist_ok=True);graph=graph_file(root,'final_kg_edges.tsv');before=sha(graph)

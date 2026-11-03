@@ -78,7 +78,7 @@ def make_plan():
             jobs.append(dict(id='matched__'+job['id'], kind='matched', stage='matched', model=job['model'],
                              setting=job['setting'], seed=job['seed'], source_job=job['id'], heavy=True,
                              depends_on=[job['id']], eval_batch=1, timeout_seconds=7200))
-    write_json(PLAN, dict(version='revision-20260918-v1', seeds=SEEDS,
+    write_json(PLAN, dict(version='revision-v1', seeds=SEEDS,
         hpo_selection='seed42 fixed validation subset only; freeze before any new test evaluation',
         scope='T1 bilinear correction; KG-ICL second KG foundation model; ULTRA T2-A; T4-A shuffle seeds; P0/P1 offline analyses',
         legacy_results='immutable inputs; T2/T4 bilinear configurations unchanged',

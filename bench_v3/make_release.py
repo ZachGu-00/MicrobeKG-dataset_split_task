@@ -164,7 +164,7 @@ def main():
     write_json(out / "SOURCE_TERMS.json", json.loads(args.source_terms_json.read_text()))
     shutil.copy2(args.source_terms_md, out / "SOURCE_TERMS.md")
     write_json(out / "build_info.json", {"ctd_hmdb_only_triples_removed": removed, "settings": SETTINGS + V3,
-                                         "seeds": SEEDS, "graph_version": "audited-20260928",
+                                         "seeds": SEEDS, "graph_version": "microbekg-audited",
                                          "benchmark_version": "mkbench-v3"})
     for root, dirs, files in os.walk(out):
         for d in dirs:

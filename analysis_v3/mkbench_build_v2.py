@@ -28,7 +28,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path("/root/autodl-tmp/MicrobeKG_data_20261031")
+ROOT = Path("/root/autodl-tmp/MicrobeKG_data")
 SRC = Path("/root/autodl-tmp/mkg/bench")
 OUT = Path("/root/autodl-tmp/mkg/bench2")
 REC = Path("/root/autodl-tmp/mkg/out2/records_v2.tsv")
@@ -68,7 +68,7 @@ def main() -> None:
     assert np.all(np.diff(xcode) > 0)
     open_ok = np.zeros(len(x), bool)
     cols = ["head_id", "head_type", "relation", "tail_id", "tail_type", "source"]
-    for df in pd.read_csv(ROOT / "kg_build_audited_20260928/final_kg_edges.tsv", sep="\t", usecols=cols,
+    for df in pd.read_csv(ROOT / "kg_build_audited/final_kg_edges.tsv", sep="\t", usecols=cols,
                           dtype=str, keep_default_na=False, chunksize=500000):
         h = np.fromiter((idx[(a, b)] for a, b in zip(df.head_type, df.head_id)), np.int64, len(df))
         t = np.fromiter((idx[(a, b)] for a, b in zip(df.tail_type, df.tail_id)), np.int64, len(df))
@@ -224,10 +224,10 @@ def main() -> None:
     log("tested-null negatives", audit["tested_null"])
 
     write_json(OUT / "build_audit.json", audit)
-    manifest = dict(protocol="mkbench-v2", graph="kg_build_audited_20260928", seeds=SEEDS,
+    manifest = dict(protocol="mkbench-v2", graph="kg_build_audited", seeds=SEEDS,
                     settings=sorted({m["setting"] for m in metas}),
-                    original_edges_sha256=sha256(ROOT / "kg_build_audited_20260928/final_kg_edges.tsv"),
-                    original_nodes_sha256=sha256(ROOT / "kg_build_audited_20260928/final_kg_nodes.tsv"),
+                    original_edges_sha256=sha256(ROOT / "kg_build_audited/final_kg_edges.tsv"),
+                    original_nodes_sha256=sha256(ROOT / "kg_build_audited/final_kg_nodes.tsv"),
                     files={str(p.relative_to(OUT)): sha256(p) for p in sorted(OUT.rglob("*"))
                            if p.is_file() and p.name != "manifest.json"},
                     splits=metas)

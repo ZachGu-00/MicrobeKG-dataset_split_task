@@ -1,6 +1,6 @@
 # Sources, attribution, and licensing observations
 
-Counts refer to audited-20260928 and were independently recomputed from the exported records.
+Counts refer to microbekg-audited and were independently recomputed from the exported records.
 They count assertion rows carrying each source label; multi-source rows contribute to more than one count.
 The 19 labels consist of 18 upstream labels and one derived conflict label.
 

@@ -2,6 +2,27 @@
 
 Loader and evaluator for **MicrobeKG-Bench: Study-Aware Evaluation of Microbe–Disease Link Prediction**. Code and documentation are published in [GitHub](https://github.com/ZachGu-00/MicrobeKG-dataset_split_task) and linked from [Hugging Face](https://huggingface.co/datasets/ZachGu/MicrobeKG). The v3 data archive will be distributed separately through Google Drive; its download link is pending. The existing Hugging Face nodes/edges tables are the audited graph, not v3 benchmark splits.
 
+## Version names and graph scope
+
+`v3` / `mkbench-v3` identifies the benchmark protocol and release package, not a
+third revision of the complete knowledge graph. `bench_v3/` contains its loader,
+evaluator and release tools; `analysis_v3/` contains the supplied research scripts.
+
+The source graph is named `microbekg-audited` (local directory `kg_build_audited`):
+67,485 typed nodes and 3,647,004 assertions. The separate v3 data archive contains
+the same typed node identities and 2,671,916 graph triples, obtained by excluding
+975,088 assertions supported only by CTD/HMDB. Its benchmark graph is therefore
+a filtered derivative, not a byte-for-byte copy of the complete audited graph.
+The archive also supplies benchmark splits, record tables, tested-null candidates
+and an external test set. Hugging Face's existing `nodes` / `edges` configurations
+remain the complete audited graph; they are not the v3 benchmark splits.
+
+Date-free names are publication aliases. Source-review dates and temporal-cutoff
+dates remain provenance facts, and random seeds remain unchanged. Archive hashes
+and source hashes identify the exact payload. For an existing local graph folder
+with another name, pass its actual path with `--graph-dir`; it need not be renamed.
+
+
 ## Install and test
 
 From this `bench_v3/` directory, use Python >= 3.12:

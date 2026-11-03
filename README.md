@@ -1,5 +1,26 @@
 # MicrobeKG
 
+## Version names and graph scope
+
+`v3` / `mkbench-v3` identifies the benchmark protocol and release package, not a
+third revision of the complete knowledge graph. `bench_v3/` contains its loader,
+evaluator and release tools; `analysis_v3/` contains the supplied research scripts.
+
+The source graph is named `microbekg-audited` (local directory `kg_build_audited`):
+67,485 typed nodes and 3,647,004 assertions. The separate v3 data archive contains
+the same typed node identities and 2,671,916 graph triples, obtained by excluding
+975,088 assertions supported only by CTD/HMDB. Its benchmark graph is therefore
+a filtered derivative, not a byte-for-byte copy of the complete audited graph.
+The archive also supplies benchmark splits, record tables, tested-null candidates
+and an external test set. Hugging Face's existing `nodes` / `edges` configurations
+remain the complete audited graph; they are not the v3 benchmark splits.
+
+Date-free names are publication aliases. Source-review dates and temporal-cutoff
+dates remain provenance facts, and random seeds remain unchanged. Archive hashes
+and source hashes identify the exact payload. For an existing local graph folder
+with another name, pass its actual path with `--graph-dir`; it need not be renamed.
+
+
 ## MicrobeKG-Bench v3
 
 The study-aware benchmark code is available in [bench_v3/](bench_v3/README.md):
@@ -9,7 +30,7 @@ analysis and experiment scripts with their original workspace requirements.
 
 Dataset page: [ZachGu/MicrobeKG](https://huggingface.co/datasets/ZachGu/MicrobeKG).
 The v3 data archive will be released separately through Google Drive; the link is
-pending. The existing Hugging Face nodes/edges tables remain the audited-20260928
+pending. The existing Hugging Face nodes/edges tables remain the microbekg-audited
 graph. See [the release index](RELEASE_V3.json) for archive hashes and versions.
 
 ## MicrobeKG resource and earlier benchmark code
@@ -51,7 +72,7 @@ To evaluate a new model, implement `candidates(queries, relations, pool, side)` 
 
 ```bash
 python -m pip install -r resource_tools/requirements.lock.txt
-python resource_tools/query_resource.py --project-root /path/to/data --graph-dir kg_build_audited_20260928 --mode demo --out outputs/resource_demo
+python resource_tools/query_resource.py --project-root /path/to/data --graph-dir kg_build_audited --mode demo --out outputs/resource_demo
 ```
 
 The two examples return original-record locations for a microbe–disease pair and compare capacity, utilization and recorded non-utilization for a microbe. Inputs and graph hashes are checked without modifying the graph. See [resource_tools/README.md](resource_tools/README.md) for required source files and the audited support directory.

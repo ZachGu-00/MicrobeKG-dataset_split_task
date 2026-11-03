@@ -3,7 +3,7 @@
 Use Python 3.13 with `requirements.lock.txt`. Run from the repository root:
 
 ```bash
-python resource_tools/query_resource.py --project-root /path/to/data --graph-dir kg_build_audited_20260928 --mode demo --out outputs/resource_demo
+python resource_tools/query_resource.py --project-root /path/to/data --graph-dir kg_build_audited --mode demo --out outputs/resource_demo
 ```
 
 The graph and all source records stay outside this code release. Under the selected data root, preserve the graph's `edges/`, `mapping/` and `provenance/` directories, the `original_data/` downloads and `literature_evidence/` parsing tables and supplements.

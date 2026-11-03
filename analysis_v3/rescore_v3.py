@@ -25,7 +25,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path("/root/autodl-tmp/MicrobeKG_data_20261031")
+ROOT = Path("/root/autodl-tmp/MicrobeKG_data")
 MKG = Path("/root/autodl-tmp/mkg")
 sys.path.insert(0, str(ROOT / "benchmark"))
 sys.path.insert(0, str(MKG))

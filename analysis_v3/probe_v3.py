@@ -24,7 +24,7 @@ import pandas as pd
 from scipy.stats import rankdata, spearmanr
 
 MKG = Path("/root/autodl-tmp/mkg")
-ROOT = Path("/root/autodl-tmp/MicrobeKG_data_20261031")
+ROOT = Path("/root/autodl-tmp/MicrobeKG_data")
 RS = MKG / "results3/rescore"
 OUT = MKG / "results3/analysis"
 GM = ROOT / ("paper_work_collaboration/overleaf/microbekg_p0024_overleaf/review/"

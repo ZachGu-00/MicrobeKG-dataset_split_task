@@ -1,6 +1,6 @@
 # External data layout
 
-No data files or model checkpoints are included in this code repository. Obtain an authorized data release separately and retain its version and manifest. The current resource is `audited-20260928`; the reference benchmark retains its original fixed graph/split inputs.
+No data files or model checkpoints are included in this code repository. Obtain an authorized data release separately and retain its version and manifest. The current resource is `microbekg-audited`; the reference benchmark retains its original fixed graph/split inputs.
 
 ## Indexed evaluation inputs
 
@@ -22,7 +22,7 @@ The manifest lists file hashes. Split arrays contain train, validation and test 
 The current evidence query reads:
 
 ```text
-kg_build_audited_20260928/
+kg_build_audited/
   final_kg_nodes.tsv
   final_kg_edges.tsv
   edges/

@@ -1,6 +1,6 @@
 # 本轮实验与统计协议
 
-版本：revision-20260918-v1；固定 seeds 42、123、456。计划在 plan.json。
+版本：revision-v1；固定 seeds 42、123、456。计划在 plan.json。
 
 ## 147 个任务
 

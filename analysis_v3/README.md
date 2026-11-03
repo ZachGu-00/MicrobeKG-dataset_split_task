@@ -1,10 +1,10 @@
 # MicrobeKG-Bench v3 analysis sources
 
-Python sources from `MicrobeKG-Bench_analysis_code_v3.zip`, preserved unchanged.
+Python sources from `MicrobeKG-Bench_analysis_code_v3.zip`, with date-based workspace names replaced by publication aliases. Numerical methods and random seeds are unchanged.
 The portable loader, evaluator, CPU baselines and release tests are in `../bench_v3/`.
 
 These research scripts assume the original Linux research workspace, including
-`/root/autodl-tmp/mkg`, `/root/autodl-tmp/MicrobeKG_data_20261031` and, for packaging,
+`/root/autodl-tmp/mkg`, `/root/autodl-tmp/MicrobeKG_data` and, for packaging,
 `/home/user/ClawsGO/MicrobeKG`. Inspect paths before running. They are not a complete
 standalone training environment: some imports (including `gnn/common.py`,
 `hmdad_audit.py`, NCN sources and the figure-style kernel) and frozen score matrices,
