@@ -2,6 +2,17 @@
 
 Loader and evaluator for **MicrobeKG-Bench: Study-Aware Evaluation of Microbe–Disease Link Prediction**. Code and documentation are published in [GitHub](https://github.com/ZachGu-00/MicrobeKG-dataset_split_task) and linked from [Hugging Face](https://huggingface.co/datasets/ZachGu/MicrobeKG). The v3 data archive will be distributed separately through Google Drive; its download link is pending. The existing Hugging Face nodes/edges tables are the audited graph, not v3 benchmark splits.
 
+## Complete audited graph download
+
+[Download the complete audited graph ZIP from Google Drive](https://drive.google.com/file/d/1q8DHrFgZF8uigf4wINlZfc9zMCenWIfx/view?usp=sharing).
+This archive contains the complete audited graph (67,485 typed nodes and
+3,647,004 assertions). It is separate from `MicrobeKG-Bench_release_v3.zip`,
+which contains filtered graph triples, benchmark splits and associated tables.
+Only the complete audited graph archive is currently available from this Drive link;
+the benchmark v3 archive has not been uploaded there. The Drive archive may extract
+to a differently named directory; pass that actual directory to `--graph-dir`.
+
+
 ## Version names and graph scope
 
 `v3` / `mkbench-v3` identifies the benchmark protocol and release package, not a

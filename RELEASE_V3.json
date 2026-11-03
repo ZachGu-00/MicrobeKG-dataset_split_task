@@ -7,7 +7,7 @@
   "dataset_url": "https://huggingface.co/datasets/ZachGu/MicrobeKG",
   "data_distribution": "Google Drive",
   "data_download_url": null,
-  "data_status": "pending_author_upload",
+  "data_status": "benchmark_archive_not_uploaded",
   "archives": [
     {
       "name": "MicrobeKG-Bench_release_v3.zip",
@@ -20,5 +20,14 @@
       "sha256": "f0d1f173869bdb5c8e2bb0453e7f38b012d978f6e8266f0ed1aa64b1c1892fab"
     }
   ],
-  "metadata_revision": "naming-1"
+  "metadata_revision": "naming-1",
+  "audited_graph_download": {
+    "url": "https://drive.google.com/file/d/1q8DHrFgZF8uigf4wINlZfc9zMCenWIfx/view?usp=sharing",
+    "graph_version": "microbekg-audited",
+    "typed_nodes": 67485,
+    "assertions": 3647004,
+    "scope": "complete audited graph; does not include benchmark v3 splits",
+    "availability": "user_uploaded_link_accessible",
+    "archive_sha256": null
+  }
 }
