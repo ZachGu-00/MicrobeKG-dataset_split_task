@@ -1,0 +1,1082 @@
+{
+ "t1_cold_disease|DegreePrior|123": {
+  "hits_at_10": 0.01894678183337977,
+  "mrr": 0.011175666741627809,
+  "n_triples": 3589,
+  "study_macro_mrr": 0.015676440170364896
+ },
+ "t1_cold_disease|DegreePrior|2024": {
+  "hits_at_10": 0.00620928338762215,
+  "mrr": 0.004230590840391603,
+  "n_triples": 4912,
+  "study_macro_mrr": 0.017798226780989936
+ },
+ "t1_cold_disease|DegreePrior|42": {
+  "hits_at_10": 0.014273668995422789,
+  "mrr": 0.008775422498820457,
+  "n_triples": 8302,
+  "study_macro_mrr": 0.020248863588067278
+ },
+ "t1_cold_disease|DegreePrior|456": {
+  "hits_at_10": 0.013522112631244034,
+  "mrr": 0.008494100004136014,
+  "n_triples": 3143,
+  "study_macro_mrr": 0.015563891904620233
+ },
+ "t1_cold_disease|DegreePrior|789": {
+  "hits_at_10": 0.014304993252361673,
+  "mrr": 0.009322971910888022,
+  "n_triples": 7410,
+  "study_macro_mrr": 0.021167746728157574
+ },
+ "t1_cold_disease|L3|123": {
+  "hits_at_10": 0.01100585121203678,
+  "mrr": 0.006154726409873505,
+  "n_triples": 3589,
+  "study_macro_mrr": 0.005240392533788019
+ },
+ "t1_cold_disease|L3|2024": {
+  "hits_at_10": 0.006412866449511401,
+  "mrr": 0.0028050682656996294,
+  "n_triples": 4912,
+  "study_macro_mrr": 0.01490740644934764
+ },
+ "t1_cold_disease|L3|42": {
+  "hits_at_10": 0.008491929655504698,
+  "mrr": 0.003317851733563321,
+  "n_triples": 8302,
+  "study_macro_mrr": 0.006225202478534025
+ },
+ "t1_cold_disease|L3|456": {
+  "hits_at_10": 0.016385618835507477,
+  "mrr": 0.008808596309422843,
+  "n_triples": 3143,
+  "study_macro_mrr": 0.016845854838417964
+ },
+ "t1_cold_disease|L3|789": {
+  "hits_at_10": 0.01039136302294197,
+  "mrr": 0.0049409112375734966,
+  "n_triples": 7410,
+  "study_macro_mrr": 0.010995511508605338
+ },
+ "t1_cold_microbe|DegreePrior|123": {
+  "hits_at_10": 0.1632428466617755,
+  "mrr": 0.07549663474716581,
+  "n_triples": 4089,
+  "study_macro_mrr": 0.0656692135951374
+ },
+ "t1_cold_microbe|DegreePrior|2024": {
+  "hits_at_10": 0.1782828282828283,
+  "mrr": 0.07386943845393422,
+  "n_triples": 3960,
+  "study_macro_mrr": 0.06397157534392084
+ },
+ "t1_cold_microbe|DegreePrior|42": {
+  "hits_at_10": 0.16362271703777834,
+  "mrr": 0.07356325626859933,
+  "n_triples": 3997,
+  "study_macro_mrr": 0.0600310609010658
+ },
+ "t1_cold_microbe|DegreePrior|456": {
+  "hits_at_10": 0.17351026539809714,
+  "mrr": 0.06984328970584179,
+  "n_triples": 3994,
+  "study_macro_mrr": 0.0651528664571907
+ },
+ "t1_cold_microbe|DegreePrior|789": {
+  "hits_at_10": 0.165474297827239,
+  "mrr": 0.0736674229580044,
+  "n_triples": 3774,
+  "study_macro_mrr": 0.06187279844169425
+ },
+ "t1_cold_microbe|L3|123": {
+  "hits_at_10": 0.17693812668134018,
+  "mrr": 0.07891466824915933,
+  "n_triples": 4089,
+  "study_macro_mrr": 0.0660521985368362
+ },
+ "t1_cold_microbe|L3|2024": {
+  "hits_at_10": 0.16805555555555557,
+  "mrr": 0.07706962694433264,
+  "n_triples": 3960,
+  "study_macro_mrr": 0.0627258526379499
+ },
+ "t1_cold_microbe|L3|42": {
+  "hits_at_10": 0.1681260945709282,
+  "mrr": 0.07757556885292154,
+  "n_triples": 3997,
+  "study_macro_mrr": 0.06633714367054643
+ },
+ "t1_cold_microbe|L3|456": {
+  "hits_at_10": 0.164621932899349,
+  "mrr": 0.07592680957725649,
+  "n_triples": 3994,
+  "study_macro_mrr": 0.06836900477380131
+ },
+ "t1_cold_microbe|L3|789": {
+  "hits_at_10": 0.18044515103338632,
+  "mrr": 0.08489643019440865,
+  "n_triples": 3774,
+  "study_macro_mrr": 0.07377124425689723
+ },
+ "t1_external|DegreePrior|123": {
+  "hits_at_10": 0.09523809523809523,
+  "mrr": 0.05200564900891358,
+  "n_triples": 5418,
+  "study_macro_mrr": 0.06618060109823114
+ },
+ "t1_external|DegreePrior|2024": {
+  "hits_at_10": 0.0950756178531907,
+  "mrr": 0.0520134426227598,
+  "n_triples": 5422,
+  "study_macro_mrr": 0.06614624992536157
+ },
+ "t1_external|DegreePrior|42": {
+  "hits_at_10": 0.09516337456156544,
+  "mrr": 0.05211648472376375,
+  "n_triples": 5417,
+  "study_macro_mrr": 0.06617809139715988
+ },
+ "t1_external|DegreePrior|456": {
+  "hits_at_10": 0.09492619926199262,
+  "mrr": 0.05187372269198201,
+  "n_triples": 5420,
+  "study_macro_mrr": 0.06610782039636913
+ },
+ "t1_external|DegreePrior|789": {
+  "hits_at_10": 0.09514581026208933,
+  "mrr": 0.05200594294603729,
+  "n_triples": 5418,
+  "study_macro_mrr": 0.06617475678668681
+ },
+ "t1_external|L3|123": {
+  "hits_at_10": 0.08619416758951642,
+  "mrr": 0.04145155153156657,
+  "n_triples": 5418,
+  "study_macro_mrr": 0.05378636649521667
+ },
+ "t1_external|L3|2024": {
+  "hits_at_10": 0.08594614533382516,
+  "mrr": 0.04130490226790065,
+  "n_triples": 5422,
+  "study_macro_mrr": 0.05407482017237286
+ },
+ "t1_external|L3|42": {
+  "hits_at_10": 0.0875023075503046,
+  "mrr": 0.04248040237726208,
+  "n_triples": 5417,
+  "study_macro_mrr": 0.05539057079760644
+ },
+ "t1_external|L3|456": {
+  "hits_at_10": 0.08699261992619926,
+  "mrr": 0.041972772099733886,
+  "n_triples": 5420,
+  "study_macro_mrr": 0.054433397025787394
+ },
+ "t1_external|L3|789": {
+  "hits_at_10": 0.0873015873015873,
+  "mrr": 0.04188152402755,
+  "n_triples": 5418,
+  "study_macro_mrr": 0.05423356007516135
+ },
+ "t1_pair|DegreePrior|123": {
+  "hits_at_10": 0.19382255389718075,
+  "mrr": 0.08682677069791735,
+  "n_triples": 4824,
+  "study_macro_mrr": 0.0729705867931706
+ },
+ "t1_pair|DegreePrior|2024": {
+  "hits_at_10": 0.18219461697722567,
+  "mrr": 0.0822571806392637,
+  "n_triples": 4830,
+  "study_macro_mrr": 0.07343974728404919
+ },
+ "t1_pair|DegreePrior|42": {
+  "hits_at_10": 0.19083177763949388,
+  "mrr": 0.08399067513607038,
+  "n_triples": 4821,
+  "study_macro_mrr": 0.07384103944100759
+ },
+ "t1_pair|DegreePrior|456": {
+  "hits_at_10": 0.19341478566991097,
+  "mrr": 0.08648852034910025,
+  "n_triples": 4829,
+  "study_macro_mrr": 0.08084087233163856
+ },
+ "t1_pair|DegreePrior|789": {
+  "hits_at_10": 0.1949679022571961,
+  "mrr": 0.08502139930218758,
+  "n_triples": 4829,
+  "study_macro_mrr": 0.07297057971082267
+ },
+ "t1_pair|L3|123": {
+  "hits_at_10": 0.22719734660033167,
+  "mrr": 0.10269486431800849,
+  "n_triples": 4824,
+  "study_macro_mrr": 0.08267847465098623
+ },
+ "t1_pair|L3|2024": {
+  "hits_at_10": 0.22236024844720498,
+  "mrr": 0.09693749636164864,
+  "n_triples": 4830,
+  "study_macro_mrr": 0.08368526442917329
+ },
+ "t1_pair|L3|42": {
+  "hits_at_10": 0.22236050611906244,
+  "mrr": 0.09949517026874596,
+  "n_triples": 4821,
+  "study_macro_mrr": 0.08548034113837351
+ },
+ "t1_pair|L3|456": {
+  "hits_at_10": 0.22913646717746947,
+  "mrr": 0.0998321307903051,
+  "n_triples": 4829,
+  "study_macro_mrr": 0.0858496916527765
+ },
+ "t1_pair|L3|789": {
+  "hits_at_10": 0.23420998136260096,
+  "mrr": 0.0995474072372528,
+  "n_triples": 4829,
+  "study_macro_mrr": 0.08125355195242011
+ },
+ "t1_study_ctx_open|DegreePrior|123": {
+  "hits_at_10": 0.06097560975609756,
+  "mrr": 0.03596999096185663,
+  "n_triples": 861,
+  "study_macro_mrr": 0.07522067908744018
+ },
+ "t1_study_ctx_open|DegreePrior|2024": {
+  "hits_at_10": 0.10885045778229908,
+  "mrr": 0.05226533137883285,
+  "n_triples": 983,
+  "study_macro_mrr": 0.07648877574202632
+ },
+ "t1_study_ctx_open|DegreePrior|42": {
+  "hits_at_10": 0.11696230598669623,
+  "mrr": 0.05708478588997818,
+  "n_triples": 902,
+  "study_macro_mrr": 0.0697251395912254
+ },
+ "t1_study_ctx_open|DegreePrior|456": {
+  "hits_at_10": 0.0849440488301119,
+  "mrr": 0.03512259322766143,
+  "n_triples": 983,
+  "study_macro_mrr": 0.057269157355553255
+ },
+ "t1_study_ctx_open|DegreePrior|789": {
+  "hits_at_10": 0.09679037111334002,
+  "mrr": 0.04863413065232558,
+  "n_triples": 997,
+  "study_macro_mrr": 0.074366051943805
+ },
+ "t1_study_ctx_open|L3|123": {
+  "hits_at_10": 0.07665505226480836,
+  "mrr": 0.036422625561042914,
+  "n_triples": 861,
+  "study_macro_mrr": 0.06740468185436012
+ },
+ "t1_study_ctx_open|L3|2024": {
+  "hits_at_10": 0.12156663275686673,
+  "mrr": 0.050440570002329536,
+  "n_triples": 983,
+  "study_macro_mrr": 0.07660105169459155
+ },
+ "t1_study_ctx_open|L3|42": {
+  "hits_at_10": 0.10920177383592018,
+  "mrr": 0.04732396238740778,
+  "n_triples": 902,
+  "study_macro_mrr": 0.06795475462123768
+ },
+ "t1_study_ctx_open|L3|456": {
+  "hits_at_10": 0.0839267548321465,
+  "mrr": 0.03675133178230159,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05130077494734632
+ },
+ "t1_study_ctx_open|L3|789": {
+  "hits_at_10": 0.10130391173520562,
+  "mrr": 0.043990261534237116,
+  "n_triples": 997,
+  "study_macro_mrr": 0.07046800659230885
+ },
+ "t1_study_reveal|DegreePrior|123": {
+  "hits_at_10": 0.078397212543554,
+  "mrr": 0.039086566182276974,
+  "n_triples": 861,
+  "study_macro_mrr": 0.06657015896840836
+ },
+ "t1_study_reveal|DegreePrior|2024": {
+  "hits_at_10": 0.12258392675483215,
+  "mrr": 0.053524411773033936,
+  "n_triples": 983,
+  "study_macro_mrr": 0.07333095059134308
+ },
+ "t1_study_reveal|DegreePrior|42": {
+  "hits_at_10": 0.1590909090909091,
+  "mrr": 0.060952153384311196,
+  "n_triples": 902,
+  "study_macro_mrr": 0.06223022660055199
+ },
+ "t1_study_reveal|DegreePrior|456": {
+  "hits_at_10": 0.09003051881993897,
+  "mrr": 0.036648882879188854,
+  "n_triples": 983,
+  "study_macro_mrr": 0.056855305703833736
+ },
+ "t1_study_reveal|DegreePrior|789": {
+  "hits_at_10": 0.11885656970912738,
+  "mrr": 0.04597670945673408,
+  "n_triples": 997,
+  "study_macro_mrr": 0.07239163945756968
+ },
+ "t1_study_reveal|L3|123": {
+  "hits_at_10": 0.09872241579558652,
+  "mrr": 0.04383069435063319,
+  "n_triples": 861,
+  "study_macro_mrr": 0.06844454918834438
+ },
+ "t1_study_reveal|L3|2024": {
+  "hits_at_10": 0.12512716174974567,
+  "mrr": 0.060278840193673286,
+  "n_triples": 983,
+  "study_macro_mrr": 0.08563516487868864
+ },
+ "t1_study_reveal|L3|42": {
+  "hits_at_10": 0.1491130820399113,
+  "mrr": 0.06479659157631786,
+  "n_triples": 902,
+  "study_macro_mrr": 0.07033201652056544
+ },
+ "t1_study_reveal|L3|456": {
+  "hits_at_10": 0.10071210579857579,
+  "mrr": 0.04524376934301082,
+  "n_triples": 983,
+  "study_macro_mrr": 0.06165409354109243
+ },
+ "t1_study_reveal|L3|789": {
+  "hits_at_10": 0.12236710130391174,
+  "mrr": 0.05228250389444538,
+  "n_triples": 997,
+  "study_macro_mrr": 0.07191652199185834
+ },
+ "t1_study_strict|DegreePrior|123": {
+  "hits_at_10": 0.06968641114982578,
+  "mrr": 0.03168932933456469,
+  "n_triples": 861,
+  "study_macro_mrr": 0.053863989651302575
+ },
+ "t1_study_strict|DegreePrior|2024": {
+  "hits_at_10": 0.10732451678535096,
+  "mrr": 0.04151548016445756,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05636962550852782
+ },
+ "t1_study_strict|DegreePrior|42": {
+  "hits_at_10": 0.15188470066518847,
+  "mrr": 0.04995558213253886,
+  "n_triples": 902,
+  "study_macro_mrr": 0.04777587959431876
+ },
+ "t1_study_strict|DegreePrior|456": {
+  "hits_at_10": 0.08036622583926754,
+  "mrr": 0.031747132253694195,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05007915726457204
+ },
+ "t1_study_strict|DegreePrior|789": {
+  "hits_at_10": 0.11384152457372117,
+  "mrr": 0.04016697180363898,
+  "n_triples": 997,
+  "study_macro_mrr": 0.0650927449749852
+ },
+ "t1_study_strict|L3|123": {
+  "hits_at_10": 0.06794425087108014,
+  "mrr": 0.029551598602836605,
+  "n_triples": 861,
+  "study_macro_mrr": 0.049277442698671105
+ },
+ "t1_study_strict|L3|2024": {
+  "hits_at_10": 0.0762970498474059,
+  "mrr": 0.034239438652098046,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05140458431946213
+ },
+ "t1_study_strict|L3|42": {
+  "hits_at_10": 0.08924611973392461,
+  "mrr": 0.037527544658907064,
+  "n_triples": 902,
+  "study_macro_mrr": 0.04764274012134352
+ },
+ "t1_study_strict|L3|456": {
+  "hits_at_10": 0.05747711088504578,
+  "mrr": 0.02458909340887678,
+  "n_triples": 983,
+  "study_macro_mrr": 0.03577142321587757
+ },
+ "t1_study_strict|L3|789": {
+  "hits_at_10": 0.07522567703109329,
+  "mrr": 0.03113580226209212,
+  "n_triples": 997,
+  "study_macro_mrr": 0.05344239177215379
+ },
+ "t1_study|DegreePrior|123": {
+  "hits_at_10": 0.07491289198606271,
+  "mrr": 0.03667175627906706,
+  "n_triples": 861,
+  "study_macro_mrr": 0.06525599903978663
+ },
+ "t1_study|DegreePrior|2024": {
+  "hits_at_10": 0.12258392675483215,
+  "mrr": 0.051003949445677585,
+  "n_triples": 983,
+  "study_macro_mrr": 0.07124350266450377
+ },
+ "t1_study|DegreePrior|42": {
+  "hits_at_10": 0.15687361419068735,
+  "mrr": 0.059969154488406125,
+  "n_triples": 902,
+  "study_macro_mrr": 0.061423685831697765
+ },
+ "t1_study|DegreePrior|456": {
+  "hits_at_10": 0.09003051881993897,
+  "mrr": 0.035107234783829634,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05571728269326745
+ },
+ "t1_study|DegreePrior|789": {
+  "hits_at_10": 0.11384152457372117,
+  "mrr": 0.043023780288868434,
+  "n_triples": 997,
+  "study_macro_mrr": 0.07159334805133154
+ },
+ "t1_study|L3|123": {
+  "hits_at_10": 0.07781649245063879,
+  "mrr": 0.036232059419054004,
+  "n_triples": 861,
+  "study_macro_mrr": 0.06161891524024309
+ },
+ "t1_study|L3|2024": {
+  "hits_at_10": 0.10325534079348932,
+  "mrr": 0.04910165727431009,
+  "n_triples": 983,
+  "study_macro_mrr": 0.07572514435756536
+ },
+ "t1_study|L3|42": {
+  "hits_at_10": 0.10975609756097561,
+  "mrr": 0.04952592673127282,
+  "n_triples": 902,
+  "study_macro_mrr": 0.06386208828298189
+ },
+ "t1_study|L3|456": {
+  "hits_at_10": 0.07934893184130214,
+  "mrr": 0.03283235870304389,
+  "n_triples": 983,
+  "study_macro_mrr": 0.052221605284541145
+ },
+ "t1_study|L3|789": {
+  "hits_at_10": 0.09077231695085256,
+  "mrr": 0.03982731973852169,
+  "n_triples": 997,
+  "study_macro_mrr": 0.06840719950760443
+ },
+ "t1_temporal_nodis|DegreePrior|123": {
+  "hits_at_10": 0.07742811863255604,
+  "mrr": 0.03585032627644236,
+  "n_triples": 4417,
+  "study_macro_mrr": 0.050234329163813075
+ },
+ "t1_temporal_nodis|DegreePrior|2024": {
+  "hits_at_10": 0.07742811863255604,
+  "mrr": 0.03585032627644236,
+  "n_triples": 4417,
+  "study_macro_mrr": 0.050234329163813075
+ },
+ "t1_temporal_nodis|DegreePrior|42": {
+  "hits_at_10": 0.07742811863255604,
+  "mrr": 0.03585032627644236,
+  "n_triples": 4417,
+  "study_macro_mrr": 0.050234329163813075
+ },
+ "t1_temporal_nodis|DegreePrior|456": {
+  "hits_at_10": 0.07742811863255604,
+  "mrr": 0.03585032627644236,
+  "n_triples": 4417,
+  "study_macro_mrr": 0.050234329163813075
+ },
+ "t1_temporal_nodis|DegreePrior|789": {
+  "hits_at_10": 0.07742811863255604,
+  "mrr": 0.03585032627644236,
+  "n_triples": 4417,
+  "study_macro_mrr": 0.050234329163813075
+ },
+ "t1_temporal_nodis|L3|123": {
+  "hits_at_10": 0.07142857142857142,
+  "mrr": 0.03331217971744074,
+  "n_triples": 4417,
+  "study_macro_mrr": 0.05448530842217733
+ },
+ "t1_temporal_nodis|L3|2024": {
+  "hits_at_10": 0.07142857142857142,
+  "mrr": 0.03331217971744074,
+  "n_triples": 4417,
+  "study_macro_mrr": 0.05448530842217733
+ },
+ "t1_temporal_nodis|L3|42": {
+  "hits_at_10": 0.07142857142857142,
+  "mrr": 0.03331217971744074,
+  "n_triples": 4417,
+  "study_macro_mrr": 0.05448530842217733
+ },
+ "t1_temporal_nodis|L3|456": {
+  "hits_at_10": 0.07142857142857142,
+  "mrr": 0.03331217971744074,
+  "n_triples": 4417,
+  "study_macro_mrr": 0.05448530842217733
+ },
+ "t1_temporal_nodis|L3|789": {
+  "hits_at_10": 0.07142857142857142,
+  "mrr": 0.03331217971744074,
+  "n_triples": 4417,
+  "study_macro_mrr": 0.05448530842217733
+ },
+ "t1_temporal|DegreePrior|123": {
+  "hits_at_10": 0.07901585048497753,
+  "mrr": 0.040273375664782764,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.05470884820051152
+ },
+ "t1_temporal|DegreePrior|2024": {
+  "hits_at_10": 0.07901585048497753,
+  "mrr": 0.040273375664782764,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.05470884820051152
+ },
+ "t1_temporal|DegreePrior|42": {
+  "hits_at_10": 0.07901585048497753,
+  "mrr": 0.040273375664782764,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.05470884820051152
+ },
+ "t1_temporal|DegreePrior|456": {
+  "hits_at_10": 0.07901585048497753,
+  "mrr": 0.040273375664782764,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.05470884820051152
+ },
+ "t1_temporal|DegreePrior|789": {
+  "hits_at_10": 0.07901585048497753,
+  "mrr": 0.040273375664782764,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.05470884820051152
+ },
+ "t1_temporal|L3|123": {
+  "hits_at_10": 0.07014431038561628,
+  "mrr": 0.03321793269491999,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.04749446571395512
+ },
+ "t1_temporal|L3|2024": {
+  "hits_at_10": 0.07014431038561628,
+  "mrr": 0.03321793269491999,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.04749446571395512
+ },
+ "t1_temporal|L3|42": {
+  "hits_at_10": 0.07014431038561628,
+  "mrr": 0.03321793269491999,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.04749446571395512
+ },
+ "t1_temporal|L3|456": {
+  "hits_at_10": 0.07014431038561628,
+  "mrr": 0.03321793269491999,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.04749446571395512
+ },
+ "t1_temporal|L3|789": {
+  "hits_at_10": 0.07014431038561628,
+  "mrr": 0.03321793269491999,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.04749446571395512
+ },
+ "t1_v3_p11_base|DegreePrior|123": {
+  "hits_at_10": 0.07491289198606271,
+  "mrr": 0.03557590272598854,
+  "n_triples": 861,
+  "study_macro_mrr": 0.06462826319520361
+ },
+ "t1_v3_p11_base|DegreePrior|2024": {
+  "hits_at_10": 0.12321792260692464,
+  "mrr": 0.05000896615648251,
+  "n_triples": 982,
+  "study_macro_mrr": 0.07041654155814633
+ },
+ "t1_v3_p11_base|DegreePrior|42": {
+  "hits_at_10": 0.15521064301552107,
+  "mrr": 0.05928126209937928,
+  "n_triples": 902,
+  "study_macro_mrr": 0.06088297668576127
+ },
+ "t1_v3_p11_base|DegreePrior|456": {
+  "hits_at_10": 0.08850457782299084,
+  "mrr": 0.03422739036974793,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05483224232687852
+ },
+ "t1_v3_p11_base|DegreePrior|789": {
+  "hits_at_10": 0.11334002006018054,
+  "mrr": 0.04220308976298163,
+  "n_triples": 997,
+  "study_macro_mrr": 0.07121911285592003
+ },
+ "t1_v3_p11_base|L3|123": {
+  "hits_at_10": 0.07607433217189315,
+  "mrr": 0.03479956651848861,
+  "n_triples": 861,
+  "study_macro_mrr": 0.060756899514611315
+ },
+ "t1_v3_p11_base|L3|2024": {
+  "hits_at_10": 0.10336048879837068,
+  "mrr": 0.04814787872005135,
+  "n_triples": 982,
+  "study_macro_mrr": 0.07024365110945727
+ },
+ "t1_v3_p11_base|L3|42": {
+  "hits_at_10": 0.10809312638580931,
+  "mrr": 0.04792615801327106,
+  "n_triples": 902,
+  "study_macro_mrr": 0.0604626093110202
+ },
+ "t1_v3_p11_base|L3|456": {
+  "hits_at_10": 0.07731434384537131,
+  "mrr": 0.03200393218372854,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05169196068091839
+ },
+ "t1_v3_p11_base|L3|789": {
+  "hits_at_10": 0.08575727181544635,
+  "mrr": 0.03777052165913537,
+  "n_triples": 997,
+  "study_macro_mrr": 0.06562649519497477
+ },
+ "t1_v3_p11_other|DegreePrior|123": {
+  "hits_at_10": 0.07491289198606271,
+  "mrr": 0.03667175726429913,
+  "n_triples": 861,
+  "study_macro_mrr": 0.06525599949304614
+ },
+ "t1_v3_p11_other|DegreePrior|2024": {
+  "hits_at_10": 0.12270875763747455,
+  "mrr": 0.05105254719332618,
+  "n_triples": 982,
+  "study_macro_mrr": 0.07125919831778801
+ },
+ "t1_v3_p11_other|DegreePrior|42": {
+  "hits_at_10": 0.15687361419068735,
+  "mrr": 0.05996915591405964,
+  "n_triples": 902,
+  "study_macro_mrr": 0.06142368690959226
+ },
+ "t1_v3_p11_other|DegreePrior|456": {
+  "hits_at_10": 0.09003051881993897,
+  "mrr": 0.03510723527247373,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05571728289778145
+ },
+ "t1_v3_p11_other|DegreePrior|789": {
+  "hits_at_10": 0.11384152457372117,
+  "mrr": 0.04302378494367785,
+  "n_triples": 997,
+  "study_macro_mrr": 0.07159334982051613
+ },
+ "t1_v3_p11_other|L3|123": {
+  "hits_at_10": 0.07781649245063879,
+  "mrr": 0.03623260544178283,
+  "n_triples": 861,
+  "study_macro_mrr": 0.06161902309817766
+ },
+ "t1_v3_p11_other|L3|2024": {
+  "hits_at_10": 0.10336048879837068,
+  "mrr": 0.049148322550649964,
+  "n_triples": 982,
+  "study_macro_mrr": 0.07573526343181618
+ },
+ "t1_v3_p11_other|L3|42": {
+  "hits_at_10": 0.10975609756097561,
+  "mrr": 0.049526095267207755,
+  "n_triples": 902,
+  "study_macro_mrr": 0.06386216825073394
+ },
+ "t1_v3_p11_other|L3|456": {
+  "hits_at_10": 0.07934893184130214,
+  "mrr": 0.032832383985983066,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05222162841084049
+ },
+ "t1_v3_p11_other|L3|789": {
+  "hits_at_10": 0.09077231695085256,
+  "mrr": 0.03982822911736146,
+  "n_triples": 997,
+  "study_macro_mrr": 0.06840792050778527
+ },
+ "t1_v3_p11_same|DegreePrior|123": {
+  "hits_at_10": 0.07549361207897794,
+  "mrr": 0.036736260187977,
+  "n_triples": 861,
+  "study_macro_mrr": 0.06534243244178223
+ },
+ "t1_v3_p11_same|DegreePrior|2024": {
+  "hits_at_10": 0.12270875763747455,
+  "mrr": 0.05107374842843163,
+  "n_triples": 982,
+  "study_macro_mrr": 0.0712786492839693
+ },
+ "t1_v3_p11_same|DegreePrior|42": {
+  "hits_at_10": 0.15687361419068735,
+  "mrr": 0.06005055906099694,
+  "n_triples": 902,
+  "study_macro_mrr": 0.0614502511073145
+ },
+ "t1_v3_p11_same|DegreePrior|456": {
+  "hits_at_10": 0.09003051881993897,
+  "mrr": 0.035123275826154585,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05573365214016545
+ },
+ "t1_v3_p11_same|DegreePrior|789": {
+  "hits_at_10": 0.11384152457372117,
+  "mrr": 0.04313108261989078,
+  "n_triples": 997,
+  "study_macro_mrr": 0.07159464340566679
+ },
+ "t1_v3_p11_same|L3|123": {
+  "hits_at_10": 0.08478513356562137,
+  "mrr": 0.039113183563867567,
+  "n_triples": 861,
+  "study_macro_mrr": 0.06588694846802617
+ },
+ "t1_v3_p11_same|L3|2024": {
+  "hits_at_10": 0.10692464358452139,
+  "mrr": 0.05221758659435081,
+  "n_triples": 982,
+  "study_macro_mrr": 0.07773555199378185
+ },
+ "t1_v3_p11_same|L3|42": {
+  "hits_at_10": 0.14135254988913526,
+  "mrr": 0.05922077945787239,
+  "n_triples": 902,
+  "study_macro_mrr": 0.06669719308884166
+ },
+ "t1_v3_p11_same|L3|456": {
+  "hits_at_10": 0.08952187182095625,
+  "mrr": 0.036620681489992396,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05603187692776498
+ },
+ "t1_v3_p11_same|L3|789": {
+  "hits_at_10": 0.10481444332998997,
+  "mrr": 0.0431205034058063,
+  "n_triples": 997,
+  "study_macro_mrr": 0.07132085388008744
+ },
+ "t1_v3_strict_nocohort|DegreePrior|123": {
+  "hits_at_10": 0.07741559953434225,
+  "mrr": 0.04075551042259972,
+  "n_triples": 859,
+  "study_macro_mrr": 0.08508003676160036
+ },
+ "t1_v3_strict_nocohort|DegreePrior|2024": {
+  "hits_at_10": 0.13021363173957273,
+  "mrr": 0.062309185389000474,
+  "n_triples": 983,
+  "study_macro_mrr": 0.09124807469921414
+ },
+ "t1_v3_strict_nocohort|DegreePrior|42": {
+  "hits_at_10": 0.1491130820399113,
+  "mrr": 0.07500577898074752,
+  "n_triples": 902,
+  "study_macro_mrr": 0.07849507268076428
+ },
+ "t1_v3_strict_nocohort|DegreePrior|456": {
+  "hits_at_10": 0.08748728382502544,
+  "mrr": 0.04027476980144042,
+  "n_triples": 983,
+  "study_macro_mrr": 0.06568024854241915
+ },
+ "t1_v3_strict_nocohort|DegreePrior|789": {
+  "hits_at_10": 0.11835506519558676,
+  "mrr": 0.053958778433802,
+  "n_triples": 997,
+  "study_macro_mrr": 0.09192844490958949
+ },
+ "t1_v3_strict_nocohort|L3|123": {
+  "hits_at_10": 0.06577415599534342,
+  "mrr": 0.028602334895921077,
+  "n_triples": 859,
+  "study_macro_mrr": 0.05314542438866536
+ },
+ "t1_v3_strict_nocohort|L3|2024": {
+  "hits_at_10": 0.09053916581892167,
+  "mrr": 0.040800938282133076,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05903540522515854
+ },
+ "t1_v3_strict_nocohort|L3|42": {
+  "hits_at_10": 0.09312638580931264,
+  "mrr": 0.036624454483434155,
+  "n_triples": 902,
+  "study_macro_mrr": 0.04720222432536894
+ },
+ "t1_v3_strict_nocohort|L3|456": {
+  "hits_at_10": 0.0676500508646999,
+  "mrr": 0.028308663450936654,
+  "n_triples": 983,
+  "study_macro_mrr": 0.04310722484129911
+ },
+ "t1_v3_strict_nocohort|L3|789": {
+  "hits_at_10": 0.09327983951855567,
+  "mrr": 0.03440192417735385,
+  "n_triples": 997,
+  "study_macro_mrr": 0.06144170277256761
+ },
+ "t1_v3_strict_nocooc|DegreePrior|123": {
+  "hits_at_10": 0.06968641114982578,
+  "mrr": 0.03191386405220076,
+  "n_triples": 861,
+  "study_macro_mrr": 0.05415552025253488
+ },
+ "t1_v3_strict_nocooc|DegreePrior|2024": {
+  "hits_at_10": 0.10681586978636826,
+  "mrr": 0.04174909196998099,
+  "n_triples": 983,
+  "study_macro_mrr": 0.056678303492453175
+ },
+ "t1_v3_strict_nocooc|DegreePrior|42": {
+  "hits_at_10": 0.15077605321507762,
+  "mrr": 0.050147711858697194,
+  "n_triples": 902,
+  "study_macro_mrr": 0.048033467089436066
+ },
+ "t1_v3_strict_nocooc|DegreePrior|456": {
+  "hits_at_10": 0.08036622583926754,
+  "mrr": 0.03200997904148416,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05036170821275602
+ },
+ "t1_v3_strict_nocooc|DegreePrior|789": {
+  "hits_at_10": 0.11384152457372117,
+  "mrr": 0.04037511745232587,
+  "n_triples": 997,
+  "study_macro_mrr": 0.06543262470098027
+ },
+ "t1_v3_strict_nocooc|L3|123": {
+  "hits_at_10": 0.06852497096399536,
+  "mrr": 0.02991131569491163,
+  "n_triples": 861,
+  "study_macro_mrr": 0.049986355894973945
+ },
+ "t1_v3_strict_nocooc|L3|2024": {
+  "hits_at_10": 0.0762970498474059,
+  "mrr": 0.03461926896734182,
+  "n_triples": 983,
+  "study_macro_mrr": 0.052452716918681794
+ },
+ "t1_v3_strict_nocooc|L3|42": {
+  "hits_at_10": 0.08869179600886919,
+  "mrr": 0.0378378530046203,
+  "n_triples": 902,
+  "study_macro_mrr": 0.04606024642646534
+ },
+ "t1_v3_strict_nocooc|L3|456": {
+  "hits_at_10": 0.0595116988809766,
+  "mrr": 0.02498725389170668,
+  "n_triples": 983,
+  "study_macro_mrr": 0.03616336073802668
+ },
+ "t1_v3_strict_nocooc|L3|789": {
+  "hits_at_10": 0.0757271815446339,
+  "mrr": 0.031842748681380435,
+  "n_triples": 997,
+  "study_macro_mrr": 0.056426509972204025
+ },
+ "t1_v3_strict_nooverlap|DegreePrior|123": {
+  "hits_at_10": 0.06968641114982578,
+  "mrr": 0.028519374640612924,
+  "n_triples": 861,
+  "study_macro_mrr": 0.05436461734537071
+ },
+ "t1_v3_strict_nooverlap|DegreePrior|2024": {
+  "hits_at_10": 0.09562563580874874,
+  "mrr": 0.038521429911455546,
+  "n_triples": 983,
+  "study_macro_mrr": 0.05479566694049099
+ },
+ "t1_v3_strict_nooverlap|DegreePrior|42": {
+  "hits_at_10": 0.14412416851441243,
+  "mrr": 0.04901032962165062,
+  "n_triples": 902,
+  "study_macro_mrr": 0.04676906908793903
+ },
+ "t1_v3_strict_nooverlap|DegreePrior|456": {
+  "hits_at_10": 0.08036622583926754,
+  "mrr": 0.029318920877760328,
+  "n_triples": 983,
+  "study_macro_mrr": 0.04409983445349515
+ },
+ "t1_v3_strict_nooverlap|DegreePrior|789": {
+  "hits_at_10": 0.09979939819458375,
+  "mrr": 0.03920748883537596,
+  "n_triples": 997,
+  "study_macro_mrr": 0.06356286136536173
+ },
+ "t1_v3_strict_nooverlap|L3|123": {
+  "hits_at_10": 0.06794425087108014,
+  "mrr": 0.028405806120803925,
+  "n_triples": 861,
+  "study_macro_mrr": 0.04826213383464062
+ },
+ "t1_v3_strict_nooverlap|L3|2024": {
+  "hits_at_10": 0.07222787385554426,
+  "mrr": 0.0329772561923268,
+  "n_triples": 983,
+  "study_macro_mrr": 0.04833364380768899
+ },
+ "t1_v3_strict_nooverlap|L3|42": {
+  "hits_at_10": 0.08702882483370289,
+  "mrr": 0.03704275516707987,
+  "n_triples": 902,
+  "study_macro_mrr": 0.04659646752596066
+ },
+ "t1_v3_strict_nooverlap|L3|456": {
+  "hits_at_10": 0.05747711088504578,
+  "mrr": 0.02354360022404875,
+  "n_triples": 983,
+  "study_macro_mrr": 0.03325418857442943
+ },
+ "t1_v3_strict_nooverlap|L3|789": {
+  "hits_at_10": 0.0712136409227683,
+  "mrr": 0.030832294015063762,
+  "n_triples": 997,
+  "study_macro_mrr": 0.05302642387423386
+ },
+ "t1_v3_temporal_dated|DegreePrior|123": {
+  "hits_at_10": 0.09060799621480956,
+  "mrr": 0.054127112430023085,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.07779948985828349
+ },
+ "t1_v3_temporal_dated|DegreePrior|2024": {
+  "hits_at_10": 0.09060799621480956,
+  "mrr": 0.054127112430023085,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.07779948985828349
+ },
+ "t1_v3_temporal_dated|DegreePrior|42": {
+  "hits_at_10": 0.09060799621480956,
+  "mrr": 0.054127112430023085,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.07779948985828349
+ },
+ "t1_v3_temporal_dated|DegreePrior|456": {
+  "hits_at_10": 0.09060799621480956,
+  "mrr": 0.054127112430023085,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.07779948985828349
+ },
+ "t1_v3_temporal_dated|DegreePrior|789": {
+  "hits_at_10": 0.09060799621480956,
+  "mrr": 0.054127112430023085,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.07779948985828349
+ },
+ "t1_v3_temporal_dated|L3|123": {
+  "hits_at_10": 0.06292879110480246,
+  "mrr": 0.02854622689331771,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.04459345946985761
+ },
+ "t1_v3_temporal_dated|L3|2024": {
+  "hits_at_10": 0.06292879110480246,
+  "mrr": 0.02854622689331771,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.04459345946985761
+ },
+ "t1_v3_temporal_dated|L3|42": {
+  "hits_at_10": 0.06292879110480246,
+  "mrr": 0.02854622689331771,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.04459345946985761
+ },
+ "t1_v3_temporal_dated|L3|456": {
+  "hits_at_10": 0.06292879110480246,
+  "mrr": 0.02854622689331771,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.04459345946985761
+ },
+ "t1_v3_temporal_dated|L3|789": {
+  "hits_at_10": 0.06292879110480246,
+  "mrr": 0.02854622689331771,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.04459345946985761
+ },
+ "t1_v3_temporal_nocooc|DegreePrior|123": {
+  "hits_at_10": 0.07901585048497753,
+  "mrr": 0.04034251528715482,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.05479639989025309
+ },
+ "t1_v3_temporal_nocooc|DegreePrior|2024": {
+  "hits_at_10": 0.07901585048497753,
+  "mrr": 0.04034251528715482,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.05479639989025309
+ },
+ "t1_v3_temporal_nocooc|DegreePrior|42": {
+  "hits_at_10": 0.07901585048497753,
+  "mrr": 0.04034251528715482,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.05479639989025309
+ },
+ "t1_v3_temporal_nocooc|DegreePrior|456": {
+  "hits_at_10": 0.07901585048497753,
+  "mrr": 0.04034251528715482,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.05479639989025309
+ },
+ "t1_v3_temporal_nocooc|DegreePrior|789": {
+  "hits_at_10": 0.07901585048497753,
+  "mrr": 0.04034251528715482,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.05479639989025309
+ },
+ "t1_v3_temporal_nocooc|L3|123": {
+  "hits_at_10": 0.07085403359356518,
+  "mrr": 0.032724225355203515,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.0469706984144026
+ },
+ "t1_v3_temporal_nocooc|L3|2024": {
+  "hits_at_10": 0.07085403359356518,
+  "mrr": 0.032724225355203515,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.0469706984144026
+ },
+ "t1_v3_temporal_nocooc|L3|42": {
+  "hits_at_10": 0.07085403359356518,
+  "mrr": 0.032724225355203515,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.0469706984144026
+ },
+ "t1_v3_temporal_nocooc|L3|456": {
+  "hits_at_10": 0.07085403359356518,
+  "mrr": 0.032724225355203515,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.0469706984144026
+ },
+ "t1_v3_temporal_nocooc|L3|789": {
+  "hits_at_10": 0.07085403359356518,
+  "mrr": 0.032724225355203515,
+  "n_triples": 4227,
+  "study_macro_mrr": 0.0469706984144026
+ }
+}

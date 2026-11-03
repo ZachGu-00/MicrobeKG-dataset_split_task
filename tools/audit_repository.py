@@ -3,7 +3,7 @@ from pathlib import Path
 import ast,json,re,subprocess,sys
 
 ROOT=Path(__file__).resolve().parents[1]
-ALLOWED={'.py','.cpp','.cu','.h','.cuh','.md','.json','.txt','.yml','.yaml','.sh','.diff'}
+ALLOWED={'.toml','.sha256','.py','.cpp','.cu','.h','.cuh','.md','.json','.txt','.yml','.yaml','.sh','.diff'}
 SPECIAL={'.gitignore','.gitattributes','LICENSE','NOTICE'}
 FORBIDDEN_DIRS={'original_data','preprocessed','data','data_local','benchmark_data','supplement_data','revision_data',
                'kg_build','kg_build_audited_20260928','kg_build_corrected_20260928','paper_work_collaboration',

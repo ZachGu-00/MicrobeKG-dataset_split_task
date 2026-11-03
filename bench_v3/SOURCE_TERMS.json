@@ -1,0 +1,200 @@
+{
+  "graph_version": "audited-20260928",
+  "count_date": "2026-09-29",
+  "counts_overlap": true,
+  "public_redistribution_review_complete": false,
+  "sources": [
+    {
+      "source": "AGORA2",
+      "current_labelled_assertions": 1496721,
+      "license_observation": "MIT on repository; downloaded SBML scope needs confirmation",
+      "status": "partial",
+      "evidence_url": "https://github.com/VirtualMetabolicHuman/AGORA2",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Repository redirects model downloads to VMH; preserve model attribution and confirm SBML terms."
+    },
+    {
+      "source": "BugSigDB",
+      "current_labelled_assertions": 15197,
+      "license_observation": "ODC-BY-1.0",
+      "status": "verified",
+      "evidence_url": "https://bugsigdb.org/Project:About",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Data licensing section explicitly covers database reuse; preserve attribution and notices."
+    },
+    {
+      "source": "CTD",
+      "current_labelled_assertions": 124973,
+      "license_observation": "Non-commercial access; commercial download license",
+      "status": "restricted",
+      "evidence_url": "https://academic.oup.com/nar/article/53/D1/D1328/7816860",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-29",
+      "notes": "The authors describe free non-commercial availability and a commercial download license. This does not establish unrestricted bulk redistribution of the derived graph.",
+      "check_method": "Read Data availability in the CTD authors' 2025 update."
+    },
+    {
+      "source": "Disbiome",
+      "current_labelled_assertions": 6715,
+      "license_observation": "No explicit data license established",
+      "status": "pending",
+      "evidence_url": "https://disbiome.ugent.be/",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Download access and article availability do not establish redistribution rights."
+    },
+    {
+      "source": "GMMAD",
+      "current_labelled_assertions": 1046640,
+      "license_observation": "No explicit data license established",
+      "status": "pending",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10464125/",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Database paper located; exact downloaded-table terms still required."
+    },
+    {
+      "source": "GMrepo_v3",
+      "current_labelled_assertions": 19849,
+      "license_observation": "No explicit data license established",
+      "status": "pending",
+      "evidence_url": "https://gmrepo.humangut.info/",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Confirm terms for the v3 phenotype and abundance exports used here."
+    },
+    {
+      "source": "HMDAD",
+      "current_labelled_assertions": 407,
+      "license_observation": "No explicit data license established",
+      "status": "pending",
+      "evidence_url": "http://www.cuilab.cn/hmdad",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Confirm original association table license."
+    },
+    {
+      "source": "HMDB",
+      "current_labelled_assertions": 850148,
+      "license_observation": "Official terms require explicit permission and acknowledgment for commercial use and redistribution.",
+      "status": "restricted_pending_snapshot",
+      "evidence_url": "https://www.hmdb.ca/downloads",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-29",
+      "notes": "Commercial restriction verified in current official page text. Exact source snapshot and applicable redistribution permission remain to be confirmed.",
+      "check_method": "Official download/about page text returned by web search; direct page access unavailable."
+    },
+    {
+      "source": "Lit44",
+      "current_labelled_assertions": 1941,
+      "license_observation": "Per-article extracted factual assertions; heterogeneous terms",
+      "status": "pending",
+      "evidence_url": "",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Historical source label. Retained assertion evidence contains study identifiers; exact article/supplement terms require per-study review. Full texts are not included."
+    },
+    {
+      "source": "MeSH",
+      "current_labelled_assertions": 8076,
+      "license_observation": "NLM MeSH Terms and Conditions",
+      "status": "verified_terms",
+      "evidence_url": "https://www.nlm.nih.gov/databases/download/terms_and_conditions_mesh.html",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Acknowledge NLM; no endorsement; identify frozen version (local source desc2026.xml.gz)."
+    },
+    {
+      "source": "NCBI_Taxonomy",
+      "current_labelled_assertions": 58610,
+      "license_observation": "NCBI government-information policy, subject to third-party notices",
+      "status": "verified_terms",
+      "evidence_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Acknowledge NCBI and retain snapshot/version information; not a blanket license for other NCBI-hosted resources."
+    },
+    {
+      "source": "NJC19",
+      "current_labelled_assertions": 5042,
+      "license_observation": "Dryad dataset terms; snapshot license confirmation pending",
+      "status": "partial",
+      "evidence_url": "https://datadryad.org/dataset/doi:10.5061/dryad.dr7sqv9v8",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Exact upstream dataset and NJC19 archive located; retain Lim et al. 2020 citation."
+    },
+    {
+      "source": "Peryton",
+      "current_labelled_assertions": 3439,
+      "license_observation": "No explicit data license established",
+      "status": "pending",
+      "evidence_url": "https://dianalab.e-ce.uth.gr/peryton/",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Confirm downloadable associations terms separately from paper license."
+    },
+    {
+      "source": "Piccinno_2025",
+      "current_labelled_assertions": 191,
+      "license_observation": "Source/supplement-specific terms to confirm",
+      "status": "pending",
+      "evidence_url": "https://doi.org/10.1038/s41591-025-03693-9",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Confirm license and third-party notices for the exact MaAsLin2/phylogenetic/meta-analysis tables."
+    },
+    {
+      "source": "Thomas_2019",
+      "current_labelled_assertions": 52,
+      "license_observation": "Source/supplement-specific terms to confirm",
+      "status": "pending",
+      "evidence_url": "https://doi.org/10.1038/s41591-019-0405-7",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Confirm exact supplement identity and reuse terms; not inferred from another article."
+    },
+    {
+      "source": "cross_source_conflict",
+      "current_labelled_assertions": 1054,
+      "license_observation": "Derived; preserve all contributing-source restrictions",
+      "status": "derived",
+      "evidence_url": "https://github.com/ZachGu-00/MicrobeKG-dataset_split_task/blob/2324306309e8851596b443e2711fef4b1bf41d66/scripts/step_merge_kg.py",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Conflict mining is original processing; underlying evidence remains source-governed."
+    },
+    {
+      "source": "gutMDisorder_v2",
+      "current_labelled_assertions": 2041,
+      "license_observation": "No explicit data license established",
+      "status": "pending",
+      "evidence_url": "https://bio-computing.hrbmu.edu.cn/gutMDisorder/",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Freely accessible resource does not establish an unrestricted data license."
+    },
+    {
+      "source": "gutMGene",
+      "current_labelled_assertions": 4771,
+      "license_observation": "No explicit data license established",
+      "status": "pending",
+      "evidence_url": "https://bio-computing.hrbmu.edu.cn/gutmgene/",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Confirm terms for the three downloaded interaction tables."
+    },
+    {
+      "source": "mBodyMap",
+      "current_labelled_assertions": 8252,
+      "license_observation": "No explicit data license established",
+      "status": "pending",
+      "evidence_url": "https://mbodymap.microbiome.cloud/",
+      "original_review_date": "2026-09-18",
+      "last_terms_check_date": "2026-09-18",
+      "notes": "Confirm terms for phenotype/body-site/species exports."
+    }
+  ]
+}

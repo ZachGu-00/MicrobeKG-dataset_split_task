@@ -54,3 +54,11 @@ vendor/**/checkpoint/
 vendor/**/ckpts/
 revision/bundle_manifest.json
 supplement_plan.json
+
+# Local v3 release data and package build artifacts
+bench_v3/benchmark/
+bench_v3/external/
+bench_v3/records/
+bench_v3/tested_null.parquet
+*.egg-info/
+.pytest_cache/

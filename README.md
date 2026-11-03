@@ -1,5 +1,19 @@
 # MicrobeKG
 
+## MicrobeKG-Bench v3
+
+The study-aware benchmark code is available in [bench_v3/](bench_v3/README.md):
+an installable loader, filtered head/tail evaluator, CPU baselines, release builders
+and reference-metric tests. [analysis_v3/](analysis_v3/README.md) contains the supplied
+analysis and experiment scripts with their original workspace requirements.
+
+Dataset page: [ZachGu/MicrobeKG](https://huggingface.co/datasets/ZachGu/MicrobeKG).
+The v3 data archive will be released separately through Google Drive; the link is
+pending. The existing Hugging Face nodes/edges tables remain the audited-20260928
+graph. See [the release index](RELEASE_V3.json) for archive hashes and versions.
+
+## MicrobeKG resource and earlier benchmark code
+
 Code for **MicrobeKG: An Evidence-Annotated Knowledge Graph for Microbiome Research**. The resource integrates microbial associations, metabolism, chemical and host context, taxonomies, source provenance, recorded negatives and conflicts.
 
 The current audited resource contains **67,485 typed nodes and 3,647,004 assertions**, including **15,821 microbial nodes**, across 25 relations and 31 typed patterns. The benchmark provides fixed splits, typed candidates, known-answer filters and protocols for thirteen models.

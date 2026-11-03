@@ -1,0 +1,31 @@
+{
+  "ctd_hmdb_only_triples_removed": 975088,
+  "settings": [
+    "t1_pair",
+    "t1_study",
+    "t1_study_reveal",
+    "t1_study_strict",
+    "t1_study_ctx_open",
+    "t1_temporal",
+    "t1_temporal_nodis",
+    "t1_cold_microbe",
+    "t1_cold_disease",
+    "t1_v3_strict_nocohort",
+    "t1_v3_strict_nooverlap",
+    "t1_v3_strict_nocooc",
+    "t1_v3_temporal_nocooc",
+    "t1_v3_temporal_dated",
+    "t1_v3_p11_base",
+    "t1_v3_p11_same",
+    "t1_v3_p11_other"
+  ],
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    2024
+  ],
+  "graph_version": "audited-20260928",
+  "benchmark_version": "mkbench-v3"
+}
